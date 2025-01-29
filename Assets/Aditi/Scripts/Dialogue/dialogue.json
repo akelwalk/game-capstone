@@ -1,0 +1,37 @@
+{
+    "dialogueLines": [
+        {
+            "character": {
+                "name": "Strawberry",
+                "icon": "strawberry_icon"
+            },
+            "dialogueSFX": ["soft_reply"],
+            "line": "Hi, welcome to Cafe Coffin!"
+        },
+        {
+            "character": {
+                "name": "Martha Mayfield",
+                "icon": "martha_icon"
+            },
+            "dialogueSFX": ["sad_whisper"],
+            "line": "Oh... hello, dear. I suppose you must be Strawberry, the Grim Reaper's new helper. Quite a peculiar name, if you ask me."
+        },
+        {
+            "character": {
+                "name": "Strawberry",
+                "icon": "strawberry_icon"
+            },
+            "dialogueSFX": ["soft_reply"],
+            "line": "It’s memorable, right? You can call me 'Berry' if you like. What can I get for you today?"
+        },
+        {
+            "character": {
+                "name": "Martha Mayfield",
+                "icon": "martha_icon"
+            },
+            "dialogueSFX": ["sad_whisper"],
+            "line": "I’m not sure, to be honest. I suppose I’d like something to... take the edge off this heaviness in my heart. It’s been so long since I felt... warmth."
+        }
+    ]
+}
+

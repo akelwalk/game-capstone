@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.0182, y: -58.8}
-  m_SizeDelta: {x: 674.0204, y: 50}
+  m_AnchoredPosition: {x: 47.193176, y: -54}
+  m_SizeDelta: {x: 674.0204, y: 98.9373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &121869169
 MonoBehaviour:
@@ -179,12 +179,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dialogue
-
-'
+  m_text: Dialogue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
+  m_sharedMaterial: {fileID: -4684204876309514909, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -208,15 +206,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -292,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.718689, y: -58.411163}
-  m_SizeDelta: {x: 1400, y: 150}
+  m_AnchoredPosition: {x: 47.492687, y: -55.600113}
+  m_SizeDelta: {x: 1400, y: 295.6494}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260089691
 MonoBehaviour:
@@ -390,7 +388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cecf13ee866d1f343b5e39e2c605e613, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -442,8 +440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -322.5409, y: -37.726013}
-  m_SizeDelta: {x: 112.5659, y: 129.31}
+  m_AnchoredPosition: {x: -287.32397, y: -56.28157}
+  m_SizeDelta: {x: 148.9783, y: 148.4215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &720345081
 MonoBehaviour:
@@ -465,7 +463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -697,8 +695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -193.21138, y: -7.244507}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 45.10678, y: 23.555496}
+  m_SizeDelta: {x: 692.0385, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1700710424
 MonoBehaviour:
@@ -724,8 +722,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
+  m_sharedMaterial: {fileID: -4684204876309514909, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -749,8 +747,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -864,18 +862,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d46540b71dfa1143be839308d752a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JSON_filepath: Aditi/Scripts/Dialogue/dialogue.json
   dialogue:
     dialogueLines:
     - character:
         name: Strawberry
-        icon: {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
+        icon: {fileID: 21300000, guid: ebd9baf8c3e343b49b8d9f164ede1a47, type: 3}
       dialogueSFX: []
-      line: 'please work '
+      line: 'Hi, welcome to Cafe Coffin! '
     - character:
-        name: Ghost
+        name: Ghost1
         icon: {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
       dialogueSFX: []
-      line: new line
+      line: Oh... hello, dear. I suppose you must be Strawberry, the Grim Reaper's
+        new helper. Quite a peculiar name, if you ask me.
+    - character:
+        name: Strawberry
+        icon: {fileID: 21300000, guid: ebd9baf8c3e343b49b8d9f164ede1a47, type: 3}
+      dialogueSFX: []
+      line: "It\u2019s memorable, right? You can call me 'Berry' if you like. What
+        can I get for you today?"
+    - character:
+        name: Ghost1
+        icon: {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
+      dialogueSFX: []
+      line: "I\u2019m not sure, to be honest. I suppose I\u2019d like something to...
+        take the edge off this heaviness in my heart. It\u2019s been so long since
+        I felt... warmth."
 --- !u!1 &1794565475
 GameObject:
   m_ObjectHideFlags: 0

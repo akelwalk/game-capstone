@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems;
+using System.IO; 
  
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
     private AudioSource audioSource;  // Reference to the AudioSource
+    public AudioClip[] dialogueSFX;
     public Image characterIcon;
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea; 
@@ -71,8 +71,13 @@ public class DialogueManager : MonoBehaviour
  
         DialogueLine currentLine = lines.Dequeue();
         
-        characterIcon.sprite = currentLine.character.icon;
-        characterName.text = currentLine.character.name;
+        if (currentLine.character.icon != null) {
+            characterIcon.sprite = currentLine.character.icon;
+        }
+        
+        if (currentLine.character.name != null) {
+            characterName.text = currentLine.character.name;
+        }
  
         StopAllCoroutines();
  
@@ -89,11 +94,11 @@ public class DialogueManager : MonoBehaviour
             if (clicked) {
                 dialogueArea.text = dialogueLine.line;
                 inTypeSentence = false;
-                PlaySFX(dialogueLine.dialogueSFX);
+                PlaySFX(dialogueSFX);
                 break;
             }
             dialogueArea.text += letter;
-            PlaySFX(dialogueLine.dialogueSFX);
+            PlaySFX(dialogueSFX);
             yield return new WaitForSeconds(typingSpeed);
         }
         inTypeSentence = false;

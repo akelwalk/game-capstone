@@ -23,14 +23,26 @@ public class Dialogue
 {
     public List<DialogueLine> dialogueLines = new List<DialogueLine>();
 }
- 
+
+[System.Serializable]
+public class DialogueData
+{
+    public List<LevelDialogue> levels;
+}
+
+[System.Serializable]
+public class LevelDialogue
+{
+    public int level;
+    public List<DialogueLine> dialogueLines;
+}
+
 public class DialogueTrigger : MonoBehaviour
 {
     public string JSON_filepath = "";
     public Dialogue dialogue;
 
     public void Start(){
-
         //add lines from json to dialogue 
         Add_JSON_lines();
         DialogueManager.Instance.StartDialogue(dialogue);
@@ -38,15 +50,16 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Add_JSON_lines() {
         string filePath = Path.Combine(Application.dataPath, JSON_filepath);
-        Debug.Log(filePath);
         string jsonString = File.ReadAllText(filePath);
 
-        Dialogue loadedDialogue = JsonUtility.FromJson<Dialogue>(jsonString); // Convert JSON into Dialogue object - puts in all the dialogue/name text
+        DialogueData data = JsonUtility.FromJson<DialogueData>(jsonString); // Convert JSON into Dialogue object - puts in all the dialogue/name text
+        int index = MainManager.Instance.getLevel(); //get index of the current level
+        dialogue.dialogueLines = data.levels[index].dialogueLines; //get current level's dialogue lines
 
         //find a way to have a list of ghost icons - ghost names - ghost encounters
         //change it so that the same dialogue SFX is applied to each person talking 
 
-        // foreach (var line in loadedDialogue.dialogueLines) // Assign icons and audio clips
+        // foreach (var line in dialogue.dialogueLines) // Assign icons and audio clips
         // {
         //     if (!string.IsNullOrEmpty(line.character.name))
         //     {
@@ -61,8 +74,5 @@ public class DialogueTrigger : MonoBehaviour
         //     //     }
         //     // }
         // }
-
-        // Assign loaded dialogue to the class instance
-        dialogue = loadedDialogue;
     }
 }

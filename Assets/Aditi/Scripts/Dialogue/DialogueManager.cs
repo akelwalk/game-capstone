@@ -99,7 +99,19 @@ public class DialogueManager : MonoBehaviour
             }
             dialogueArea.text += letter;
             PlaySFX(dialogueSFX);
-            yield return new WaitForSeconds(typingSpeed);
+            if (letter == ' ') {
+                continue;
+            }
+            else if (letter == '.' || letter == '?' || letter == ',' || letter == '?') {
+                yield return new WaitForSeconds(typingSpeed * 2);
+            }
+            else if (letter == ',') {
+                yield return new WaitForSeconds(typingSpeed * 1.2f);
+            }
+            else {
+                yield return new WaitForSeconds(typingSpeed);
+            }
+            
         }
         inTypeSentence = false;
 

@@ -5,8 +5,8 @@
         "dialogueLines": [
           {
             "character": {
-              "name": "Strawberry",
-              "icon": "strawberry_icon"
+              "name": "Rehema",
+              "icon": "rehema_icon"
             },
             "dialogueSFX": ["soft_reply"],
             "line": "Hi, welcome to Cafe Coffin!"
@@ -17,15 +17,15 @@
               "icon": "martha_icon"
             },
             "dialogueSFX": ["sad_whisper"],
-            "line": "Oh... hello, dear. I suppose you must be Strawberry, the Grim Reaper's new helper. Quite a peculiar name, if you ask me."
+            "line": "Oh... hello, dear. I suppose you must be Rehema, the Grim Reaper's new helper. Quite a peculiar name, if you ask me."
           },
           {
             "character": {
-              "name": "Strawberry",
-              "icon": "strawberry_icon"
+              "name": "Rehema",
+              "icon": "rehema_icon"
             },
             "dialogueSFX": ["soft_reply"],
-            "line": "It’s memorable, right? You can call me 'Berry' if you like. What can I get for you today?"
+            "line": "It’s memorable, right? What can I get for you today?"
           },
           {
             "character": {
@@ -37,8 +37,8 @@
           },
           {
             "character": {
-              "name": "Strawberry",
-              "icon": "strawberry_icon"
+              "name": "Rehema",
+              "icon": "rehema_icon"
             },
             "dialogueSFX": ["thoughtful_hum"],
             "line": "I think I have just the thing!"
@@ -58,8 +58,8 @@
           },
           {
             "character": {
-              "name": "Strawberry",
-              "icon": "strawberry_icon"
+              "name": "Rehema",
+              "icon": "rehema_icon"
             },
             "dialogueSFX": ["nervous_laugh"],
             "line": "Uh... maybe I took a wrong turn?"
@@ -74,8 +74,8 @@
           },
           {
             "character": {
-              "name": "Strawberry",
-              "icon": "strawberry_icon"
+              "name": "Rehema",
+              "icon": "rehema_icon"
             },
             "dialogueSFX": ["gentle_voice"],
             "line": "Maybe I can help. Tell me—what’s keeping you here?"
@@ -90,8 +90,8 @@
           },
           {
             "character": {
-              "name": "Strawberry",
-              "icon": "strawberry_icon"
+              "name": "Rehema",
+              "icon": "rehema_icon"
             },
             "dialogueSFX": ["soft_reply"],
             "line": "Maybe there's a way we can fix that."
@@ -111,8 +111,8 @@
           },
           {
             "character": {
-              "name": "Strawberry",
-              "icon": "strawberry_icon"
+              "name": "Rehema",
+              "icon": "rehema_icon"
             },
             "dialogueSFX": ["determined"],
             "line": "Oh, great. A spirit that doesn’t want a latte. Guess I’ll have to play you out!"
@@ -123,7 +123,7 @@
               "icon": "grim_reaper_icon"
             },
             "dialogueSFX": ["deep_chuckle"],
-            "line": "Careful, Strawberry. These ones don’t tip well."
+            "line": "Careful, Rehema. These ones don’t tip well."
           },
           {
             "character": {
@@ -135,8 +135,8 @@
           },
           {
             "character": {
-              "name": "Strawberry",
-              "icon": "strawberry_icon"
+              "name": "Rehema",
+              "icon": "rehema_icon"
             },
             "dialogueSFX": ["music_ready"],
             "line": "Alright, let’s jam!"

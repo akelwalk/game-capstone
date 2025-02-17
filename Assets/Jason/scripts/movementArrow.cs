@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class movementArrow : MonoBehaviour
@@ -18,6 +19,7 @@ public class movementArrow : MonoBehaviour
     private byte arrowAlpha;
     private float startTime;
     public bool arrowWiggle;
+    private bool arrowMiss;
 
 
     private void Start()
@@ -61,10 +63,18 @@ public class movementArrow : MonoBehaviour
 
         gameObject.transform.localScale += arrowScale;
 
-        if (gameObject.transform.localPosition.y >= 4.55 && arrowDisappear == false)
+        if (arrowMiss == false)
         {
-            arrowDisappear = true;
-            StartCoroutine(arrowCoroutine);
+            if (gameObject.transform.localPosition.y >= 4.55 && arrowDisappear == false)
+            {
+                arrowDisappear = true;
+                StartCoroutine(arrowCoroutine);
+            }
+
+            else if (gameObject.transform.localPosition.y > 5.1 && arrowSprite.color.ToHexString().Substring(0, 2) == "FF")
+            {
+                arrows2(3);
+            }
         }
     }
 

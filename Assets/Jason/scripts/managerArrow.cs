@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 
 public class managerArrow : MonoBehaviour
@@ -10,8 +11,11 @@ public class managerArrow : MonoBehaviour
     [SerializeField] bool arrowGenerateEnabled;
     [SerializeField] int arrowGeneratePerSecond;
     [SerializeField] AudioSource stageMusic;
+    [SerializeField] TextMeshProUGUI arrowScoreDisplay;
 
     private IEnumerator arrowCoroutine;
+    private IEnumerator moveCoroutine1;
+    private IEnumerator moveCoroutine2;
     private IEnumerator characterCoroutine;
     private Vector3 characterRotate0;
     private Vector3 characterRotate1;
@@ -27,6 +31,8 @@ public class managerArrow : MonoBehaviour
     private int characterQuality;
     private string[] stageTimings;
     private int arrowCount;
+    private bool coroutineActive;
+    private int arrowScore;
 
     void Start()
     {
@@ -40,6 +46,8 @@ public class managerArrow : MonoBehaviour
         arrowPosition1 = new Vector3 (-6.8f, -5.5f, 0);
         arrowPosition2 = new Vector3 (-4.85f, -5.5f, 0);
         arrowPosition3 = new Vector3 (-2.9f, -5.5f, 0);
+        moveCoroutine1 = MoveRandomly();
+        moveCoroutine2 = MoveReturn();
 
         if (arrowGenerateEnabled == true)
         {
@@ -89,7 +97,7 @@ public class managerArrow : MonoBehaviour
             StopCoroutine(arrowCoroutine);
         }
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if (transform.childCount > 5 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)))
         {
             movementArrow movementArrow = gameObject.transform.GetChild(5).GetComponent<movementArrow>();
 
@@ -97,17 +105,20 @@ public class managerArrow : MonoBehaviour
             {
                 switch (gameObject.transform.GetChild(5).transform.localPosition.y)
                 {
-                    case >= 4.45f and <= 4.55f:
+                    case >= 4.4f and <= 4.6f:
+                        arrowScore += 1000;
                         movementArrow.arrows2(0);
                         characterQuality = 0;
                         break;
 
-                    case >= 4.35f and <= 4.65f:
+                    case >= 4.25f and <= 4.75f:
+                        arrowScore += 400;
                         movementArrow.arrows2(1);
                         characterQuality = 1;
                         break;
 
-                    case >= 4.1f and <= 4.9f:
+                    case >= 3.9f and <= 5.1f:
+                        arrowScore += 100;
                         movementArrow.arrows2(2);
                         characterQuality = 2;
                         break;
@@ -118,34 +129,49 @@ public class managerArrow : MonoBehaviour
                         break;
                 }
 
+                arrowScoreDisplay.text = "Score: " + arrowScore;
                 StartCoroutine(characterCoroutine);
                 gameObject.transform.SetAsLastSibling();
             }
-        }
-
-        if (Input.GetKeyUp(KeyCode.P))
-        {
-            StartCoroutine(MoveRandomly());
-        }
-
-        if (Input.GetKeyUp(KeyCode.O))
-        {
-            arrowMain.GetComponent<movementArrow>().arrows3();
         }
     }
 
     IEnumerator arrows1()
     {
+        yield return new WaitForSeconds(4.25f);
+
         stageTimings = File.ReadAllLines(Application.dataPath + "/Jason/csv/stage2B.txt");
 
-        while (true)
+        while (arrowCount < stageTimings.Length - 1)
         {
             GameObject arrowClone = Instantiate(arrowMain, gameObject.transform, false);
             arrows2(arrowClone);
             arrowClone.transform.position = new Vector3(arrowClone.transform.position.x, arrowClone.transform.position.y, arrowCount * 0.0001f);
             arrowClone.SetActive(true);
 
-            // yield return new WaitForSeconds(1f / arrowGeneratePerSecond);
+            switch (arrowCount)
+            {
+                case 12:
+                    arrowMain.GetComponent<movementArrow>().arrows3();
+                    break;
+
+                case 48:
+                    if (coroutineActive == false)
+                    {
+                        coroutineActive = true;
+                        StartCoroutine(moveCoroutine1);
+                    }
+                    break;
+
+                case 65:
+                    arrowMain.GetComponent<movementArrow>().arrows3();
+                    break;
+
+                case 87:
+                    StopCoroutine(moveCoroutine1);
+                    StartCoroutine(moveCoroutine2);
+                    break;
+            }
 
             if (arrowCount == stageTimings.Length)
             {
@@ -220,12 +246,8 @@ public class managerArrow : MonoBehaviour
 
     void music1()
     {
-        stageMusic.time = 4.25f;
         stageMusic.enabled = true;
     }
-
-
-
 
     public Transform targetPoint; // The point around which the object moves
 
@@ -253,7 +275,7 @@ public class managerArrow : MonoBehaviour
     {
         float elapsedTime = 0f;
         Vector3 startingPosition = transform.position;
-        while (elapsedTime < 1f)
+        while (elapsedTime < 1)
         {
             elapsedTime += Time.deltaTime * 0.6f;
             float smoothStep = Mathf.SmoothStep(0f, 1f, elapsedTime);
@@ -263,5 +285,26 @@ public class managerArrow : MonoBehaviour
         }
 
         transform.position = targetPosition;
+    }
+
+    private IEnumerator MoveReturn()
+    {
+        yield return new WaitForSeconds(.4f);
+
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime * 0.03f;
+            float smoothStep = Mathf.SmoothStep(0f, 1f, elapsedTime);
+            transform.position = Vector3.Lerp(transform.position, Vector3.zero, smoothStep);
+
+            yield return null;
+
+            if (transform.position.x < 0.0001f)
+            {
+                transform.position = Vector3.zero;
+                StopCoroutine(MoveReturn());
+            }
+        }
     }
 }

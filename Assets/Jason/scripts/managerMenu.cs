@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class managerMenu : MonoBehaviour
 {
+    [SerializeField] Color32[] colorsUI;
     [SerializeField] GameObject buttons_0;
     [SerializeField] GameObject settings_1;
     [SerializeField] GameObject credits_2;
+    [SerializeField] GameObject menuBackground;
+    private Vector2 originalPosition;
     [SerializeField] Sprite[] menuSprites;
     private IEnumerator transformCoroutine1;
     private IEnumerator transformCoroutine2;
@@ -26,6 +31,49 @@ public class managerMenu : MonoBehaviour
         transformCoroutine2 = transform2();
         menuTransform1 = new Vector2(0.44f, 0.44f);
         menuTransform2 = new Vector2(0.4f, 0.4f);
+        originalPosition = menuBackground.transform.position;
+    }
+
+    private void FixedUpdate()
+    {
+        switch (Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height)
+        {
+            case ( >= 0 and <= 1, >= 0 and <= 1):
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(Input.mousePosition.x / (Screen.width * 4) + 0.25f, Input.mousePosition.y / (Screen.height * 4) - 1.25f) + (originalPosition / 2), 0.225f);
+                break;
+
+            case ( >= 0 and <= 1, <= 0):  // the ones that are out of bounds in one corner
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2((Input.mousePosition.x / (Screen.width * 4) + 0.25f) + (originalPosition.x / 2), -1.255f), 0.225f);
+                break;
+
+            case ( >= 0 and <= 1, >= 1):
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2((Input.mousePosition.x / (Screen.width * 4) + 0.25f) + (originalPosition.x / 2), -1), 0.225f);
+                break;
+
+            case ( <= 0, >= 0 and <= 1):
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, (Input.mousePosition.y / (Screen.height * 4) - 1.25f) + (originalPosition.y / 2)), 0.225f);
+                break;
+
+            case ( >= 1, >= 0 and <= 1):
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, (Input.mousePosition.y / (Screen.height * 4) - 1.25f) + (originalPosition.y / 2)), 0.225f);
+                break;
+
+            case ( <= 0, <= 0): // the ones that are out of bounds in both corners
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, -1.255f), 0.225f);
+                break;
+
+            case ( <= 0, >= 1):
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, -1), 0.225f);
+                break;
+
+            case ( >= 1, <= 0):
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, -1.255f), 0.225f);
+                break;
+
+            case ( >= 1, >= 1):
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, -1), 0.225f);
+                break;
+        }
     }
 
     public void buttons1()
@@ -57,6 +105,8 @@ public class managerMenu : MonoBehaviour
         if (menuButtonHeld == -1 || menuButtonHeld == menuSelected)
         {
             buttons_0.transform.GetChild(menuSelected).GetComponent<SpriteRenderer>().sprite = menuSprites[1];
+            buttons_0.transform.GetChild(menuSelected).GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.white;
+            buttons_0.transform.GetChild(menuSelected).GetChild(0).GetComponent<TextMeshProUGUI>().fontMaterial.DisableKeyword("UNDERLAY_ON");
         }
     }
 
@@ -65,6 +115,8 @@ public class managerMenu : MonoBehaviour
         if (menuButtonHeld == -1 || menuButtonHeld == menuSelected)
         {
             buttons_0.transform.GetChild(menuSelected).GetComponent<SpriteRenderer>().sprite = menuSprites[0];
+            buttons_0.transform.GetChild(menuSelected).GetChild(0).GetComponent<TextMeshProUGUI>().color = colorsUI[0];
+            buttons_0.transform.GetChild(menuSelected).GetChild(0).GetComponent<TextMeshProUGUI>().fontMaterial.EnableKeyword("UNDERLAY_ON");
         }
     }
 

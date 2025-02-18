@@ -31,7 +31,7 @@ public class managerMenu : MonoBehaviour
         transformCoroutine2 = transform2();
         menuTransform1 = new Vector2(0.44f, 0.44f);
         menuTransform2 = new Vector2(0.4f, 0.4f);
-        originalPosition = menuBackground.transform.position;
+        originalPosition = Vector2.zero;
     }
 
     private void FixedUpdate()
@@ -81,7 +81,7 @@ public class managerMenu : MonoBehaviour
         switch (menuButtonHeld)
         {
             case 0:
-                SceneManager.LoadScene("default");
+                SceneManager.LoadScene("rhythm");
                 sceneLoading = true;
                 break;
 

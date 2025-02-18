@@ -179,13 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dialogue
-
-    Testing
-
-    1234567
-
-'
+  m_text: END DIALOGUE SCENE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
   m_sharedMaterial: {fileID: -4684204876309514909, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
@@ -561,7 +555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &427080217
 Transform:
   m_ObjectHideFlags: 0
@@ -1308,7 +1302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773812068}
-  - component: {fileID: 1773812070}
+  - component: {fileID: 1773812072}
   - component: {fileID: 1773812069}
   - component: {fileID: 1773812071}
   m_Layer: 0
@@ -1354,24 +1348,6 @@ MonoBehaviour:
   characterName: {fileID: 1700710424}
   dialogueArea: {fileID: 121869169}
   typingSpeed: 0.07
---- !u!114 &1773812070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773812067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d46540b71dfa1143be839308d752a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jsonDialogue: {fileID: 4900000, guid: f2db3e821d1e13743a066105a3522281, type: 3}
-  strawberrySprite: {fileID: 21300000, guid: 23c915dae147fcd47b740d1da9a56c72, type: 3}
-  ghostSprites:
-  - {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
-  dialogue:
-    dialogueLines: []
 --- !u!114 &1773812071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,6 +1360,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d7a8011f60f3140b535e84f920d1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1773812072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773812067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924addd12dcf1a44dbec3f78fa7c0f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonDialogue: {fileID: 4900000, guid: d707c1e85736c31479f4c56b50a11376, type: 3}
+  strawberrySprite: {fileID: 21300000, guid: 23c915dae147fcd47b740d1da9a56c72, type: 3}
+  ghostSprites:
+  - {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
+  dialogue:
+    dialogueLines: []
 --- !u!1 &1794565475
 GameObject:
   m_ObjectHideFlags: 0

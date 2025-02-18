@@ -1,43 +1,22 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
-using Unity.VisualScripting;
 
 [System.Serializable]
-public class DialogueCharacter
+public class EndData
 {
-    public string name;
-    public Sprite icon; //might not be a sprite
-}
- 
-[System.Serializable]
-public class DialogueLine
-{
-    public DialogueCharacter character;
-    [TextArea(3, 10)]
-    public string line;
-}
- 
-[System.Serializable]
-public class Dialogue
-{
-    public List<DialogueLine> dialogueLines = new List<DialogueLine>();
+    public List<Level> levels;
 }
 
 [System.Serializable]
-public class DialogueData
-{
-    public List<LevelDialogue> levels;
-}
-
-[System.Serializable]
-public class LevelDialogue
+public class Level
 {
     public int level;
-    public List<DialogueLine> dialogueLines;
+    public List<DialogueLine> success;
+    public List<DialogueLine> fail;
 }
 
-public class DialogueTrigger : MonoBehaviour
+public class EndDialogueTrigger : MonoBehaviour
 {
     // public string JSON_filepath = "";
     public TextAsset jsonDialogue;
@@ -52,9 +31,18 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     private void Add_JSON_lines() {
-        DialogueData data = JsonUtility.FromJson<DialogueData>(jsonDialogue.text); // Convert JSON into Dialogue object - puts in all the dialogue/name text
+        EndData data = JsonUtility.FromJson<EndData>(jsonDialogue.text); // Convert JSON into Dialogue object - puts in all the dialogue/name text
+        Debug.Log(data.levels[0].success[0].line);
+        Debug.Log(data.levels[0].success[1].line);
+        Debug.Log(data.levels[0].success[2].line);
         int index = MainManager.Instance.getLevel(); //get index of the current level
-        dialogue.dialogueLines = data.levels[index].dialogueLines; //get current level's dialogue lines
+        // if (MainManager.Instance.success) {
+        //     dialogue.dialogueLines = data.levels[index].success; //get current level's dialogue lines
+        // }
+        // else {
+        //     dialogue.dialogueLines = data.levels[index].fail; //get current level's dialogue lines
+        // }
+        
 
         foreach (var line in dialogue.dialogueLines) // Assign icons
         {

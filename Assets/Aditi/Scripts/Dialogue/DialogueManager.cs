@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using System.IO; 
+using UnityEngine.SceneManagement;
  
 public class DialogueManager : MonoBehaviour
 {
@@ -41,6 +42,12 @@ public class DialogueManager : MonoBehaviour
                 }
                 else {
                     //add end of dialogue behavior (disappear after this click?)
+                    if (MainManager.Instance.getLevel() == 2) { //third level
+                        SceneManager.LoadScene("default");
+                    }
+                    else {
+                        SceneManager.LoadScene("Coffee Shop");
+                    }
                 }
                 
             }
@@ -103,7 +110,7 @@ public class DialogueManager : MonoBehaviour
                 continue;
             }
             else if (letter == '.' || letter == '?' || letter == ',' || letter == '?') {
-                yield return new WaitForSeconds(typingSpeed * 2);
+                yield return new WaitForSeconds(typingSpeed * 2.4f);
             }
             else if (letter == ',') {
                 yield return new WaitForSeconds(typingSpeed * 1.2f);

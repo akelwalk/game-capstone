@@ -1,0 +1,20 @@
+{
+    "levels": [
+        {
+            "level": 1,
+            "customer": {
+                "name": "Somber Spirit",
+                "description": "A melancholic ghost who has wandered for ages, longing for warmth and solace. They seek a drink to lift their weary soul."
+            },
+            "drinks": ["Celestial Cocoa"]
+        },
+        {
+            "level": 2,
+            "customer": {
+                "name": "Lost Spirit",
+                "description": "A restless soul burdened by regret. They need something soothing to help them move on."
+            },
+            "drinks": ["Twilight Velvet"]
+        }
+    ]
+}

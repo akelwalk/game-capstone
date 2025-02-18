@@ -1,0 +1,114 @@
+{
+    "levels": [
+      {
+        "level": 1,
+        "success": [
+          {
+            "character": {
+              "name": "Somber Spirit",
+              "icon": "martha_icon"
+            },
+            "dialogueSFX": ["relieved_sigh"],
+            "line": "Oh... this warmth... It’s been so long since I’ve felt something like this. Thank you, dear."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "dialogueSFX": ["soft_smile"],
+            "line": "I’m glad you like it! I hope it brings you some peace."
+          },
+          {
+            "character": {
+              "name": "Somber Spirit",
+              "icon": "martha_icon"
+            },
+            "dialogueSFX": ["gentle_laugh"],
+            "line": "Perhaps, just for a moment... I feel like I could rest."
+          }
+        ],
+        "fail": [
+          {
+            "character": {
+              "name": "Somber Spirit",
+              "icon": "martha_icon"
+            },
+            "dialogueSFX": ["disappointed_sigh"],
+            "line": "Oh... this isn’t quite what I expected. I feel... just as heavy as before."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "dialogueSFX": ["apologetic_hum"],
+            "line": "I’m really sorry! Maybe I can try again?"
+          },
+          {
+            "character": {
+              "name": "Somber Spirit",
+              "icon": "martha_icon"
+            },
+            "dialogueSFX": ["soft_whisper"],
+            "line": "No... I appreciate the effort, dear. Perhaps another time."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "success": [
+          {
+            "character": {
+              "name": "Lost Spirit",
+              "icon": "lost_spirit_icon"
+            },
+            "dialogueSFX": ["calm_exhale"],
+            "line": "This... this is exactly what I needed. The weight feels lighter somehow."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "dialogueSFX": ["encouraging_tone"],
+            "line": "I’m glad. Maybe now you can find the peace you’re looking for."
+          },
+          {
+            "character": {
+              "name": "Lost Spirit",
+              "icon": "lost_spirit_icon"
+            },
+            "dialogueSFX": ["hopeful_murmur"],
+            "line": "Yes... perhaps I can finally tell Eleanor how much she meant to me, even if only in spirit."
+          }
+        ],
+        "fail": [
+          {
+            "character": {
+              "name": "Lost Spirit",
+              "icon": "lost_spirit_icon"
+            },
+            "dialogueSFX": ["pained_whisper"],
+            "line": "No... this isn’t what I needed. The pain... it lingers."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "dialogueSFX": ["concerned_tone"],
+            "line": "Oh no... I really thought this would help. I’m so sorry."
+          },
+          {
+            "character": {
+              "name": "Lost Spirit",
+              "icon": "lost_spirit_icon"
+            },
+            "dialogueSFX": ["haunted_sigh"],
+            "line": "It’s not your fault... I suppose some wounds can’t be soothed so easily."
+          }
+        ]
+      }
+    ]
+  }

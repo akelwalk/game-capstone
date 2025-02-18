@@ -39,7 +39,10 @@ public class LevelDialogue
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public string JSON_filepath = "";
+    // public string JSON_filepath = "";
+    public TextAsset jsonDialogue;
+    public Sprite strawberrySprite;
+    public List<Sprite> ghostSprites;
     public Dialogue dialogue;
 
     public void Start(){
@@ -49,30 +52,21 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     private void Add_JSON_lines() {
-        string filePath = Path.Combine(Application.dataPath, JSON_filepath);
-        string jsonString = File.ReadAllText(filePath);
-
-        DialogueData data = JsonUtility.FromJson<DialogueData>(jsonString); // Convert JSON into Dialogue object - puts in all the dialogue/name text
+        DialogueData data = JsonUtility.FromJson<DialogueData>(jsonDialogue.text); // Convert JSON into Dialogue object - puts in all the dialogue/name text
         int index = MainManager.Instance.getLevel(); //get index of the current level
         dialogue.dialogueLines = data.levels[index].dialogueLines; //get current level's dialogue lines
 
-        //find a way to have a list of ghost icons - ghost names - ghost encounters
-        //change it so that the same dialogue SFX is applied to each person talking 
-
-        // foreach (var line in dialogue.dialogueLines) // Assign icons and audio clips
-        // {
-        //     if (!string.IsNullOrEmpty(line.character.name))
-        //     {
-        //         line.character.icon = null; //load in a sprite with the same name as the character
-        //     }
-
-        //     // if (line.dialogueSFX != null && line.dialogueSFX.Length > 0)
-        //     // {
-        //     //     for (int i = 0; i < line.dialogueSFX.Length; i++)
-        //     //     {
-        //     //         line.dialogueSFX[i] = Resources.Load<AudioClip>(line.dialogueSFX[i].name); //load in charactername1, charactername2, etc audio clips
-        //     //     }
-        //     // }
-        // }
+        foreach (var line in dialogue.dialogueLines) // Assign icons
+        {
+            if (line.character.name == "Rehema") {
+                line.character.icon = strawberrySprite;
+            }
+            // else if (line.character.name == "Grim Reaper") {
+            //     //TODO
+            // }
+            else {
+                line.character.icon = ghostSprites[Random.Range(0, ghostSprites.Count)]; //choose a random ghost sprite for anyone that's not strawberry
+            }
+        }
     }
 }

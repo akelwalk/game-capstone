@@ -10,6 +10,7 @@ public class MainManager : MonoBehaviour
     public static MainManager Instance;
     private int score = 0;
     private int level = 0;
+    public bool success = true;
     
 
     void Start()

@@ -1,148 +1,147 @@
 {
-    "levels": [
+  "levels": [
       {
-        "level": 1,
-        "dialogueLines": [
-          {
-            "character": {
-              "name": "Rehema",
-              "icon": "rehema_icon"
-            },
-            "dialogueSFX": ["soft_reply"],
-            "line": "Hi, welcome to Cafe Coffin!"
-          },
-          {
-            "character": {
-              "name": "Somber Spirit",
-              "icon": "martha_icon"
-            },
-            "dialogueSFX": ["sad_whisper"],
-            "line": "Oh... hello, dear. I suppose you must be Rehema, the Grim Reaper's new helper. Quite a peculiar name, if you ask me."
-          },
-          {
-            "character": {
-              "name": "Rehema",
-              "icon": "rehema_icon"
-            },
-            "dialogueSFX": ["soft_reply"],
-            "line": "It’s memorable, right? What can I get for you today?"
-          },
-          {
-            "character": {
-              "name": "Somber Spirit",
-              "icon": "martha_icon"
-            },
-            "dialogueSFX": ["sad_whisper"],
-            "line": "I’m not sure, to be honest. I suppose I’d like something to... take the edge off this heaviness in my heart. It’s been so long since I felt... warmth."
-          },
-          {
-            "character": {
-              "name": "Rehema",
-              "icon": "rehema_icon"
-            },
-            "dialogueSFX": ["thoughtful_hum"],
-            "line": "I think I have just the thing!"
-          }
-        ]
+          "level": 1,
+          "dialogueLines": [
+              {
+                  "character": {
+                      "name": "Rehema",
+                      "icon": "rehema_icon"
+                  },
+                  "dialogueSFX": ["soft_reply"],
+                  "line": "Hi, welcome to Cafe Coffin!"
+              },
+              {
+                  "character": {
+                      "name": "Somber Spirit",
+                      "icon": "martha_icon"
+                  },
+                  "dialogueSFX": ["sad_whisper"],
+                  "line": "Oh... hello, dear. I suppose you must be Rehema, the Grim Reaper's new helper. Quite a peculiar name, if you ask me."
+              },
+              {
+                  "character": {
+                      "name": "Rehema",
+                      "icon": "rehema_icon"
+                  },
+                  "dialogueSFX": ["soft_reply"],
+                  "line": "It’s memorable, right? What can I get for you today?"
+              },
+              {
+                  "character": {
+                      "name": "Somber Spirit",
+                      "icon": "martha_icon"
+                  },
+                  "dialogueSFX": ["sad_whisper"],
+                  "line": "I’m not sure, to be honest. I suppose I’d like something to... take the edge off this heaviness in my heart. It’s been so long since I felt... warmth."
+              },
+              {
+                  "character": {
+                      "name": "Rehema",
+                      "icon": "rehema_icon"
+                  },
+                  "dialogueSFX": ["thoughtful_hum"],
+                  "line": "I think I have just the thing! One Celestial Cocoa, coming right up."
+              }
+          ]
       },
       {
-        "level": 2,
-        "dialogueLines": [
-          {
-            "character": {
-              "name": "Lost Spirit",
-              "icon": "lost_spirit_icon"
-            },
-            "dialogueSFX": ["ghostly_whisper"],
-            "line": "You should not have come here..."
-          },
-          {
-            "character": {
-              "name": "Rehema",
-              "icon": "rehema_icon"
-            },
-            "dialogueSFX": ["nervous_laugh"],
-            "line": "Uh... maybe I took a wrong turn?"
-          },
-          {
-            "character": {
-              "name": "Lost Spirit",
-              "icon": "lost_spirit_icon"
-            },
-            "dialogueSFX": ["deep_sigh"],
-            "line": "No... I mean, I do not belong here. I should have moved on long ago, but something keeps me tied."
-          },
-          {
-            "character": {
-              "name": "Rehema",
-              "icon": "rehema_icon"
-            },
-            "dialogueSFX": ["gentle_voice"],
-            "line": "Maybe I can help. Tell me—what’s keeping you here?"
-          },
-          {
-            "character": {
-              "name": "Lost Spirit",
-              "icon": "lost_spirit_icon"
-            },
-            "dialogueSFX": ["echoing_regret"],
-            "line": "I... I never told her how much she meant to me. My sister, Eleanor. She thought I hated her... but I didn’t. I just didn’t know how to say it."
-          },
-          {
-            "character": {
-              "name": "Rehema",
-              "icon": "rehema_icon"
-            },
-            "dialogueSFX": ["soft_reply"],
-            "line": "Maybe there's a way we can fix that."
-          }
-        ]
+          "level": 2,
+          "dialogueLines": [
+              {
+                  "character": {
+                      "name": "Lost Spirit",
+                      "icon": "lost_spirit_icon"
+                  },
+                  "dialogueSFX": ["ghostly_whisper"],
+                  "line": "You should not have come here..."
+              },
+              {
+                  "character": {
+                      "name": "Rehema",
+                      "icon": "rehema_icon"
+                  },
+                  "dialogueSFX": ["nervous_laugh"],
+                  "line": "Uh... maybe I took a wrong turn?"
+              },
+              {
+                  "character": {
+                      "name": "Lost Spirit",
+                      "icon": "lost_spirit_icon"
+                  },
+                  "dialogueSFX": ["deep_sigh"],
+                  "line": "No... I mean, I do not belong here. I should have moved on long ago, but something keeps me tied."
+              },
+              {
+                  "character": {
+                      "name": "Rehema",
+                      "icon": "rehema_icon"
+                  },
+                  "dialogueSFX": ["gentle_voice"],
+                  "line": "Maybe I can help. Tell me—what’s keeping you here?"
+              },
+              {
+                  "character": {
+                      "name": "Lost Spirit",
+                      "icon": "lost_spirit_icon"
+                  },
+                  "dialogueSFX": ["echoing_regret"],
+                  "line": "I... I never told her how much she meant to me. My sister, Eleanor. She thought I hated her... but I didn’t. I just didn’t know how to say it."
+              },
+              {
+                  "character": {
+                      "name": "Rehema",
+                      "icon": "rehema_icon"
+                  },
+                  "dialogueSFX": ["soft_reply"],
+                  "line": "Maybe there's a way we can fix that. Let's start with a Twilight Velvet to soothe your mind."
+              }
+          ]
       },
       {
-        "level": 3,
-        "dialogueLines": [
-          {
-            "character": {
-              "name": "Malevolent Shade",
-              "icon": "shade_icon"
-            },
-            "dialogueSFX": ["shadowy_hiss"],
-            "line": "Foolish mortal... this place is ours!"
-          },
-          {
-            "character": {
-              "name": "Rehema",
-              "icon": "rehema_icon"
-            },
-            "dialogueSFX": ["determined"],
-            "line": "Oh, great. A spirit that doesn’t want a latte. Guess I’ll have to play you out!"
-          },
-          {
-            "character": {
-              "name": "The Grim Reaper",
-              "icon": "grim_reaper_icon"
-            },
-            "dialogueSFX": ["deep_chuckle"],
-            "line": "Careful, Rehema. These ones don’t tip well."
-          },
-          {
-            "character": {
-              "name": "Malevolent Shade",
-              "icon": "shade_icon"
-            },
-            "dialogueSFX": ["shadow_roar"],
-            "line": "ENOUGH! FACE THE MUSIC!"
-          },
-          {
-            "character": {
-              "name": "Rehema",
-              "icon": "rehema_icon"
-            },
-            "dialogueSFX": ["music_ready"],
-            "line": "Alright, let’s jam!"
-          }
-        ]
+          "level": 3,
+          "dialogueLines": [
+              {
+                  "character": {
+                      "name": "Malevolent Shade",
+                      "icon": "shade_icon"
+                  },
+                  "dialogueSFX": ["shadowy_hiss"],
+                  "line": "Foolish mortal... this place is ours!"
+              },
+              {
+                  "character": {
+                      "name": "Rehema",
+                      "icon": "rehema_icon"
+                  },
+                  "dialogueSFX": ["determined"],
+                  "line": "Oh, great. A spirit that doesn’t want a latte. Guess I’ll have to play you out!"
+              },
+              {
+                  "character": {
+                      "name": "The Grim Reaper",
+                      "icon": "grim_reaper_icon"
+                  },
+                  "dialogueSFX": ["deep_chuckle"],
+                  "line": "Careful, Rehema. These ones don’t tip well."
+              },
+              {
+                  "character": {
+                      "name": "Malevolent Shade",
+                      "icon": "shade_icon"
+                  },
+                  "dialogueSFX": ["shadow_roar"],
+                  "line": "ENOUGH! FACE THE MUSIC!"
+              },
+              {
+                  "character": {
+                      "name": "Rehema",
+                      "icon": "rehema_icon"
+                  },
+                  "dialogueSFX": ["music_ready"],
+                  "line": "Alright, let’s jam!"
+              }
+          ]
       }
-    ]
+  ]
 }
-  

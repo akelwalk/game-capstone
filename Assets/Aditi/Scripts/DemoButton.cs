@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DemoButton : MonoBehaviour
 {
-    public DialogueTrigger trigger;
+    private DialogueTrigger trigger;
     // Start is called before the first frame update
     void Start()
     {

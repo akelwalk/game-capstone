@@ -179,7 +179,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dialogue
+  m_text: 'Dialogue
+
+    Testing
+
+    1234567
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
   m_sharedMaterial: {fileID: -4684204876309514909, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
@@ -206,8 +212,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -218,7 +224,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -256,37 +262,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121869167}
   m_CullTransparentMesh: 1
---- !u!1 &224435796
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224435797}
-  m_Layer: 0
-  m_Name: Main
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &224435797
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224435796}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 492.2634, y: 315.58493, z: -13.789018}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260089689
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Level: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
   m_sharedMaterial: {fileID: -4684204876309514909, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
@@ -586,7 +561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &427080217
 Transform:
   m_ObjectHideFlags: 0
@@ -660,7 +635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23c915dae147fcd47b740d1da9a56c72, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1057,6 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4505396b8b7274e42baa02c9f750983e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  success: 1
 --- !u!1 &1690517418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,7 +1353,7 @@ MonoBehaviour:
   characterIcon: {fileID: 720345081}
   characterName: {fileID: 1700710424}
   dialogueArea: {fileID: 121869169}
-  typingSpeed: 0.1
+  typingSpeed: 0.07
 --- !u!114 &1773812070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,7 +1366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d46540b71dfa1143be839308d752a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JSON_filepath: Aditi/Scripts/Dialogue/dialogue.json
+  jsonDialogue: {fileID: 4900000, guid: f2db3e821d1e13743a066105a3522281, type: 3}
+  strawberrySprite: {fileID: 21300000, guid: 23c915dae147fcd47b740d1da9a56c72, type: 3}
+  ghostSprites:
+  - {fileID: 21300000, guid: 62009db3748b8044e9256f149697bf34, type: 3}
   dialogue:
     dialogueLines: []
 --- !u!114 &1773812071
@@ -1405,7 +1384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d7a8011f60f3140b535e84f920d1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
 --- !u!1 &1794565475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,5 +1617,4 @@ SceneRoots:
   - {fileID: 1794565478}
   - {fileID: 1690517422}
   - {fileID: 963673574}
-  - {fileID: 224435797}
   - {fileID: 1235462423}

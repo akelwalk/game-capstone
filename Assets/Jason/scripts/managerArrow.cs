@@ -13,7 +13,10 @@ public class managerArrow : MonoBehaviour
     [SerializeField] AudioSource stageMusic;
     [SerializeField] TextMeshProUGUI arrowScoreDisplay;
 
-    private IEnumerator arrowCoroutine;
+    private IEnumerator arrowCoroutine0;
+    private IEnumerator arrowCoroutine1;
+    private IEnumerator arrowCoroutine2;
+    private IEnumerator arrowCoroutine3;
     private IEnumerator moveCoroutine1;
     private IEnumerator moveCoroutine2;
     private IEnumerator characterCoroutine;
@@ -51,9 +54,18 @@ public class managerArrow : MonoBehaviour
 
         if (arrowGenerateEnabled == true)
         {
-            arrowCoroutine = arrows1();
+            arrowCoroutine0 = arrows1("/csv/stage2A.txt", 0);
+            arrowCoroutine1 = arrows1("/csv/stage2B.txt", 1);
+            arrowCoroutine2 = arrows1("/csv/stage2C.txt", 2);
+            arrowCoroutine3 = arrows1("/csv/stage2D.txt", 3);
             characterCoroutine = character1();
         }
+        
+        StartCoroutine(arrowCoroutine0);
+        //StartCoroutine(arrowCoroutine1);
+        //StartCoroutine(arrowCoroutine2);
+        //StartCoroutine(arrowCoroutine3);
+        Invoke("music1", 0);
 
         /* stageTimings = File.ReadAllLines(Application.dataPath + "/Jason/csv/stage2A.txt");
 
@@ -73,18 +85,18 @@ public class managerArrow : MonoBehaviour
             {
                 case (true, true):
                     arrowGenerateActive = !arrowGenerateActive;
-                    StopCoroutine(arrowCoroutine);
+                    StopCoroutine(arrowCoroutine0);
                     break;
 
                 case (true, false):
                     arrowGenerateActive = !arrowGenerateActive;
-                    StartCoroutine(arrowCoroutine);
+                    StartCoroutine(arrowCoroutine0);
                     Invoke("music1", 0);
                     break;
 
                 default:
                     GameObject arrowClone = Instantiate(arrowMain, gameObject.transform, false);
-                    arrows2(arrowClone);
+                    arrows2(arrowClone, 1);
                     arrowClone.SetActive(true);
                     break;
             }
@@ -94,7 +106,7 @@ public class managerArrow : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Return))
         {
             arrowGenerateEnabled = !arrowGenerateEnabled;
-            StopCoroutine(arrowCoroutine);
+            StopCoroutine(arrowCoroutine0);
         }
 
         if (transform.childCount > 5 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)))
@@ -136,16 +148,17 @@ public class managerArrow : MonoBehaviour
         }
     }
 
-    IEnumerator arrows1()
+    IEnumerator arrows1(string arrowFile, int arrowDirection)
     {
-        yield return new WaitForSeconds(4.25f);
+        yield return new WaitForSeconds(4.22f);
 
-        stageTimings = File.ReadAllLines(Application.dataPath + "/Jason/csv/stage2B.txt");
+        stageTimings = File.ReadAllLines(Application.streamingAssetsPath + arrowFile);
 
         while (arrowCount < stageTimings.Length - 1)
         {
+            Debug.Log(AudioSettings.dspTime);
             GameObject arrowClone = Instantiate(arrowMain, gameObject.transform, false);
-            arrows2(arrowClone);
+            arrows2(arrowClone, arrowDirection);
             arrowClone.transform.position = new Vector3(arrowClone.transform.position.x, arrowClone.transform.position.y, arrowCount * 0.0001f);
             arrowClone.SetActive(true);
 
@@ -187,9 +200,9 @@ public class managerArrow : MonoBehaviour
         }
     }
 
-    void arrows2(GameObject arrowClone)
+    void arrows2(GameObject arrowClone, int arrowDirection)
     {
-        switch (/* Random.Range(0, 4) */ 1)
+        switch (Random.Range(0, 4))
         {
             case 0:
                 arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.A;
@@ -247,6 +260,7 @@ public class managerArrow : MonoBehaviour
     void music1()
     {
         stageMusic.enabled = true;
+
     }
 
     public Transform targetPoint; // The point around which the object moves

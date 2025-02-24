@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     private bool isDialogueActive = true;
     private bool clicked = false;
     private bool inTypeSentence = false;
+    [SerializeField] transitionMain transitionMain;
 
     private void Awake()
     {
@@ -42,11 +43,12 @@ public class DialogueManager : MonoBehaviour
                 }
                 else {
                     //add end of dialogue behavior (disappear after this click?)
-                    if (MainManager.Instance.getLevel() == 2) { //third level
-                        SceneManager.LoadScene("default");
+                    if (MainManager.Instance.getLevel() == 2)
+                    { //third level
+                        transitionMain.transition2a(4);
                     }
                     else {
-                        SceneManager.LoadScene("Coffee Shop");
+                        transitionMain.transition2a("Coffee Shop");
                     }
                 }
                 

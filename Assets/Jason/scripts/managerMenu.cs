@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using System.IO;
 
 public class managerMenu : MonoBehaviour
 {
@@ -23,6 +23,9 @@ public class managerMenu : MonoBehaviour
     private int menuButtonTransform2;
     private int menuButtonHeld;
     private bool sceneLoading;
+    private byte transitionAlpha;
+    [SerializeField] SpriteRenderer transitionMain;
+    private Color32 transitionColor;
 
     void Start()
     {
@@ -32,6 +35,7 @@ public class managerMenu : MonoBehaviour
         menuTransform1 = new Vector2(0.44f, 0.44f);
         menuTransform2 = new Vector2(0.4f, 0.4f);
         originalPosition = Vector2.zero;
+        transitionColor = new Color32(255, 255, 255, 0);
     }
 
     private void FixedUpdate()
@@ -39,39 +43,39 @@ public class managerMenu : MonoBehaviour
         switch (Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height)
         {
             case ( >= 0 and <= 1, >= 0 and <= 1):
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(Input.mousePosition.x / (Screen.width * 4) + 0.25f, Input.mousePosition.y / (Screen.height * 4) - 1.25f) + (originalPosition / 2), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(Input.mousePosition.x / (Screen.width * 4) + 0.25f, Input.mousePosition.y / (Screen.height * 4) - 0.25f) + (originalPosition / 2), 0.225f);
                 break;
 
             case ( >= 0 and <= 1, <= 0):  // the ones that are out of bounds in one corner
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2((Input.mousePosition.x / (Screen.width * 4) + 0.25f) + (originalPosition.x / 2), -1.255f), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2((Input.mousePosition.x / (Screen.width * 4) + 0.25f) + (originalPosition.x / 2), -0.255f), 0.225f);
                 break;
 
             case ( >= 0 and <= 1, >= 1):
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2((Input.mousePosition.x / (Screen.width * 4) + 0.25f) + (originalPosition.x / 2), -1), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2((Input.mousePosition.x / (Screen.width * 4) + 0.25f) + (originalPosition.x / 2), 0), 0.225f);
                 break;
 
             case ( <= 0, >= 0 and <= 1):
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, (Input.mousePosition.y / (Screen.height * 4) - 1.25f) + (originalPosition.y / 2)), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, (Input.mousePosition.y / (Screen.height * 4) - 0.25f) + (originalPosition.y / 2)), 0.225f);
                 break;
 
             case ( >= 1, >= 0 and <= 1):
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, (Input.mousePosition.y / (Screen.height * 4) - 1.25f) + (originalPosition.y / 2)), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, (Input.mousePosition.y / (Screen.height * 4) - 0.25f) + (originalPosition.y / 2)), 0.225f);
                 break;
 
             case ( <= 0, <= 0): // the ones that are out of bounds in both corners
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, -1.255f), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, -0.255f), 0.225f);
                 break;
 
             case ( <= 0, >= 1):
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, -1), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.25f, 0), 0.225f);
                 break;
 
             case ( >= 1, <= 0):
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, -1.255f), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, -0.255f), 0.225f);
                 break;
 
             case ( >= 1, >= 1):
-                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, -1), 0.225f);
+                menuBackground.transform.position = Vector2.Lerp(menuBackground.transform.position, new Vector2(0.5f, 0), 0.225f);
                 break;
         }
     }
@@ -81,7 +85,7 @@ public class managerMenu : MonoBehaviour
         switch (menuButtonHeld)
         {
             case 0:
-                SceneManager.LoadScene("rhythm");
+                StartCoroutine(transition1());
                 sceneLoading = true;
                 break;
 
@@ -171,4 +175,73 @@ public class managerMenu : MonoBehaviour
             }
         }
     }
+
+    IEnumerator transition1()
+    {
+        while (true)
+        {
+            if (transitionAlpha == 255)
+            {
+                break;
+            }
+
+            transitionAlpha += 5;
+            transitionColor.a = transitionAlpha;
+            transitionMain.color = transitionColor;
+
+            yield return new WaitForSeconds(1 / 60f);
+        }
+
+        yield return new WaitForSeconds(0.4f);
+
+        SceneManager.LoadScene(1);
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            string[] stageTimings = File.ReadAllLines(Application.dataPath + "/Jason/csv/stage2A.txt");
+            {
+                for (int x = 0; x < stageTimings.Length; x++)
+                {
+                    stageTimings[x] = stageTimings[x].Substring(0, stageTimings[x].IndexOf(','));
+                }
+            }
+
+            File.WriteAllLines(Application.dataPath + "/Jason/csv/stage2A.txt", stageTimings);
+
+            stageTimings = File.ReadAllLines(Application.dataPath + "/Jason/csv/stage2B.txt");
+            {
+                for (int x = 0; x < stageTimings.Length; x++)
+                {
+                    stageTimings[x] = stageTimings[x].Substring(0, stageTimings[x].IndexOf(','));
+                }
+            }
+
+            File.WriteAllLines(Application.dataPath + "/Jason/csv/stage2B.txt", stageTimings);
+
+            stageTimings = File.ReadAllLines(Application.dataPath + "/Jason/csv/stage2C.txt");
+            {
+                for (int x = 0; x < stageTimings.Length; x++)
+                {
+                    stageTimings[x] = stageTimings[x].Substring(0, stageTimings[x].IndexOf(','));
+                }
+            }
+
+            File.WriteAllLines(Application.dataPath + "/Jason/csv/stage2C.txt", stageTimings);
+
+            stageTimings = File.ReadAllLines(Application.dataPath + "/Jason/csv/stage2D.txt");
+            {
+                for (int x = 0; x < stageTimings.Length; x++)
+                {
+                    stageTimings[x] = stageTimings[x].Substring(0, stageTimings[x].IndexOf(','));
+                }
+            }
+
+            File.WriteAllLines(Application.dataPath + "/Jason/csv/stage2D.txt", stageTimings);
+        }
+    }
+
 }

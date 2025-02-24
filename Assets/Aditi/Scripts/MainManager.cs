@@ -11,6 +11,7 @@ public class MainManager : MonoBehaviour
     private int score = 0;
     private int level = 0;
     public bool success = true;
+    public bool transitionStop;
     
 
     void Start()

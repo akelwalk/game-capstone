@@ -91,7 +91,7 @@ public class movementArrow : MonoBehaviour
             arrowColor.a = arrowAlpha;
             arrowSprite.color = arrowColor;
 
-            yield return new WaitForSeconds(1 / 60f);
+            yield return new WaitForFixedUpdate();
         }
     }
 
@@ -102,6 +102,11 @@ public class movementArrow : MonoBehaviour
         arrowMovement2 = Vector3.zero;
         arrowScale = Vector3.one / 20f;
         StartCoroutine(arrowCoroutine);
+
+        if (gameObject.transform.localPosition.y < 4.55)
+        {
+            StartCoroutine(arrowCoroutine);
+        }
 
         switch (arrowQuality)
         {

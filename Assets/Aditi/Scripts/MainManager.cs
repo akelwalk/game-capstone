@@ -12,7 +12,6 @@ public class MainManager : MonoBehaviour
     private int level = 0;
     public bool success = true;
     public bool transitionStop;
-    
 
     void Start()
     {
@@ -28,7 +27,6 @@ public class MainManager : MonoBehaviour
         }
 
     }
-
 
     public void increaseLevel() {
         level++;

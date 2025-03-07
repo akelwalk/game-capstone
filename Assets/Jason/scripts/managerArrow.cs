@@ -37,8 +37,55 @@ public class managerArrow : MonoBehaviour
     private bool coroutineActive;
     private int arrowScore;
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] audioClips;
+    [SerializeField] GameObject audioMain;
+
+
+    private List<List<float>> timingsAll;
+    private int arrowTimings0;
+    private int arrowTimings1;
+    private int arrowTimings2;
+    private int arrowTimings3;
+
     void Start()
     {
+        timingsAll = new List<List<float>>();
+
+        for (int x = 0; x < 4; x++)
+        {
+            string[] arrowLines = new string[0];
+            List<float> timingsFile = new List<float>();
+
+            switch (x)
+            {
+                case 0:
+                    arrowLines = File.ReadAllLines(Application.streamingAssetsPath + "/csv/stage1A.txt");
+                    break;
+
+                case 1:
+                    arrowLines = File.ReadAllLines(Application.streamingAssetsPath + "/csv/stage1B.txt");
+                    break;
+
+                case 2:
+                    arrowLines = File.ReadAllLines(Application.streamingAssetsPath + "/csv/stage1C.txt");
+                    break;
+
+                default:
+                    arrowLines = File.ReadAllLines(Application.streamingAssetsPath + "/csv/stage1D.txt");
+                    break;
+
+            }
+
+
+            for (int y = 0; y < arrowLines.Length; y++)
+            {
+                timingsFile.Add(float.Parse(arrowLines[y]));
+            }
+
+            timingsAll.Add(timingsFile);
+        }
+
         characterRotate0 = new Vector3(0, 0, 40);
         characterRotate1 = new Vector3(0, 0, 20);
         characterRotate2 = new Vector3(0, 0, -10);
@@ -49,19 +96,19 @@ public class managerArrow : MonoBehaviour
         arrowPosition1 = new Vector3 (-6.8f, -5.5f, 0);
         arrowPosition2 = new Vector3 (-4.85f, -5.5f, 0);
         arrowPosition3 = new Vector3 (-2.9f, -5.5f, 0);
-        moveCoroutine1 = MoveRandomly();
-        moveCoroutine2 = MoveReturn();
+        // moveCoroutine1 = MoveRandomly();
+        // moveCoroutine2 = MoveReturn();
 
-        if (arrowGenerateEnabled == true)
+        /* if (arrowGenerateEnabled == true)
         {
-            arrowCoroutine0 = arrows1("/csv/stage2A.txt", 0);
-            arrowCoroutine1 = arrows1("/csv/stage2B.txt", 1);
-            arrowCoroutine2 = arrows1("/csv/stage2C.txt", 2);
-            arrowCoroutine3 = arrows1("/csv/stage2D.txt", 3);
+            arrowCoroutine0 = arrows1("/csv/stage1A.txt", 0);
+            arrowCoroutine1 = arrows1("/csv/stage1B.txt", 1);
+            arrowCoroutine2 = arrows1("/csv/stage1C.txt", 2);
+            arrowCoroutine3 = arrows1("/csv/stage1D.txt", 3);
             characterCoroutine = character1();
-        }
+        } */
         
-        StartCoroutine(arrowCoroutine0);
+        //StartCoroutine(arrowCoroutine0);
         //StartCoroutine(arrowCoroutine1);
         //StartCoroutine(arrowCoroutine2);
         //StartCoroutine(arrowCoroutine3);
@@ -79,28 +126,28 @@ public class managerArrow : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (arrowTimings0 < timingsAll[0].Count && stageMusic.time - 4.75f >= timingsAll[0][arrowTimings0])
         {
-            switch (arrowGenerateEnabled, arrowGenerateActive)
-            {
-                case (true, true):
-                    arrowGenerateActive = !arrowGenerateActive;
-                    StopCoroutine(arrowCoroutine0);
-                    break;
+            arrowInstantiate(0);
+            arrowTimings0++;
+        }
 
-                case (true, false):
-                    arrowGenerateActive = !arrowGenerateActive;
-                    StartCoroutine(arrowCoroutine0);
-                    Invoke("music1", 0);
-                    break;
+        if (arrowTimings1 < timingsAll[1].Count && stageMusic.time - 4.75f >= timingsAll[1][arrowTimings1])
+        {
+            arrowInstantiate(1);
+            arrowTimings1++;
+        }
 
-                default:
-                    GameObject arrowClone = Instantiate(arrowMain, gameObject.transform, false);
-                    arrows2(arrowClone, 1);
-                    arrowClone.SetActive(true);
-                    break;
-            }
+        if (arrowTimings2 < timingsAll[2].Count && stageMusic.time - 4.75f >= timingsAll[2][arrowTimings2])
+        {
+            arrowInstantiate(2);
+            arrowTimings2++;
+        }
 
+        if (arrowTimings3 < timingsAll[3].Count && stageMusic.time - 4.75f >= timingsAll[3][arrowTimings3])
+        {
+            arrowInstantiate(3);
+            arrowTimings3++;
         }
 
         if (Input.GetKeyUp(KeyCode.Return))
@@ -120,33 +167,141 @@ public class managerArrow : MonoBehaviour
                     case >= 4.4f and <= 4.6f:
                         arrowScore += 1000;
                         movementArrow.arrows2(0);
+                        arrowSounds(0);
                         characterQuality = 0;
                         break;
 
                     case >= 4.25f and <= 4.75f:
                         arrowScore += 400;
                         movementArrow.arrows2(1);
+                        arrowSounds(1);
                         characterQuality = 1;
                         break;
 
                     case >= 3.9f and <= 5.1f:
                         arrowScore += 100;
                         movementArrow.arrows2(2);
+                        arrowSounds(2);
                         characterQuality = 2;
                         break;
 
                     case >= 3.5f:
                         movementArrow.arrows2(3);
+                        arrowSounds(2);
                         characterQuality = 3;
                         break;
                 }
 
                 arrowScoreDisplay.text = "Score: " + arrowScore;
-                StartCoroutine(characterCoroutine);
+                //StartCoroutine(characterCoroutine);
                 gameObject.transform.SetAsLastSibling();
             }
         }
     }
+
+    private void arrowInstantiate(int arrowDirection)
+    {
+        GameObject arrowClone = Instantiate(arrowMain, gameObject.transform, false);
+
+        switch (arrowDirection)
+        {
+            case 0:
+                arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.A;
+                break;
+
+            case 1:
+                arrowClone.transform.eulerAngles = arrowRotate1;
+                arrowClone.transform.localPosition = arrowPosition1;
+                arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.W;
+                break;
+
+            case 2:
+                arrowClone.transform.eulerAngles = arrowRotate2;
+                arrowClone.transform.localPosition = arrowPosition2;
+                arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.S;
+                break;
+
+            case 3:
+                arrowClone.transform.eulerAngles = arrowRotate3;
+                arrowClone.transform.localPosition = arrowPosition3;
+                arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.D;
+                break;
+        }
+
+        arrowClone.transform.position = new Vector3(arrowClone.transform.position.x, arrowClone.transform.position.y, arrowCount * 0.0001f);
+        arrowClone.SetActive(true);
+    }
+
+    void music1()
+    {
+        stageMusic.enabled = true;
+    }
+
+    private void arrowSounds(int audioClip)
+    {
+        audioSource.clip = audioClips[audioClip];
+        GameObject audioClone = Instantiate(audioMain, audioMain.transform.parent);
+        audioClone.SetActive(true);
+    }
+
+    IEnumerator arrows1(string arrowFile, int arrowDirection)
+    {
+        yield return new WaitForSeconds(4.22f);
+
+        //stageTimings = File.ReadAllLines(Application.streamingAssetsPath + arrowFile);
+
+        while (arrowCount < stageTimings.Length - 1)
+        {
+            GameObject arrowClone = Instantiate(arrowMain, gameObject.transform, false);
+            arrows2(arrowClone, arrowDirection);
+            arrowClone.transform.position = new Vector3(arrowClone.transform.position.x, arrowClone.transform.position.y, arrowCount * 0.0001f);
+            arrowClone.SetActive(true);
+
+            /* switch (arrowCount)
+            {
+                case 12:
+                    arrowMain.GetComponent<movementArrow>().arrows3();
+                    break;
+
+                case 48:
+                    if (coroutineActive == false)
+                    {
+                        coroutineActive = true;
+                        StartCoroutine(moveCoroutine1);
+                    }
+                    break;
+
+                case 65:
+                    arrowMain.GetComponent<movementArrow>().arrows3();
+                    break;
+
+                case 87:
+                    StopCoroutine(moveCoroutine1);
+                    StartCoroutine(moveCoroutine2);
+                    break;
+            }
+
+            if (arrowCount == stageTimings.Length)
+            {
+                Debug.Log(stageTimings[arrowCount]);
+                break;
+            }
+
+            else
+            {
+                yield return new WaitForSeconds((float.Parse(stageTimings[arrowCount + 1]) - float.Parse(stageTimings[arrowCount])) * (50.4f / 42));
+                arrowCount++;
+            } */
+        }
+    }
+
+
+    void arrows2(GameObject arrowClone, int arrowDirection)
+    {
+
+    }
+
+    /*
 
     IEnumerator arrows1(string arrowFile, int arrowDirection)
     {
@@ -200,33 +355,6 @@ public class managerArrow : MonoBehaviour
         }
     }
 
-    void arrows2(GameObject arrowClone, int arrowDirection)
-    {
-        switch (Random.Range(0, 4))
-        {
-            case 0:
-                arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.A;
-                break;
-
-            case 1:
-                arrowClone.transform.eulerAngles = arrowRotate1;
-                arrowClone.transform.localPosition = arrowPosition1;
-                arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.W;
-                break;
-
-            case 2:
-                arrowClone.transform.eulerAngles = arrowRotate2;
-                arrowClone.transform.localPosition = arrowPosition2;
-                arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.S;
-                break;
-
-            case 3:
-                arrowClone.transform.eulerAngles = arrowRotate3;
-                arrowClone.transform.localPosition = arrowPosition3;
-                arrowClone.GetComponent<movementArrow>().arrowLetter = KeyCode.D;
-                break;
-        }
-    }
 
     IEnumerator character1()
     {
@@ -257,11 +385,8 @@ public class managerArrow : MonoBehaviour
         }
     }
 
-    void music1()
-    {
-        stageMusic.enabled = true;
 
-    }
+
 
     public Transform targetPoint; // The point around which the object moves
 
@@ -321,4 +446,6 @@ public class managerArrow : MonoBehaviour
             }
         }
     }
+
+    */
 }

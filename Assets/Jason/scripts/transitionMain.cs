@@ -19,12 +19,22 @@ public class transitionMain : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Coffee Shop":
-                transitionColor.a = 0;
-                transitionImage.color = transitionColor;
-                MainManager.Instance.transitionStop = false;
+                switch (MainManager.Instance.transitionStop)
+                {
+                    case true:
+                        transitionColor.a = 0;
+                        transitionImage.color = transitionColor;
+                        break;
+
+                    case false:
+                        MainManager.Instance.transitionStop = true;
+                        StartCoroutine(transition1());
+                        break;
+                }
                 break;
 
             default:
+                //MainManager.Instance.transitionStop = false;
                 StartCoroutine(transition1());
                 break;
         }
@@ -79,6 +89,17 @@ public class transitionMain : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
+        if (transitionScene == "Dialogue")
+        {
+            MainManager.Instance.GetComponent<AudioSource>().enabled = false;
+            MainManager.Instance.GetComponent<AudioSource>().time = 0;
+        }
+
+        else if (transitionScene == "Coffee Shop")
+        {
+            MainManager.Instance.GetComponent<AudioSource>().enabled = true;
+        }
+
         SceneManager.LoadScene(transitionScene);
     }
 
@@ -99,6 +120,8 @@ public class transitionMain : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.4f);
+
+
 
         SceneManager.LoadScene(transitionSceneInt);
     }

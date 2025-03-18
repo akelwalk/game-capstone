@@ -40,13 +40,13 @@ public class Cauldron : MonoBehaviour
         recipes.Add("Twilight Velvet", new List<string> { "Ghost Brew", "Whisper Syrup" });
         recipes.Add("Celestial Cocoa", new List<string> { "Cocoa", "Stardust Sugar" });
         recipes.Add("Ember Awakening", new List<string> { "Infernal Roast", "Honeydew" });
-        recipes.Add("Lunar Embrace", new List<string> { "Moonlit Tea", "Whisper Syrup" });
+        recipes.Add("Moonlit Comfort", new List<string> { "Moonlit Tea", "Whisper Syrup" });
         recipes.Add("Midnight Frost", new List<string> { "Nocturnal Drip", "Cloud Foam" });
-        recipes.Add("Dreamcatcher Brew", new List<string> { "Ghost Brew", "Stardust Sugar" });
+        recipes.Add("Dreamcatcher", new List<string> { "Ghost Brew", "Stardust Sugar" });
         recipes.Add("Eclipsed Mocha", new List<string> { "Cocoa", "Whisper Syrup" });
         recipes.Add("Sunfire Espresso", new List<string> { "Infernal Roast", "Stardust Sugar" });
         recipes.Add("Lunar Bloom", new List<string> { "Moonlit Tea", "Cloud Foam" });
-        recipes.Add("Starry Drip", new List<string> { "Nocturnal Drip", "Stardust" });
+        recipes.Add("Starry Drip", new List<string> { "Nocturnal Drip", "Stardust Sugar" });
     }
 
     void Start()
@@ -76,7 +76,7 @@ public class Cauldron : MonoBehaviour
         }
         else {
             for (int i = 0; i < recipe.Count; i++) { //the only ingredients in the cauldron should be the ones in the recipe
-                if (!currentIngredients.Contains(recipe[i])) {
+                if (!currentIngredients.Contains(recipe[i] + "(Clone)")) {
                     MainManager.Instance.success = false;
                 }
             }

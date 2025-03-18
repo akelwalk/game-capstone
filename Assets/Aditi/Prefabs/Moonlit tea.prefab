@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2333336170048608750}
   - component: {fileID: 483738685250845610}
   m_Layer: 5
-  m_Name: Moonlit tea
+  m_Name: Moonlit Tea
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

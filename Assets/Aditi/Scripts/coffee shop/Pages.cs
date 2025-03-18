@@ -11,9 +11,20 @@ public class Pages : MonoBehaviour
     public GameObject teaMenu;
 
     public GameObject customerPage;
-    
+    private AudioSource audioSource;
+
+    public void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public void playPageFlip() {
+        audioSource.Play();
+    }
+
     public void pageFlip() {
         Debug.Log("button clicked");
+        audioSource.Play();
         GameObject currentPage = pages[pageNum];
         currentPage.SetActive(false);
         pageNum++;
@@ -25,6 +36,7 @@ public class Pages : MonoBehaviour
     }
 
     public void getCoffeeMenu() {
+        audioSource.Play();
         int c = pages.IndexOf(coffeeMenu);
         if (c == pageNum) {
             return;
@@ -38,6 +50,7 @@ public class Pages : MonoBehaviour
     }
 
     public void getTeaMenu() {
+        audioSource.Play();
         int t = pages.IndexOf(teaMenu);
 
         if (t == pageNum) {
@@ -51,6 +64,7 @@ public class Pages : MonoBehaviour
     }
 
     public void openLastPage() {
+        audioSource.Play();
         GameObject currentPage = pages[pageNum];
         currentPage.SetActive(true);
         customerPage.SetActive(false);

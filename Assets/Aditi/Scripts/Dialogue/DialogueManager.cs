@@ -43,12 +43,13 @@ public class DialogueManager : MonoBehaviour
                 }
                 else {
                     //add end of dialogue behavior (disappear after this click?)
-                    if (MainManager.Instance.getLevel() == 2)
+                    if (MainManager.Instance.getLevel() == 8) //level 10 is the rhythm game stage (index 9 is level 10)
                     { //third level
                         transitionMain.transition2a(4);
                     }
                     else {
-                        transitionMain.transition2a("Coffee Shop");
+                        // transitionMain.transition2a("Coffee Shop");
+                        SceneManager.LoadScene("Coffee Shop");
                     }
                 }
                 

@@ -6,6 +6,7 @@ using UnityEngine;
 public class movementArrow : MonoBehaviour
 {
     public KeyCode arrowLetter;
+    public KeyCode arrowDirection;
 
     [SerializeField] Vector3 arrowMovement0;
     [SerializeField] Vector3 arrowMovement1;

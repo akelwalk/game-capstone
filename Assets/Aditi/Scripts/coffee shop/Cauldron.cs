@@ -38,13 +38,13 @@ public class Cauldron : MonoBehaviour
     {
         // Add drink names and their corresponding ingredients
         recipes.Add("Twilight Velvet", new List<string> { "Ghost Brew", "Whisper Syrup" });
-        recipes.Add("Celestial Cocoa", new List<string> { "Cocoa", "Starlight Sugar" });
+        recipes.Add("Celestial Cocoa", new List<string> { "Cocoa", "Stardust Sugar" });
         recipes.Add("Ember Awakening", new List<string> { "Infernal Roast", "Honeydew" });
         recipes.Add("Lunar Embrace", new List<string> { "Moonlit Tea", "Whisper Syrup" });
         recipes.Add("Midnight Frost", new List<string> { "Nocturnal Drip", "Cloud Foam" });
-        recipes.Add("Dreamcatcher Brew", new List<string> { "Ghost Brew", "Starlight Sugar" });
+        recipes.Add("Dreamcatcher Brew", new List<string> { "Ghost Brew", "Stardust Sugar" });
         recipes.Add("Eclipsed Mocha", new List<string> { "Cocoa", "Whisper Syrup" });
-        recipes.Add("Sunfire Espresso", new List<string> { "Infernal Roast", "Starlight Sugar" });
+        recipes.Add("Sunfire Espresso", new List<string> { "Infernal Roast", "Stardust Sugar" });
         recipes.Add("Lunar Bloom", new List<string> { "Moonlit Tea", "Cloud Foam" });
         recipes.Add("Starry Drip", new List<string> { "Nocturnal Drip", "Stardust" });
     }

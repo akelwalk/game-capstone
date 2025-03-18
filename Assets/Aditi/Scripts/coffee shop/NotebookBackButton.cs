@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 
 public class NotebookBackButton : MonoBehaviour
@@ -8,7 +10,10 @@ public class NotebookBackButton : MonoBehaviour
     public GameObject nextMenu;
 
     public void OnClick() {
-        StartCoroutine(SwitchMenus());
+        if (previousMenu.name != nextMenu.name){
+            StartCoroutine(SwitchMenus());
+        }
+        
     }
 
     private IEnumerator SwitchMenus() {

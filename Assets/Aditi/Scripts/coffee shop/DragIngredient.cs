@@ -1,14 +1,14 @@
-namespace Assets.Scripts
-{
+// namespace Assets.Scripts
+// {
     using UnityEngine;
     using UnityEngine.EventSystems;
 
-    public class DraggableUi : MonoBehaviour, IDragHandler
+    public class DragIngredient : MonoBehaviour, IDragHandler
     {
         private RectTransform panelTransform;
 
         [SerializeField]
-        private Canvas canvas;
+        public Canvas canvas;
 
         private Vector2 botLeftBoundary = Vector2.zero;
 
@@ -49,4 +49,4 @@ namespace Assets.Scripts
             }
         }
     }
-}
+// }

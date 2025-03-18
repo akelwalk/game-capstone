@@ -43,9 +43,10 @@ public class DialogueManager : MonoBehaviour
                 }
                 else {
                     //add end of dialogue behavior (disappear after this click?)
-                    if (MainManager.Instance.getLevel() == 8) //level 10 is the rhythm game stage (index 9 is level 10)
-                    { //third level
-                        transitionMain.transition2a(4);
+                    if (MainManager.Instance.getLevel() == 9) //level 10 is the rhythm game stage (index 9 is level 10)
+                    { 
+                        SceneManager.LoadScene("rhythm");
+                        // transitionMain.transition2a(4);
                     }
                     else {
                         // transitionMain.transition2a("Coffee Shop");
@@ -112,7 +113,7 @@ public class DialogueManager : MonoBehaviour
             if (letter == ' ') {
                 continue;
             }
-            else if (letter == '.' || letter == '?' || letter == ',' || letter == '?') {
+            else if (letter == '.' || letter == '?' || letter == ',' || letter == '?' || letter == '!') {
                 yield return new WaitForSeconds(typingSpeed * 2.4f);
             }
             else if (letter == ',') {

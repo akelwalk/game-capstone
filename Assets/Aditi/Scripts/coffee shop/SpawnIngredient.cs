@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Unity.UI;
-using JetBrains.Annotations;
-using Microsoft.Unity.VisualStudio.Editor;
 
 public class SpawnIngredient : MonoBehaviour
 {

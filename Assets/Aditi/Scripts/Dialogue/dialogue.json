@@ -8,7 +8,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["soft_reply"],
             "line": "Hi, welcome to Cafe Coffin!"
           },
           {
@@ -16,7 +15,6 @@
               "name": "Somber Spirit",
               "icon": "martha_icon"
             },
-            "dialogueSFX": ["sad_whisper"],
             "line": "Oh... hello, dear. I suppose you must be Rehema, the Grim Reaper's new helper. Quite a peculiar name, if you ask me."
           },
           {
@@ -24,7 +22,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["soft_reply"],
             "line": "It’s memorable, right? What can I get for you today?"
           },
           {
@@ -32,7 +29,6 @@
               "name": "Somber Spirit",
               "icon": "martha_icon"
             },
-            "dialogueSFX": ["sad_whisper"],
             "line": "I’m not sure, to be honest. I suppose I’d like something to... take the edge off this heaviness in my heart. It’s been so long since I felt... warmth."
           },
           {
@@ -40,7 +36,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["thoughtful_hum"],
             "line": "I think I have just the thing! One Celestial Cocoa, coming right up."
           }
         ]
@@ -53,7 +48,6 @@
               "name": "Lost Spirit",
               "icon": "lost_spirit_icon"
             },
-            "dialogueSFX": ["ghostly_whisper"],
             "line": "You should not have come here..."
           },
           {
@@ -61,7 +55,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["nervous_laugh"],
             "line": "Uh... maybe I took a wrong turn?"
           },
           {
@@ -69,7 +62,6 @@
               "name": "Lost Spirit",
               "icon": "lost_spirit_icon"
             },
-            "dialogueSFX": ["deep_sigh"],
             "line": "No... I mean, I do not belong here. I should have moved on long ago, but something keeps me tied."
           },
           {
@@ -77,7 +69,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["gentle_voice"],
             "line": "Maybe I can help. Tell me—what’s keeping you here?"
           },
           {
@@ -85,7 +76,6 @@
               "name": "Lost Spirit",
               "icon": "lost_spirit_icon"
             },
-            "dialogueSFX": ["echoing_regret"],
             "line": "I... I never told her how much she meant to me. My sister, Eleanor. She thought I hated her... but I didn’t. I just didn’t know how to say it."
           },
           {
@@ -93,7 +83,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["soft_reply"],
             "line": "Maybe there's a way we can fix that. Let's start with a Twilight Velvet to soothe your mind."
           }
         ]
@@ -106,7 +95,6 @@
               "name": "Wandering Spirit",
               "icon": "wandering_spirit_icon"
             },
-            "dialogueSFX": ["lost_cry"],
             "line": "I can't remember the last time I felt truly alive..."
           },
           {
@@ -114,7 +102,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["sympathetic_voice"],
             "line": "Sometimes, a little warmth can bring things back to life. What can I make for you today?"
           },
           {
@@ -122,7 +109,6 @@
               "name": "Wandering Spirit",
               "icon": "wandering_spirit_icon"
             },
-            "dialogueSFX": ["sigh"],
             "line": "Maybe something comforting... something to remind me of the stars."
           },
           {
@@ -130,7 +116,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["thoughtful_hum"],
             "line": "I know just the drink. A Dreamcatcher it is!"
           }
         ]
@@ -143,7 +128,6 @@
               "name": "Shadowed Specter",
               "icon": "shadowed_specter_icon"
             },
-            "dialogueSFX": ["low_grumble"],
             "line": "The world is so dark... I don't know where I'm going."
           },
           {
@@ -151,7 +135,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["concerned_voice"],
             "line": "That sounds tough. Would you like something to help clear your mind?"
           },
           {
@@ -159,7 +142,6 @@
               "name": "Shadowed Specter",
               "icon": "shadowed_specter_icon"
             },
-            "dialogueSFX": ["hesitant"],
             "line": "Maybe... something strong. Something to wake me up from this endless fog."
           },
           {
@@ -167,7 +149,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["upbeat_reply"],
             "line": "How about a Midnight Frost? It’s bold and invigorating!"
           }
         ]
@@ -180,7 +161,6 @@
               "name": "Lonely Ghost",
               "icon": "lonely_ghost_icon"
             },
-            "dialogueSFX": ["soft_whisper"],
             "line": "I’ve been wandering this place for so long... I’ve lost all my connections."
           },
           {
@@ -188,7 +168,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["gentle_voice"],
             "line": "I understand. Maybe a warm drink can help you find some peace. What do you feel like today?"
           },
           {
@@ -196,7 +175,6 @@
               "name": "Lonely Ghost",
               "icon": "lonely_ghost_icon"
             },
-            "dialogueSFX": ["long_sigh"],
             "line": "Something soothing... something that reminds me of peace."
           },
           {
@@ -204,7 +182,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["calm_reply"],
             "line": "A Moonlit Comfort would be just right for you."
           }
         ]
@@ -217,7 +194,6 @@
               "name": "Eternal Wanderer",
               "icon": "eternal_wanderer_icon"
             },
-            "dialogueSFX": ["hollow_voice"],
             "line": "Time doesn’t seem to pass here... I feel... stuck."
           },
           {
@@ -225,7 +201,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["concerned_reply"],
             "line": "It can be hard to move on. Maybe a drink can ease your burden."
           },
           {
@@ -233,7 +208,6 @@
               "name": "Eternal Wanderer",
               "icon": "eternal_wanderer_icon"
             },
-            "dialogueSFX": ["tired_voice"],
             "line": "Something that can help me forget this endless drift... something sweet."
           },
           {
@@ -241,7 +215,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["calm_reply"],
             "line": "I have just the thing. One Eclipsed Mocha, coming right up!"
           }
         ]
@@ -254,7 +227,6 @@
               "name": "Faded Spirit",
               "icon": "faded_spirit_icon"
             },
-            "dialogueSFX": ["deep_whisper"],
             "line": "I am not sure who I am anymore..."
           },
           {
@@ -262,7 +234,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["gentle_voice"],
             "line": "It’s okay to feel lost sometimes. What can I get you today?"
           },
           {
@@ -270,7 +241,6 @@
               "name": "Faded Spirit",
               "icon": "faded_spirit_icon"
             },
-            "dialogueSFX": ["soft_cry"],
             "line": "Maybe something fiery... something that makes me feel alive again."
           },
           {
@@ -278,7 +248,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["thoughtful_hum"],
             "line": "How about a Sunfire Espresso? It’ll warm your spirit!"
           }
         ]
@@ -291,7 +260,6 @@
               "name": "Eclipsed Soul",
               "icon": "eclipsed_soul_icon"
             },
-            "dialogueSFX": ["distant_voice"],
             "line": "I’m so tired... but I can't rest."
           },
           {
@@ -299,7 +267,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["compassionate_reply"],
             "line": "Rest is hard to find sometimes. Can I make something that’ll help you feel at ease?"
           },
           {
@@ -307,7 +274,6 @@
               "name": "Eclipsed Soul",
               "icon": "eclipsed_soul_icon"
             },
-            "dialogueSFX": ["tired_whisper"],
             "line": "Something light... something that can help me drift into a peaceful sleep."
           },
           {
@@ -315,7 +281,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["soothing_reply"],
             "line": "I think a Lunar Bloom is just what you need."
           }
         ]
@@ -328,7 +293,6 @@
               "name": "Eternal Wraith",
               "icon": "eternal_wraith_icon"
             },
-            "dialogueSFX": ["echoing_whisper"],
             "line": "I have been waiting for someone... for so long."
           },
           {
@@ -336,7 +300,6 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["sympathetic_voice"],
             "line": "Waiting is hard, especially when it feels endless. How can I help?"
           },
           {
@@ -344,7 +307,6 @@
               "name": "Eternal Wraith",
               "icon": "eternal_wraith_icon"
             },
-            "dialogueSFX": ["long_sigh"],
             "line": "Perhaps a drink to help me feel connected... to feel at peace."
           },
           {
@@ -352,11 +314,43 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "dialogueSFX": ["warm_reply"],
             "line": "I think a Starry Drip would bring you the peace you're looking for."
           }
         ]
-      }
+      },
+      {
+        "level": 10,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Angry Ghost",
+              "icon": "angry_ghost_icon"
+            },
+            "line": "I've had enough of this! You think you can fix me with your drinks? Prepare yourself!"
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Whoa, what’s going on? I just wanted to help you...!"
+          },
+          {
+            "character": {
+              "name": "Angry Ghost",
+              "icon": "angry_ghost_icon"
+            },
+            "line": "No more sympathy, no more warmth! If you want to defeat me, you’ll have to face me in the rhythm of battle!"
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "A rhythm battle? Alright... bring it on!"
+          }
+        ]
+      }      
     ]
   }
   

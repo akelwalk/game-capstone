@@ -9,6 +9,7 @@ public class NextEncounter : MonoBehaviour
 
     public void Next() {
         MainManager.Instance.increaseLevel();
-        transitionMain.transition2a("Dialogue");
+        SceneManager.LoadScene("Dialogue");
+        // transitionMain.transition2a("Dialogue");
     }
 }

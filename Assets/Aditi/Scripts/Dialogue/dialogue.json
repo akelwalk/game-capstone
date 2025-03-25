@@ -1,147 +1,356 @@
 {
-  "levels": [
+    "levels": [
       {
-          "level": 1,
-          "dialogueLines": [
-              {
-                  "character": {
-                      "name": "Rehema",
-                      "icon": "rehema_icon"
-                  },
-                  "dialogueSFX": ["soft_reply"],
-                  "line": "Hi, welcome to Cafe Coffin!"
-              },
-              {
-                  "character": {
-                      "name": "Somber Spirit",
-                      "icon": "martha_icon"
-                  },
-                  "dialogueSFX": ["sad_whisper"],
-                  "line": "Oh... hello, dear. I suppose you must be Rehema, the Grim Reaper's new helper. Quite a peculiar name, if you ask me."
-              },
-              {
-                  "character": {
-                      "name": "Rehema",
-                      "icon": "rehema_icon"
-                  },
-                  "dialogueSFX": ["soft_reply"],
-                  "line": "It’s memorable, right? What can I get for you today?"
-              },
-              {
-                  "character": {
-                      "name": "Somber Spirit",
-                      "icon": "martha_icon"
-                  },
-                  "dialogueSFX": ["sad_whisper"],
-                  "line": "I’m not sure, to be honest. I suppose I’d like something to... take the edge off this heaviness in my heart. It’s been so long since I felt... warmth."
-              },
-              {
-                  "character": {
-                      "name": "Rehema",
-                      "icon": "rehema_icon"
-                  },
-                  "dialogueSFX": ["thoughtful_hum"],
-                  "line": "I think I have just the thing! One Celestial Cocoa, coming right up."
-              }
-          ]
+        "level": 1,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Hi, welcome to Cafe Coffin!"
+          },
+          {
+            "character": {
+              "name": "Somber Spirit",
+              "icon": "martha_icon"
+            },
+            "line": "Oh... hello, dear. I suppose you must be Rehema, the Grim Reaper's new helper. Quite a peculiar name, if you ask me."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "It’s memorable, right? What can I get for you today?"
+          },
+          {
+            "character": {
+              "name": "Somber Spirit",
+              "icon": "martha_icon"
+            },
+            "line": "I’m not sure, to be honest. I suppose I’d like something to... take the edge off this heaviness in my heart. It’s been so long since I felt... warmth."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I think I have just the thing! One Celestial Cocoa, coming right up."
+          }
+        ]
       },
       {
-          "level": 2,
-          "dialogueLines": [
-              {
-                  "character": {
-                      "name": "Lost Spirit",
-                      "icon": "lost_spirit_icon"
-                  },
-                  "dialogueSFX": ["ghostly_whisper"],
-                  "line": "You should not have come here..."
-              },
-              {
-                  "character": {
-                      "name": "Rehema",
-                      "icon": "rehema_icon"
-                  },
-                  "dialogueSFX": ["nervous_laugh"],
-                  "line": "Uh... maybe I took a wrong turn?"
-              },
-              {
-                  "character": {
-                      "name": "Lost Spirit",
-                      "icon": "lost_spirit_icon"
-                  },
-                  "dialogueSFX": ["deep_sigh"],
-                  "line": "No... I mean, I do not belong here. I should have moved on long ago, but something keeps me tied."
-              },
-              {
-                  "character": {
-                      "name": "Rehema",
-                      "icon": "rehema_icon"
-                  },
-                  "dialogueSFX": ["gentle_voice"],
-                  "line": "Maybe I can help. Tell me—what’s keeping you here?"
-              },
-              {
-                  "character": {
-                      "name": "Lost Spirit",
-                      "icon": "lost_spirit_icon"
-                  },
-                  "dialogueSFX": ["echoing_regret"],
-                  "line": "I... I never told her how much she meant to me. My sister, Eleanor. She thought I hated her... but I didn’t. I just didn’t know how to say it."
-              },
-              {
-                  "character": {
-                      "name": "Rehema",
-                      "icon": "rehema_icon"
-                  },
-                  "dialogueSFX": ["soft_reply"],
-                  "line": "Maybe there's a way we can fix that. Let's start with a Twilight Velvet to soothe your mind."
-              }
-          ]
+        "level": 2,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Lost Spirit",
+              "icon": "lost_spirit_icon"
+            },
+            "line": "You should not have come here..."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Uh... maybe I took a wrong turn?"
+          },
+          {
+            "character": {
+              "name": "Lost Spirit",
+              "icon": "lost_spirit_icon"
+            },
+            "line": "No... I mean, I do not belong here. I should have moved on long ago, but something keeps me tied."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Maybe I can help. Tell me—what’s keeping you here?"
+          },
+          {
+            "character": {
+              "name": "Lost Spirit",
+              "icon": "lost_spirit_icon"
+            },
+            "line": "I... I never told her how much she meant to me. My sister, Eleanor. She thought I hated her... but I didn’t. I just didn’t know how to say it."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Maybe there's a way we can fix that. Let's start with a Twilight Velvet to soothe your mind."
+          }
+        ]
       },
       {
-          "level": 3,
-          "dialogueLines": [
-              {
-                  "character": {
-                      "name": "Malevolent Shade",
-                      "icon": "shade_icon"
-                  },
-                  "dialogueSFX": ["shadowy_hiss"],
-                  "line": "Foolish mortal... this place is ours!"
-              },
-              {
-                  "character": {
-                      "name": "Rehema",
-                      "icon": "rehema_icon"
-                  },
-                  "dialogueSFX": ["determined"],
-                  "line": "Oh, great. A spirit that doesn’t want a latte. Guess I’ll have to play you out!"
-              },
-              {
-                  "character": {
-                      "name": "The Grim Reaper",
-                      "icon": "grim_reaper_icon"
-                  },
-                  "dialogueSFX": ["deep_chuckle"],
-                  "line": "Careful, Rehema. These ones don’t tip well."
-              },
-              {
-                  "character": {
-                      "name": "Malevolent Shade",
-                      "icon": "shade_icon"
-                  },
-                  "dialogueSFX": ["shadow_roar"],
-                  "line": "ENOUGH! FACE THE MUSIC!"
-              },
-              {
-                  "character": {
-                      "name": "Rehema",
-                      "icon": "rehema_icon"
-                  },
-                  "dialogueSFX": ["music_ready"],
-                  "line": "Alright, let’s jam!"
-              }
-          ]
-      }
-  ]
-}
+        "level": 3,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Wandering Spirit",
+              "icon": "wandering_spirit_icon"
+            },
+            "line": "I can't remember the last time I felt truly alive..."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Sometimes, a little warmth can bring things back to life. What can I make for you today?"
+          },
+          {
+            "character": {
+              "name": "Wandering Spirit",
+              "icon": "wandering_spirit_icon"
+            },
+            "line": "Maybe something comforting... something to remind me of the stars."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I know just the drink. A Dreamcatcher it is!"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Shadowed Specter",
+              "icon": "shadowed_specter_icon"
+            },
+            "line": "The world is so dark... I don't know where I'm going."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "That sounds tough. Would you like something to help clear your mind?"
+          },
+          {
+            "character": {
+              "name": "Shadowed Specter",
+              "icon": "shadowed_specter_icon"
+            },
+            "line": "Maybe... something strong. Something to wake me up from this endless fog."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "How about a Midnight Frost? It’s bold and invigorating!"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Lonely Ghost",
+              "icon": "lonely_ghost_icon"
+            },
+            "line": "I’ve been wandering this place for so long... I’ve lost all my connections."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I understand. Maybe a warm drink can help you find some peace. What do you feel like today?"
+          },
+          {
+            "character": {
+              "name": "Lonely Ghost",
+              "icon": "lonely_ghost_icon"
+            },
+            "line": "Something soothing... something that reminds me of peace."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "A Moonlit Comfort would be just right for you."
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Eternal Wanderer",
+              "icon": "eternal_wanderer_icon"
+            },
+            "line": "Time doesn’t seem to pass here... I feel... stuck."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "It can be hard to move on. Maybe a drink can ease your burden."
+          },
+          {
+            "character": {
+              "name": "Eternal Wanderer",
+              "icon": "eternal_wanderer_icon"
+            },
+            "line": "Something that can help me forget this endless drift... something sweet."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I have just the thing. One Eclipsed Mocha, coming right up!"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Faded Spirit",
+              "icon": "faded_spirit_icon"
+            },
+            "line": "I am not sure who I am anymore..."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "It’s okay to feel lost sometimes. What can I get you today?"
+          },
+          {
+            "character": {
+              "name": "Faded Spirit",
+              "icon": "faded_spirit_icon"
+            },
+            "line": "Maybe something fiery... something that makes me feel alive again."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "How about a Sunfire Espresso? It’ll warm your spirit!"
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Eclipsed Soul",
+              "icon": "eclipsed_soul_icon"
+            },
+            "line": "I’m so tired... but I can't rest."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Rest is hard to find sometimes. Can I make something that’ll help you feel at ease?"
+          },
+          {
+            "character": {
+              "name": "Eclipsed Soul",
+              "icon": "eclipsed_soul_icon"
+            },
+            "line": "Something light... something that can help me drift into a peaceful sleep."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I think a Lunar Bloom is just what you need."
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Eternal Wraith",
+              "icon": "eternal_wraith_icon"
+            },
+            "line": "I have been waiting for someone... for so long."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Waiting is hard, especially when it feels endless. How can I help?"
+          },
+          {
+            "character": {
+              "name": "Eternal Wraith",
+              "icon": "eternal_wraith_icon"
+            },
+            "line": "Perhaps a drink to help me feel connected... to feel at peace."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I think a Starry Drip would bring you the peace you're looking for."
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Angry Ghost",
+              "icon": "angry_ghost_icon"
+            },
+            "line": "I've had enough of this! You think you can fix me with your drinks? Prepare yourself!"
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Whoa, what’s going on? I just wanted to help you...!"
+          },
+          {
+            "character": {
+              "name": "Angry Ghost",
+              "icon": "angry_ghost_icon"
+            },
+            "line": "No more sympathy, no more warmth! If you want to defeat me, you’ll have to face me in the rhythm of battle!"
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "A rhythm battle? Alright... bring it on!"
+          }
+        ]
+      }      
+    ]
+  }
+  

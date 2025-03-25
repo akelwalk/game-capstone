@@ -15,6 +15,62 @@
                 "description": "A restless soul burdened by regret. They need something soothing to help them move on."
             },
             "drinks": ["Twilight Velvet"]
+        },
+        {
+            "level": 3,
+            "customer": {
+                "name": "Wandering Spirit",
+                "description": "A ghost lost in time, seeking the comfort of stars to remind them of their past."
+            },
+            "drinks": ["Dreamcatcher"]
+        },
+        {
+            "level": 4,
+            "customer": {
+                "name": "Shadowed Specter",
+                "description": "A ghost shrouded in darkness, struggling to see the light. They crave something bold to break through the fog."
+            },
+            "drinks": ["Midnight Frost"]
+        },
+        {
+            "level": 5,
+            "customer": {
+                "name": "Lonely Ghost",
+                "description": "A spirit adrift, separated from those they loved. They seek peace and comfort in a gentle drink."
+            },
+            "drinks": ["Moonlit Comfort"]
+        },
+        {
+            "level": 6,
+            "customer": {
+                "name": "Eternal Wanderer",
+                "description": "A spirit caught in a never-ending journey, desperate to feel alive again. They need something sweet and revitalizing."
+            },
+            "drinks": ["Eclipsed Mocha"]
+        },
+        {
+            "level": 7,
+            "customer": {
+                "name": "Faded Spirit",
+                "description": "A ghost who feels disconnected from the world, longing to feel the warmth of life once more."
+            },
+            "drinks": ["Sunfire Espresso"]
+        },
+        {
+            "level": 8,
+            "customer": {
+                "name": "Eclipsed Soul",
+                "description": "A soul weary from the weight of endless time, seeking a gentle and restful drink to ease their burden."
+            },
+            "drinks": ["Lunar Bloom"]
+        },
+        {
+            "level": 9,
+            "customer": {
+                "name": "Eternal Wraith",
+                "description": "A wraith who has been waiting for someone, trapped in time. They seek a drink that will bring peace and connection."
+            },
+            "drinks": ["Starry Drip"]
         }
     ]
 }

@@ -1,0 +1,154 @@
+  {
+    "levels": [
+        {
+            "level": 1,
+            "success": [
+                {
+                    "character": { "name": "Somber Spirit", "icon": "martha_icon" },
+                    "line": "This warmth... I had forgotten what it felt like. Thank you, Rehema. Maybe... maybe I can find peace after all."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Somber Spirit", "icon": "martha_icon" },
+                    "line": "Oh... this isn't quite right. I suppose some things are beyond fixing."
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "success": [
+                {
+                    "character": { "name": "Lost Spirit", "icon": "lost_spirit_icon" },
+                    "line": "It’s... soothing. Like a whisper from the past telling me it’s okay. Thank you, Rehema. Maybe now, I can move on."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Lost Spirit", "icon": "lost_spirit_icon" },
+                    "line": "No... this isn’t right. The regret still lingers, heavier than ever. I am still lost."
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "success": [
+                {
+                    "character": { "name": "Wandering Spirit", "icon": "wandering_spirit_icon" },
+                    "line": "Ah... it reminds me of something I used to love. Maybe I haven't faded as much as I thought."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Wandering Spirit", "icon": "wandering_spirit_icon" },
+                    "line": "I don’t feel anything... just more emptiness. I guess some things are beyond repair."
+                }
+            ]
+        },
+        {
+            "level": 4,
+            "success": [
+                {
+                    "character": { "name": "Shadowed Specter", "icon": "shadowed_specter_icon" },
+                    "line": "I can see a flicker of light in the dark. Maybe I don’t have to be lost forever."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Shadowed Specter", "icon": "shadowed_specter_icon" },
+                    "line": "The fog hasn’t lifted. Maybe it never will..."
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "success": [
+                {
+                    "character": { "name": "Lonely Ghost", "icon": "lonely_ghost_icon" },
+                    "line": "This taste... it reminds me of home. Maybe I’m not as alone as I thought."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Lonely Ghost", "icon": "lonely_ghost_icon" },
+                    "line": "No... this isn’t it. I still feel so... disconnected."
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "success": [
+                {
+                    "character": { "name": "Eternal Wanderer", "icon": "eternal_wanderer_icon" },
+                    "line": "For the first time in a long while, I feel... settled. Thank you."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Eternal Wanderer", "icon": "eternal_wanderer_icon" },
+                    "line": "Still drifting... still waiting. Maybe I always will be."
+                }
+            ]
+        },
+        {
+            "level": 7,
+            "success": [
+                {
+                    "character": { "name": "Faded Spirit", "icon": "faded_spirit_icon" },
+                    "line": "This fire inside me... I had forgotten it. Perhaps I am still here after all."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Faded Spirit", "icon": "faded_spirit_icon" },
+                    "line": "Nothing stirs. I remain a shadow. Just as before."
+                }
+            ]
+        },
+        {
+            "level": 8,
+            "success": [
+                {
+                    "character": { "name": "Eclipsed Soul", "icon": "eclipsed_soul_icon" },
+                    "line": "This feeling... I think I can finally rest. Thank you, Rehema."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Eclipsed Soul", "icon": "eclipsed_soul_icon" },
+                    "line": "No... I am still weary. Sleep eludes me, as always."
+                }
+            ]
+        },
+        {
+          "level": 9,
+          "success": [
+              {
+                  "character": { "name": "Eternal Wraith", "icon": "eternal_wraith_icon" },
+                  "line": "This flavor soothes my restless spirit. For the first time in ages, I feel at peace. Thank you."
+              }
+          ],
+          "failure": [
+              {
+                  "character": { "name": "Eternal Wraith", "icon": "eternal_wraith_icon" },
+                  "line": "This... this is not what I longed for. The emptiness remains. I will keep waiting... forever."
+              }
+          ]
+        },
+        {
+            "level": 10,
+            "success": [
+                {
+                    "character": { "name": "Angry Ghost", "icon": "angry_ghost_icon" },
+                    "line": "Hah! You matched my fury beat for beat. I... I feel lighter. Maybe your help isn't so useless after all."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Angry Ghost", "icon": "angry_ghost_icon" },
+                    "line": "Pathetic! You can't keep up! Your so-called kindness is nothing but weakness!"
+                }
+            ]
+        }
+    ]
+}

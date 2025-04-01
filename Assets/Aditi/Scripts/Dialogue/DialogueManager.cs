@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueArea; 
     private Queue<DialogueLine> lines;
     public float typingSpeed = 0.1f;
-    private bool isDialogueActive = true;
+    // private bool isDialogueActive = true;
     private bool clicked = false;
     private bool inTypeSentence = false;
     [SerializeField] transitionMain transitionMain;
@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else {
                     //add end of dialogue behavior (disappear after this click?)
-                    if (MainManager.Instance.getLevel() == 9) //level 10 is the rhythm game stage (index 9 is level 10)
+                    if (MainManager.Instance.getLevel() >= 9) //level 10 is the rhythm game stage (index 9 is level 10)
                     { 
                         SceneManager.LoadScene("rhythm");
                         // transitionMain.transition2a(4);
@@ -60,7 +60,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        isDialogueActive = true;
+        // isDialogueActive = true;
   
         lines.Clear();
  
@@ -76,7 +76,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (lines.Count == 0)
         {
-            EndDialogue();
+            // EndDialogue();
             return;
         }
  
@@ -113,11 +113,11 @@ public class DialogueManager : MonoBehaviour
             if (letter == ' ') {
                 continue;
             }
-            else if (letter == '.' || letter == '?' || letter == ',' || letter == '?' || letter == '!') {
+            else if (letter == '.' || letter == '?' || letter == '?' || letter == '!') {
                 yield return new WaitForSeconds(typingSpeed * 2.4f);
             }
             else if (letter == ',') {
-                yield return new WaitForSeconds(typingSpeed * 1.2f);
+                yield return new WaitForSeconds(typingSpeed * 1.5f);
             }
             else {
                 yield return new WaitForSeconds(typingSpeed);
@@ -136,8 +136,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
  
-    private void EndDialogue()
-    {
-        isDialogueActive = false;
-    }
+    // private void EndDialogue()
+    // {
+    //     isDialogueActive = false;
+    // }
 }

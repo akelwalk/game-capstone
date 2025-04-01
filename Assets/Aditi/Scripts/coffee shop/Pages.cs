@@ -9,6 +9,7 @@ public class Pages : MonoBehaviour
 
     public GameObject coffeeMenu;
     public GameObject teaMenu;
+    public GameObject blankMenu;
 
     public GameObject customerPage;
     private AudioSource audioSource;
@@ -68,5 +69,12 @@ public class Pages : MonoBehaviour
         GameObject currentPage = pages[pageNum];
         currentPage.SetActive(true);
         customerPage.SetActive(false);
+    }
+
+    public void openLastDrinkPage() {
+        audioSource.Play();
+        GameObject currentPage = pages[pageNum];
+        currentPage.SetActive(true);
+        blankMenu.SetActive(false);
     }
 }

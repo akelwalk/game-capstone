@@ -25,11 +25,26 @@ public class Shelf : MonoBehaviour
         public List<Sprite> ingredientList;
         public List<GameObject> prefabList;
     }
-    public List<serializableClass> selections = new List<serializableClass>();
+    public List<serializableClass> selections1 = new List<serializableClass>();
+    public List<serializableClass> selections2 = new List<serializableClass>();
     
     public TMP_Text selectionText;
 
-    int index = 0;
+    private int index = 0;
+    private List<serializableClass> selections;
+
+    public void Start()
+    {
+        if (MainManager.Instance.getLevel() < 10) {
+            selections = selections1;
+        }
+        else if (MainManager.Instance.getLevel() < 20) {
+            selections = selections2;
+        }
+        selections = selections2; //TESTING PURPOSES
+        switchSelection(selections[0].ingredientList);
+        updateText(selections[0].type);
+    }
 
     public void updateText(Ingredient type) {
         // string formatted = char.ToUpper(text[0]) + text.Substring(1);

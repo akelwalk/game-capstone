@@ -6,7 +6,7 @@
                 "name": "Somber Spirit",
                 "description": "A melancholic ghost who has wandered for ages, longing for warmth and solace. They seek a drink to lift their weary soul."
             },
-            "drinks": ["Celestial Cocoa"]
+            "drinks": ["Crimson Haze"]
         },
         {
             "level": 2,
@@ -71,6 +71,86 @@
                 "description": "A wraith who has been waiting for someone, trapped in time. They seek a drink that will bring peace and connection."
             },
             "drinks": ["Starry Drip"]
+        },
+        {
+            "level": 10,
+            "customer": {
+                "name": "Rhythm Stage",
+                "description": "You found a glitch."
+            },
+            "drinks": ["N/A"]
+        }, 
+        {
+            "level": 11,
+            "customer": {
+                "name": "Eternal Wraith",
+                "description": "A wraith who has been waiting for someone, trapped in time. They seek a drink that will bring peace and connection."
+            },
+            "drinks": ["Ember's Hollow"]
+        },
+        {
+            "level": 12,
+            "customer": {
+                "name": "Moonlit Specter",
+                "description": "A restless spirit who drifts beneath the stars, searching for something elusive. They long for a drink that echoes the quiet between the worlds."
+            },
+            "drinks": ["Obsidian Reign"]
+        },
+        {
+            "level": 13,
+            "customer": {
+                "name": "Glimmering Shade",
+                "description": "A shadowed figure who only half exists, caught between what was and what could have been. They crave a drink that offers a glimpse of hope amidst the darkness."
+            },
+            "drinks": ["Abyssal Bloom"]
+        },
+        {
+            "level": 14,
+            "customer": {
+                "name": "Faded Echo",
+                "description": "A being who once lived brightly but now fades like a distant memory. They seek a drink that lets them hold onto fragments of their former self."
+            },
+            "drinks": ["Crimson Haze"]
+        },
+        {
+            "level": 15,
+            "customer": {
+                "name": "Silent Repose",
+                "description": "A soul who rests in the quiet stillness of time. They yearn for a drink that brings solace and peace, helping them find comfort in their thoughts."
+            },
+            "drinks": ["Dawn's Lament"]
+        },
+        {
+            "level": 16,
+            "customer": {
+                "name": "Luminous Wanderer",
+                "description": "A glowing presence who wanders through the night, never lost but always searching. They seek a drink that will light their way and help them find their purpose."
+            },
+            "drinks": ["Radiance"]
+        },
+        {
+            "level": 17,
+            "customer": {
+                "name": "Veiled Shadow",
+                "description": "A figure wrapped in mist, constantly shifting and changing. They desire a drink that embraces the fleeting moments between what was and what could be."
+            },
+            "drinks": ["The Shifting"]
+        },
+        {
+            "level": 18,
+            "customer": {
+                "name": "Shrouded One",
+                "description": "A spirit surrounded by fog, lost in the haze of time. They seek a drink that will help them find clarity and warmth in their confusion."
+            },
+            "drinks": ["Mistbound"]
+        },
+        {
+            "level": 19,
+            "customer": {
+                "name": "Wandering Soul",
+                "description": "A lost soul with a mind full of thoughts, too loud and scattered to find peace. They long for a drink that will calm their restless heart."
+            },
+            "drinks": ["Faded Silence"]
         }
     ]
 }

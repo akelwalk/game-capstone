@@ -33,10 +33,13 @@ public class Cauldron : MonoBehaviour
     private List<string> recipe = new List<string>();
     private List<string> currentIngredients = new List<string>();
     private GameData gameData;
+    private AudioSource audioSource;
     
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         // Add drink names and their corresponding ingredients
+        //phase 1
         recipes.Add("Twilight Velvet", new List<string> { "Ghost Brew", "Whisper Syrup" });
         recipes.Add("Celestial Cocoa", new List<string> { "Cocoa", "Stardust Sugar" });
         recipes.Add("Ember Awakening", new List<string> { "Infernal Roast", "Honeydew" });
@@ -47,6 +50,19 @@ public class Cauldron : MonoBehaviour
         recipes.Add("Sunfire Espresso", new List<string> { "Infernal Roast", "Stardust Sugar" });
         recipes.Add("Lunar Bloom", new List<string> { "Moonlit Tea", "Cloud Foam" });
         recipes.Add("Starry Drip", new List<string> { "Nocturnal Drip", "Stardust Sugar" });
+
+        //phase 2
+        recipes.Add("Ember's Hollow", new List<string> { "Abyssal Espresso", "Maple", "Hollow Crystals" });
+        recipes.Add("Obsidian Reign", new List<string> { "Abyssal Espresso", "Shadow Water", "Soulshards", "Nightshade" });
+        recipes.Add("Abyssal Bloom", new List<string> { "Abyssal Espresso", "Soul Milk", "Maple", "Hollow Crystals" });
+        recipes.Add("Crimson Haze", new List<string> { "Shadow Water", "Maple", "Hollow Crystals" });
+        recipes.Add("Dawn's Lament", new List<string> { "Veilbrew", "Soul Milk", "Obsidian Vanilla", "Glow Pearls" });
+        recipes.Add("Radiance", new List<string> { "Soul Milk", "Obsidian Vanilla", "Glow Pearls" });
+        recipes.Add("The Shifting", new List<string> { "Veilbrew", "Soulshards", "Glow Pearls" });
+        recipes.Add("Mistbound", new List<string> { "Veilbrew", "Soul Milk", "Obsidian Vanilla", "Glow Pearls" });
+        recipes.Add("Faded Silence", new List<string> { "Shadow Water", "Veilbrew", "Soulshards", "Nightshade" });
+        recipes.Add("EclipseVeil", new List<string> { "Veilbrew", "Obsidian Vanilla", "Glow Pearls" });
+
     }
 
     void Start()
@@ -94,6 +110,7 @@ public class Cauldron : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Ingredient")) {
             Debug.Log("Added " + other.gameObject.name);
+            audioSource.Play();
             currentIngredients.Add(other.gameObject.name); //adding the name of ingredient to the cauldron
             other.gameObject.SetActive(false);
 

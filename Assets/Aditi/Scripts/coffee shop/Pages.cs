@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Pages : MonoBehaviour
 {
-    public List<GameObject> pages = new List<GameObject>();
+    public List<GameObject> pages1 = new List<GameObject>();
+    public List<GameObject> pages2 = new List<GameObject>();
     private int pageNum = 0;
 
     public GameObject coffeeMenu;
@@ -13,10 +14,24 @@ public class Pages : MonoBehaviour
 
     public GameObject customerPage;
     private AudioSource audioSource;
+    private List<GameObject> pages;
 
     public void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    public void Start()
+    {
+        
+        if (MainManager.Instance.getLevel() < 10) {
+            pages = pages1;
+        }
+        else if (MainManager.Instance.getLevel() < 20) {
+            pages = pages2;
+        }
+        pages = pages2; //TESTING PURPOSES
+        pages[0].SetActive(true);
     }
 
     public void playPageFlip() {

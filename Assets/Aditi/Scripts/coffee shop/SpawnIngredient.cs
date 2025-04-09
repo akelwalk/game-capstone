@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using System.Collections;
+
 
 public class SpawnIngredient : MonoBehaviour
 {
@@ -8,17 +8,20 @@ public class SpawnIngredient : MonoBehaviour
     public GameObject ingredient;
 
     public void spawn() {
-        // Instantiate the ingredient prefab
         GameObject newObject = Instantiate(ingredient);
+        newObject.transform.SetParent(gameObject.transform.parent.transform, false);
 
-        // Set the parent to be the canvas, ensuring it's under the canvas with proper scaling
-        newObject.transform.SetParent(canvas.transform, false); // 'false' keeps local scale intact
-
-        // Get the DragIngredient component
-        DragIngredient dragIngredient = newObject.GetComponent<DragIngredient>();
-        if (dragIngredient != null) {
-            dragIngredient.canvas = canvas;
+        DragIngredient draggable = newObject.GetComponent<DragIngredient>();
+        if (draggable != null)
+        {
+            draggable.StartDragging();
         }
+
+        // // Get the DragIngredient component
+        // DragIngredient dragIngredient = newObject.GetComponent<DragIngredient>();
+        // if (dragIngredient != null) {
+        //     dragIngredient.canvas = canvas;
+        // }
 
         // Make sure the new object uses the correct RectTransform settings
         RectTransform rectTransform = newObject.GetComponent<RectTransform>();
@@ -26,5 +29,18 @@ public class SpawnIngredient : MonoBehaviour
             rectTransform.localScale = Vector3.one; // Ensure scale is set correctly
             rectTransform.anchoredPosition = Vector2.zero; // Or set a specific position if needed
         }
+
+        
     }
+
+    // private IEnumerator spawnSomething()
+    // {
+    //     GameObject newObject = Instantiate(ingredient);
+    //     newObject.transform.SetParent(transform.parent, false);
+    //     yield break;
+    // }
+
+
+
+
 }

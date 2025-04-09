@@ -1,0 +1,105 @@
+{
+    "drinks": [
+      {
+        "name": "Starry Drip",
+        "recipe": "Nocturnal Drip + Stardust",
+        "description": "A deep, velvety black coffee speckled with glistening stardust, mimicking the endless night sky in a single cup."
+      },
+      {
+        "name": "Ember Awakening",
+        "recipe": "Infernal Roast + Honey",
+        "description": "A fiery coffee tempered by ethereal honey, balancing bold spice with a golden smoothness that stirs the senses."
+      },
+      {
+        "name": "Midnight Frost",
+        "recipe": "Nocturnal Drip + Cloud Foam",
+        "description": "A bold, extra-strong midnight roast topped with airy foam, lightening the depth of its intensity with a soft finish."
+      },
+      {
+        "name": "Sunfire Espresso",
+        "recipe": "Infernal Roast + Stardust",
+        "description": "A fiery roast kissed with cosmic sweetness, igniting a surge of warmth while leaving behind a radiant glow."
+      },
+      {
+        "name": "Eclipsed Mocha",
+        "recipe": "Cocoa + Whisper Syrup",
+        "description": "A ghostly chocolate blend with a subtle, haunting sweetness that lingers like a half-forgotten lullaby."
+      },
+      {
+        "name": "Celestial Cocoa",
+        "recipe": "Cocoa + Stardust",
+        "description": "A silky chocolate drink infused with twinkling sweetness, bringing comfort and warmth to wandering souls."
+      },
+      {
+        "name": "Twilight Velvet",
+        "recipe": "Ghost brew + Whisper Syrup",
+        "description": "A smooth, subtly sweet cold brew that lingers on the tongue like a fading memory, perfect for ghosts seeking quiet reflection."
+      },
+      {
+        "name": "Dreamcatcher",
+        "recipe": "Ghost brew + Stardust",
+        "description": "A shimmering cold brew with a delicate, starry sweetness that helps spirits recall distant, cherished dreams."
+      },
+      {
+        "name": "Lunar Bloom",
+        "recipe": "Moonlit Tea + Cloud Foam",
+        "description": "A light, floral tea crowned with airy foam, reminiscent of soft moonbeams resting on drifting clouds."
+      },
+      {
+        "name": "Moonlit Comfort",
+        "recipe": "Moonlit Tea + Whisper Syrup",
+        "description": "A softly glowing herbal tea with a whisper of sweetness, easing restless spirits into peaceful slumber."
+      },
+      {
+        "name": "Ember's Hollow",
+        "recipe": "Abyssal Espresso + Maple + Hollow Crystals",
+        "description": "Warm and grounding, like sitting by a fire on a rainy day."
+      },
+      {
+        "name": "Obsidian Reign",
+        "recipe": "Abyssal Espresso + Shadow Water + Soulshards + Nightshade",
+        "description": "A contemplative blend that stirs lost dreams and lets you wander the quiet between memory and shadow."
+      },
+      {
+        "name": "Abyssal Bloom",
+        "recipe": "Abyssal Espresso + Soul Milk + Maple + Hollow Crystals",
+        "description": "A quiet reminder than hope can bloom even in the abyss."
+      },
+      {
+        "name": "Crimson Haze",
+        "recipe": "Shadow Water + Maple + Hollow Crystals",
+        "description": "Thick with mystery, this drink washes away the haze that clouds precious memories."
+      },
+      {
+        "name": "Dawn's Lament",
+        "recipe": "Veilbrew + Soul Milk + Obsidian Vanilla + Glow Pearls",
+        "description": "A still blend for those who wake with regret and sit quietly in the pause before light."
+      },
+      {
+        "name": "Radiance",
+        "recipe": "Soul Milk + Obsidian Vanilla + Glow Pearls",
+        "description": " A bright and uplifting gentle light that clears the haze and serves as proof of your existence."
+      },
+      {
+        "name": "The Shifting",
+        "recipe": "Veilbrew + Soulshards + Glow Pearls",
+        "description": "A fleeting taste of joy and sadness, slipping past like mist you can almost hold."
+      },
+      {
+        "name": "Mistbound",
+        "recipe": "Veilbrew + Soul Milk + Obsidian Vanilla + Glow Pearls",
+        "description": "A soft, hazy comfort that wraps around the lost and lets them feel gently seen through the fog."
+      },
+      {
+        "name": "Faded Silence",
+        "recipe": "Shadow Water + Veilbrew + Soulshards + Nightshade",
+        "description": "A drink to gently quell thoughts that are too loud."
+      },
+      {
+        "name": "EclipseVeil",
+        "recipe": "Veilbrew + Obsidian Vanilla + Glow Pearls",
+        "description": "A drink for drifting thoughts and quiet moments, where the world fades away in reflection."
+      }
+    ]
+  }
+  

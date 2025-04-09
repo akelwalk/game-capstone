@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd9272a5a093844cb2bada1e3ff0425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  duration: 2
 --- !u!61 &191097393829000008
 BoxCollider2D:
   m_ObjectHideFlags: 0

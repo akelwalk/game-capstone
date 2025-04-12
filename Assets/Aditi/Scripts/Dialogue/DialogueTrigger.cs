@@ -48,7 +48,7 @@ public class DialogueTrigger : MonoBehaviour
     public void Start(){
         //add lines from json to dialogue 
         Add_JSON_lines();
-        Invoke("startDelay", 51 / 60f);
+        Invoke("startDelay", 0);
     
     }
 

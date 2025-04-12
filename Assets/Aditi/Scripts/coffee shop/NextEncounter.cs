@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class NextEncounter : MonoBehaviour
 {
     [SerializeField] transitionMain transitionMain;
+    [SerializeField] GameObject transitionObject;
 
     public void Next() {
         MainManager.Instance.increaseLevel();
-        SceneManager.LoadScene("Dialogue");
+        transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "Dialogue");
+        // SceneManager.LoadScene("Dialogue");
         // transitionMain.transition2a("Dialogue");
     }
 }

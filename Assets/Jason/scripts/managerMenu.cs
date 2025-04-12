@@ -26,6 +26,7 @@ public class managerMenu : MonoBehaviour
     private byte transitionAlpha;
     [SerializeField] SpriteRenderer transitionMain;
     private Color32 transitionColor;
+    [SerializeField] GameObject transitionObject;
 
     void Start()
     {
@@ -85,7 +86,7 @@ public class managerMenu : MonoBehaviour
         switch (menuButtonHeld)
         {
             case 0:
-                StartCoroutine(transition1());
+                transitionObject.GetComponent<transitionSmooth>().transitionStart(true, 1);
                 sceneLoading = true;
                 break;
 
@@ -98,7 +99,6 @@ public class managerMenu : MonoBehaviour
                 break;
 
             case 3:
-                // sceneLoading = true; // Enable later during build
                 Application.Quit();
                 break;
         }
@@ -176,7 +176,7 @@ public class managerMenu : MonoBehaviour
         }
     }
 
-    IEnumerator transition1()
+    /* IEnumerator transition1()
     {
         while (true)
         {
@@ -195,7 +195,7 @@ public class managerMenu : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         SceneManager.LoadScene(1);
-    }
+    } 
 
 
     private void Update()
@@ -242,6 +242,6 @@ public class managerMenu : MonoBehaviour
 
             File.WriteAllLines(Application.dataPath + "/Jason/csv/stage2D.txt", stageTimings);
         }
-    }
+    } */
 
 }

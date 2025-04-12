@@ -8,7 +8,13 @@ public class beginRhythm : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        managerArrow.Begin(int.Parse(gameObject.name.Substring(0, 1)));
+        managerArrow.arrowsBegin(int.Parse(gameObject.name.Substring(0, 1)));
+        transform.parent.gameObject.SetActive(false);
+    }
+
+    public void startRhythm(int rhythmTrack)
+    {
+        managerArrow.arrowsBegin(rhythmTrack);
         transform.parent.gameObject.SetActive(false);
     }
 }

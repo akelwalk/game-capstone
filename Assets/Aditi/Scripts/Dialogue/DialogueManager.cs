@@ -19,7 +19,9 @@ public class DialogueManager : MonoBehaviour
     // private bool isDialogueActive = true;
     private bool clicked = false;
     private bool inTypeSentence = false;
-    [SerializeField] transitionMain transitionMain;
+    [SerializeField] transitionMain transitionMain; 
+    [SerializeField] GameObject transitionObject;
+
 
     private void Awake()
     {
@@ -44,13 +46,19 @@ public class DialogueManager : MonoBehaviour
                 else {
                     //add end of dialogue behavior (disappear after this click?)
                     if (MainManager.Instance.getLevel() >= 9) //level 10 is the rhythm game stage (index 9 is level 10)
-                    { 
-                        SceneManager.LoadScene("rhythm");
+                    {
+                        transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "rhythm");
+
+                        // ############ ADITI READ THIS: I have a function in the rhythm minigame called 'public void startRhythm(int rhythmTrack)' in a script called 'beginRhythm'. I'm wasn't sure exactly how you wanted to integrate this, but just use this function to start
+                        // ############ the rhythm minigame and choose the specific track you want. Otherwise, the buttons just pop up like how I've showed in our presentations.
+
+                        // SceneManager.LoadScene("rhythm");
                         // transitionMain.transition2a(4);
                     }
                     else {
                         // transitionMain.transition2a("Coffee Shop");
-                        SceneManager.LoadScene("Coffee Shop");
+                        transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "Coffee Shop");
+                        //SceneManager.LoadScene("Coffee Shop");
                     }
                 }
                 

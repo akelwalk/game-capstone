@@ -40,5 +40,4 @@ public class MainManager : MonoBehaviour
     public int getScore() {
         return score;
     }
-
 }

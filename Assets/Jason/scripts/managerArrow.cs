@@ -8,38 +8,29 @@ public class managerArrow : MonoBehaviour
 {
     [SerializeField] GameObject arrowMain;
     [SerializeField] GameObject characterMain;
-    [SerializeField] bool arrowGenerateEnabled;
-    [SerializeField] int arrowGeneratePerSecond;
-    [SerializeField] AudioSource stageMusic;
+
     [SerializeField] TextMeshProUGUI arrowScoreDisplay;
 
     [SerializeField] AudioClip[] stageTracks;
+    [SerializeField] AudioSource stageMusic;
+
+    [SerializeField] bool arrowGenerateEnabled;
+    [SerializeField] int arrowGeneratePerSecond;
 
     private IEnumerator arrowCoroutine0;
-    private IEnumerator arrowCoroutine1;
-    private IEnumerator arrowCoroutine2;
-    private IEnumerator arrowCoroutine3;
-    private IEnumerator moveCoroutine1;
-    private IEnumerator moveCoroutine2;
-    private IEnumerator characterCoroutine;
-    private Vector3 characterRotate0;
-    private Vector3 characterRotate1;
-    private Vector3 characterRotate2;
-    private Vector3 characterRotate3;
+
     private Vector3 arrowRotate1;
     private Vector3 arrowRotate3;
     private Vector3 arrowRotate2;
     private Vector3 arrowPosition1;
     private Vector3 arrowPosition2;
     private Vector3 arrowPosition3;
-    private bool arrowGenerateActive;
-    private int characterQuality;
-    private string[] stageTimings;
-    private int arrowCount;
-    private bool coroutineActive;
-    private int arrowScore;
+
     private float instantiateOffset;
     private float instantiateScale;
+
+    private int arrowCount;
+    private int arrowScore;
 
     [SerializeField] Sprite[] danceBG;
     [SerializeField] GameObject backgroundObj;
@@ -47,7 +38,6 @@ public class managerArrow : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip[] audioClips;
     [SerializeField] GameObject audioMain;
-
 
     private List<List<float>> timingsAll;
     private int arrowTimings0;
@@ -58,10 +48,6 @@ public class managerArrow : MonoBehaviour
     void Start()
     {
         timingsAll = new List<List<float>>();
-        characterRotate0 = new Vector3(0, 0, 40);
-        characterRotate1 = new Vector3(0, 0, 20);
-        characterRotate2 = new Vector3(0, 0, -10);
-        characterRotate3 = new Vector3(0, 0, -30);
         arrowRotate1 = new Vector3 (0, 0, -90);
         arrowRotate3 = new Vector3 (0, 0, 180);
         arrowRotate2 = new Vector3 (0, 0, 90);
@@ -95,7 +81,95 @@ public class managerArrow : MonoBehaviour
         File.WriteAllLines(Application.dataPath + "/Jason/csv/stage2B.txt", stageTimings); */
     }
 
-    public void Begin(int trackNumber)
+    void Update()
+    {
+        try
+        {
+            if (arrowTimings0 < timingsAll[0].Count && stageMusic.time - instantiateOffset >= (timingsAll[0][arrowTimings0] * instantiateScale))
+            {
+                arrowsMovement(0);
+                arrowTimings0++;
+            }
+
+            if (arrowTimings1 < timingsAll[1].Count && stageMusic.time - instantiateOffset >= (timingsAll[1][arrowTimings1] * instantiateScale))
+            {
+                arrowsMovement(1);
+                arrowTimings1++;
+            }
+
+            if (arrowTimings2 < timingsAll[2].Count && stageMusic.time - instantiateOffset >= (timingsAll[2][arrowTimings2] * instantiateScale))
+            {
+                arrowsMovement(2);
+                arrowTimings2++;
+            }
+
+            if (arrowTimings3 < timingsAll[3].Count && stageMusic.time - instantiateOffset >= (timingsAll[3][arrowTimings3] * instantiateScale))
+            {
+                arrowsMovement(3);
+                arrowTimings3++;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Return))
+            {
+                arrowGenerateEnabled = !arrowGenerateEnabled;
+                StopCoroutine(arrowCoroutine0);
+            }
+
+            if (transform.childCount > 6 && ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) || (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))))
+            {
+                movementArrow movementArrow = gameObject.transform.GetChild(6).GetComponent<movementArrow>();
+
+                if (Input.GetKeyDown(movementArrow.arrowLetter) == true || Input.GetKeyDown(movementArrow.arrowDirection) == true)
+                {
+                    Vector3 location = new Vector3(movementArrow.gameObject.transform.localPosition.x + 0.3f, movementArrow.gameObject.transform.localPosition.y, 0);
+
+                    switch (gameObject.transform.GetChild(6).transform.localPosition.y)
+                    {
+                        case >= 4.4f and <= 4.6f:
+                            arrowScore += 1000;
+                            movementArrow.arrows2(0);
+                            arrowsEffects(0);
+                            GameObject tempParticle = gameObject.transform.GetChild(5).transform.GetChild(0).gameObject;
+                            GameObject clone = Instantiate(tempParticle, location, movementArrow.gameObject.transform.localRotation);
+                            clone.SetActive(true);
+                            break;
+
+                        case >= 4.25f and <= 4.75f:
+                            arrowScore += 400;
+                            movementArrow.arrows2(1);
+                            arrowsEffects(1);
+                            tempParticle = gameObject.transform.GetChild(5).transform.GetChild(1).gameObject;
+                            clone = Instantiate(tempParticle, location, movementArrow.gameObject.transform.localRotation);
+                            clone.SetActive(true);
+                            break;
+
+                        case >= 3.9f and <= 5.1f:
+                            arrowScore += 100;
+                            movementArrow.arrows2(2);
+                            arrowsEffects(2);
+                            tempParticle = gameObject.transform.GetChild(5).transform.GetChild(2).gameObject;
+                            clone = Instantiate(tempParticle, location, movementArrow.gameObject.transform.localRotation);
+                            clone.SetActive(true);
+                            break;
+
+                        case >= 3.5f:
+                            movementArrow.arrows2(3);
+                            arrowsEffects(2);
+                            tempParticle = gameObject.transform.GetChild(5).transform.GetChild(3).gameObject;
+                            clone = Instantiate(tempParticle, location, movementArrow.gameObject.transform.localRotation);
+                            clone.SetActive(true);
+                            break;
+                    }
+
+                    arrowScoreDisplay.text = "Score: " + arrowScore;
+                    gameObject.transform.SetAsLastSibling();
+                }
+            }
+        }
+        catch { }
+    }
+
+    public void arrowsBegin(int trackNumber)
     {
         for (int x = 0; x < 4; x++)
         {
@@ -158,89 +232,10 @@ public class managerArrow : MonoBehaviour
 
         stageMusic.clip = stageTracks[trackNumber - 1];
         backgroundObj.GetComponent<SpriteRenderer>().sprite = danceBG[trackNumber - 1];
-        Invoke("music1", 0);
+        Invoke("musicMain", 0);
     }
 
-    void Update()
-    {
-        try
-        {
-            if (arrowTimings0 < timingsAll[0].Count && stageMusic.time - instantiateOffset >= (timingsAll[0][arrowTimings0] * instantiateScale))
-            {
-                arrowInstantiate(0);
-                arrowTimings0++;
-            }
-
-            if (arrowTimings1 < timingsAll[1].Count && stageMusic.time - instantiateOffset >= (timingsAll[1][arrowTimings1] * instantiateScale))
-            {
-                arrowInstantiate(1);
-                arrowTimings1++;
-            }
-
-            if (arrowTimings2 < timingsAll[2].Count && stageMusic.time - instantiateOffset >= (timingsAll[2][arrowTimings2] * instantiateScale))
-            {
-                arrowInstantiate(2);
-                arrowTimings2++;
-            }
-
-            if (arrowTimings3 < timingsAll[3].Count && stageMusic.time - instantiateOffset >= (timingsAll[3][arrowTimings3] * instantiateScale))
-            {
-                arrowInstantiate(3);
-                arrowTimings3++;
-            }
-
-            if (Input.GetKeyUp(KeyCode.Return))
-            {
-                arrowGenerateEnabled = !arrowGenerateEnabled;
-                StopCoroutine(arrowCoroutine0);
-            }
-
-            if (transform.childCount > 5 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)))
-            {
-                movementArrow movementArrow = gameObject.transform.GetChild(5).GetComponent<movementArrow>();
-
-                if (Input.GetKeyDown(movementArrow.arrowLetter) == true || Input.GetKeyDown(movementArrow.arrowDirection) == true)
-                {
-                    switch (gameObject.transform.GetChild(5).transform.localPosition.y)
-                    {
-                        case >= 4.4f and <= 4.6f:
-                            arrowScore += 1000;
-                            movementArrow.arrows2(0);
-                            arrowSounds(0);
-                            characterQuality = 0;
-                            break;
-
-                        case >= 4.25f and <= 4.75f:
-                            arrowScore += 400;
-                            movementArrow.arrows2(1);
-                            arrowSounds(1);
-                            characterQuality = 1;
-                            break;
-
-                        case >= 3.9f and <= 5.1f:
-                            arrowScore += 100;
-                            movementArrow.arrows2(2);
-                            arrowSounds(2);
-                            characterQuality = 2;
-                            break;
-
-                        case >= 3.5f:
-                            movementArrow.arrows2(3);
-                            arrowSounds(2);
-                            characterQuality = 3;
-                            break;
-                    }
-
-                    arrowScoreDisplay.text = "Score: " + arrowScore;
-                    //StartCoroutine(characterCoroutine);
-                    gameObject.transform.SetAsLastSibling();
-                }
-            }
-        }
-        catch { }
-    }
-
-    private void arrowInstantiate(int arrowDirection)
+    private void arrowsMovement(int arrowDirection)
     {
         GameObject arrowClone = Instantiate(arrowMain, gameObject.transform, false);
 
@@ -277,16 +272,16 @@ public class managerArrow : MonoBehaviour
         arrowClone.SetActive(true);
     }
 
-    void music1()
-    {
-        stageMusic.enabled = true;
-    }
-
-    private void arrowSounds(int audioClip)
+    private void arrowsEffects(int audioClip)
     {
         audioSource.clip = audioClips[audioClip];
         GameObject audioClone = Instantiate(audioMain, audioMain.transform.parent);
         audioClone.SetActive(true);
+    }
+
+    public void musicMain()
+    {
+        stageMusic.enabled = true;
     }
 
     /* IEnumerator arrows1(string arrowFile, int arrowDirection)

@@ -14,6 +14,7 @@ public class Pages : MonoBehaviour
 
     public GameObject customerPage;
     private AudioSource audioSource;
+    public AudioClip mainTrack;
     private List<GameObject> pages;
 
     public void Awake()
@@ -21,17 +22,21 @@ public class Pages : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void Start()
+    //basically a start function that another script can call 
+    public void beginGame()
     {
-        
         if (MainManager.Instance.getLevel() < 10) {
             pages = pages1;
         }
         else if (MainManager.Instance.getLevel() < 20) {
             pages = pages2;
         }
-        pages = pages2; //TESTING PURPOSES
+        // pages = pages2; //TESTING PURPOSES
         pages[0].SetActive(true);
+        if (mainTrack != null) {
+            MainManager.Instance.playMusic(mainTrack);
+        }
+        
     }
 
     public void playPageFlip() {
@@ -39,7 +44,6 @@ public class Pages : MonoBehaviour
     }
 
     public void pageFlip() {
-        Debug.Log("button clicked");
         audioSource.Play();
         GameObject currentPage = pages[pageNum];
         currentPage.SetActive(false);

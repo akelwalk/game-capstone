@@ -14,6 +14,13 @@ public class MainManager : MonoBehaviour
     public bool transitionStop;
     public bool levelEnd = false;
 
+    private AudioSource audioSource;
+
+
+    void Awake()
+    {
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
     void Start()
     {
 
@@ -29,8 +36,25 @@ public class MainManager : MonoBehaviour
 
     }
 
+
+    public void playMusic(AudioClip clip) {
+        if (!audioSource.isPlaying) {
+            audioSource.clip = clip; 
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+    }
+
+    public void stopMusic() {
+        audioSource.Stop();
+    }
+
     public void increaseLevel() {
         level++;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public int getLevel() {

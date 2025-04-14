@@ -8,7 +8,7 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "line": "Hi, welcome to Cafe Coffin!"
+            "line": "Hi, welcome to Coffin Cafe!"
           },
           {
             "character": {
@@ -22,14 +22,14 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "line": "It’s memorable, right? What can I get for you today?"
+            "line": "It's memorable, right? What can I get for you today?"
           },
           {
             "character": {
               "name": "Somber Spirit",
               "icon": "martha_icon"
             },
-            "line": "I’m not sure, to be honest. I suppose I’d like something to... take the edge off this heaviness in my heart. It’s been so long since I felt... warmth."
+            "line": "I'm not sure, to be honest. I suppose I'd like something to... take the edge off this heaviness in my heart. It's been so long since I felt... warmth."
           },
           {
             "character": {
@@ -69,14 +69,14 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "line": "Maybe I can help. Tell me—what’s keeping you here?"
+            "line": "Maybe I can help. Tell me—what's keeping you here?"
           },
           {
             "character": {
               "name": "Lost Spirit",
               "icon": "lost_spirit_icon"
             },
-            "line": "I... I never told her how much she meant to me. My sister, Eleanor. She thought I hated her... but I didn’t. I just didn’t know how to say it."
+            "line": "I... I never told her how much she meant to me. My sister, Eleanor. She thought I hated her... but I didn't. I just didn't know how to say it."
           },
           {
             "character": {
@@ -149,7 +149,7 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "line": "How about a Midnight Frost? It’s bold and invigorating!"
+            "line": "How about a Midnight Frost? It's bold and invigorating!"
           }
         ]
       },
@@ -161,7 +161,7 @@
               "name": "Lonely Ghost",
               "icon": "lonely_ghost_icon"
             },
-            "line": "I’ve been wandering this place for so long... I’ve lost all my connections."
+            "line": "I've been wandering this place for so long... I've lost all my connections."
           },
           {
             "character": {
@@ -194,7 +194,7 @@
               "name": "Eternal Wanderer",
               "icon": "eternal_wanderer_icon"
             },
-            "line": "Time doesn’t seem to pass here... I feel... stuck."
+            "line": "Time doesn't seem to pass here... I feel... stuck."
           },
           {
             "character": {
@@ -234,7 +234,7 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "line": "It’s okay to feel lost sometimes. What can I get you today?"
+            "line": "It's okay to feel lost sometimes. What can I get you today?"
           },
           {
             "character": {
@@ -248,7 +248,7 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "line": "How about a Sunfire Espresso? It’ll warm your spirit!"
+            "line": "How about a Sunfire Espresso? It'll warm your spirit!"
           }
         ]
       },
@@ -260,14 +260,14 @@
               "name": "Eclipsed Soul",
               "icon": "eclipsed_soul_icon"
             },
-            "line": "I’m so tired... but I can't rest."
+            "line": "I'm so tired... but I can't rest."
           },
           {
             "character": {
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "line": "Rest is hard to find sometimes. Can I make something that’ll help you feel at ease?"
+            "line": "Rest is hard to find sometimes. Can I make something that'll help you feel at ease?"
           },
           {
             "character": {
@@ -333,14 +333,14 @@
               "name": "Rehema",
               "icon": "rehema_icon"
             },
-            "line": "Whoa, what’s going on? I just wanted to help you...!"
+            "line": "Whoa, what's going on? I just wanted to help you...!"
           },
           {
             "character": {
               "name": "Angry Ghost",
               "icon": "angry_ghost_icon"
             },
-            "line": "No more sympathy, no more warmth! If you want to defeat me, you’ll have to face me in the rhythm of battle!"
+            "line": "No more sympathy, no more warmth! If you want to defeat me, you'll have to face me in the rhythm of battle!"
           },
           {
             "character": {
@@ -350,7 +350,251 @@
             "line": "A rhythm battle? Alright... bring it on!"
           }
         ]
-      }      
+      },
+      {
+        "level": 11,
+        "dialogueLines": [
+          {
+            "character": { "name": "Eternal Wraith", "icon": "eternal_wraith_icon" },
+            "line": "This place… it stirs something in me. A warmth I thought I'd lost long ago."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Could be the fire. The way it crackles—it has a way of waking up old memories, doesn't it?"
+          },
+          {
+            "character": { "name": "Eternal Wraith", "icon": "eternal_wraith_icon" },
+            "line": "It reminds me of sitting by the hearth on a rainy night, wrapped in quiet, safe from the storm. I long for that again—something that feels like home."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "An Ember's Hollow might be just the thing to bring that memory back to life, if only for a moment."
+          }
+        ]
+      },      
+      {
+        "level": 12,
+        "dialogueLines": [
+          {
+            "character": { "name": "Moonlit Specter", "icon": "moonlit_specter_icon" },
+            "line": "The past clings to me like mist. No matter how I try, I can't seem to face it fully."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Some memories run too deep to hold all at once. Maybe a drink could help you see their shape—without letting them drown you."
+          },
+          {
+            "character": { "name": "Moonlit Specter", "icon": "moonlit_specter_icon" },
+            "line": "Yes… something that carries the weight of what was. Something that gives form to the shadowy thoughts that lurk in the corners of my mind."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "An Obsidian Reign, then. It won't banish the past, but it might help you stand with it."
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "dialogueLines": [
+          {
+            "character": { "name": "Glimmering Shade", "icon": "glimmering_shade_icon" },
+            "line": "I keep hoping for something... even though I don't quite know what it is."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Hope's a stubborn thing. It hangs around even when the world stops making sense—like a stubborn ember refusing to die out."
+          },
+          {
+            "character": { "name": "Glimmering Shade", "icon": "glimmering_shade_icon" },
+            "line": "Maybe you have something that can help me believe again?"
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Absolutely. I'll make you an Abyssal Bloom. It won't tell you what to believe—but it might help you remember how."
+          }
+        ]
+      }, 
+      {
+        "level": 14,
+        "dialogueLines": [
+          {
+            "character": { "name": "Faded Echo", "icon": "faded_echo_icon" },
+            "line": "Whenever I reach for a memory, it slips through my fingers like fog. I'm left holding nothing but the ache of it."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Not all memories need to be grasped tightly. Some are meant to drift… and be felt rather than remembered."
+          },
+          {
+            "character": { "name": "Faded Echo", "icon": "faded_echo_icon" },
+            "line": "Then I want something soft. Something that doesn't force me to face past but lets it quietly sit beside me."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "I've got just the thing— a Crimson Haze to let your unrest fade away."
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "dialogueLines": [
+          {
+            "character": { "name": "Silent Repose", "icon": "silent_repose_icon" },
+            "line": "So much stillness… and it stretches endlessly. The weight of eternity is unbearable, and all I can do is wait."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Stillness can be peaceful... or painful. Depends on what you're waiting for."
+          },
+          {
+            "character": { "name": "Silent Repose", "icon": "silent_repose_icon" },
+            "line": "I want something quiet. Something that serves as a companion in the hush between endings and beginnings."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Hmm… I have a few drinks in mind. Let's see what speaks to your silence."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "dialogueLines": [
+          {
+            "character": { "name": "Luminous Wanderer", "icon": "luminous_wanderer_icon" },
+            "line": "I've drifted so far, I'm not even sure I'm real anymore. I just… need something to tell me I still exist."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "You are real. Even when you're lost in the dark, the light remembers you. You just need to feel its touch again."
+          },
+          {
+            "character": { "name": "Luminous Wanderer", "icon": "luminous_wanderer_icon" },
+            "line": "Then I wish for a spark of light... enough to remind me I still exist, even if just for a moment."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "A Radiance should do the trick."
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "dialogueLines": [
+          {
+            "character": { "name": "Veiled Shadow", "icon": "veiled_shadow_icon" },
+            "line": "These wounds... they cling to me. I don't even know if they're mine anymore, but I carry them still."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Sometimes it's not about the weight itself, but the way we hold it. Maybe it's time to see it from a new angle."
+          },
+          {
+            "character": { "name": "Veiled Shadow", "icon": "veiled_shadow_icon" },
+            "line": "I don't want to be rid of it, not really. I just want... relief. A gentler way forward."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Then try The Shifting. It won't erase what's there, but it might show you a different path through it."
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "dialogueLines": [
+          {
+            "character": { "name": "Shrouded One", "icon": "shrouded_one_icon" },
+            "line": "..."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "You don't have to say anything if you're not ready. Sometimes silence holds the deepest truths."
+          },
+          {
+            "character": { "name": "Shrouded One", "icon": "shrouded_one_icon" },
+            "line": "..."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+              "line": "Let me make you a Faded Silence. It's a drink that offers solace to the quiet."
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "dialogueLines": [
+          {
+            "character": { "name": "Wandering Soul", "icon": "wandering_soul_icon" },
+            "line": "There's so much noise in my mind… thoughts chasing each other, overlapping, unraveling—I can't make sense of any of it."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Sounds like your spirit's caught in a storm. Maybe what you need isn't an answer, but a pause."
+          },
+          {
+            "character": { "name": "Wandering Soul", "icon": "wandering_soul_icon" },
+            "line": "I keep reaching... for something I can't name. Like if I just think hard enough, I'll finally remember what I've forgotten."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "Not everything comes from thinking. Some truths settle in when we stop chasing them."
+          },
+          {
+            "character": { "name": "Wandering Soul", "icon": "wandering_soul_icon" },
+            "line": "Then maybe I need something calming. Something that hushes the noise without silencing the questions."
+          },
+          {
+            "character": { "name": "Rehema", "icon": "rehema_icon" },
+            "line": "I've got just the thing. Let's try to bring a little stillness to the searching."
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Vengeful Shade",
+              "icon": "vengeful_shade_icon"
+            },
+            "line": "So you're the one they whisper about... the brewer who thinks kindness can cure centuries of rot."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I don't claim to cure anything. But sometimes a warm cup can reach where words can't."
+          },
+          {
+            "character": {
+              "name": "Vengeful Shade",
+              "icon": "vengeful_shade_icon"
+            },
+            "line": "Hah! What nonsense. These ghosts are broken, twisted— *I* am twisted. Your sympathy is wasted on wretches like me."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Maybe. But even bitterness stems from pain. I'm not here to force peace on you… just to offer a moment of quiet, if you want it."
+          },
+          {
+            "character": {
+              "name": "Vengeful Shade",
+              "icon": "vengeful_shade_icon"
+            },
+            "line": "Save your pity. If you want to reach me, you'll have to fight through the storm I've become. Rhythm for rhythm, beat for beat—if you dare."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Then let the music do the talking. I'm not afraid of a challenge."
+          }
+        ]
+      }  
     ]
   }
   

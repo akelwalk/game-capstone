@@ -20,13 +20,13 @@
             "success": [
                 {
                     "character": { "name": "Lost Spirit", "icon": "lost_spirit_icon" },
-                    "line": "It’s... soothing. Like a whisper from the past telling me it’s okay. Thank you, Rehema. Maybe now, I can move on."
+                    "line": "It's... soothing. Like a whisper from the past telling me it's okay. Thank you, Rehema. Maybe now, I can move on."
                 }
             ],
             "failure": [
                 {
                     "character": { "name": "Lost Spirit", "icon": "lost_spirit_icon" },
-                    "line": "No... this isn’t right. The regret still lingers, heavier than ever. I am still lost."
+                    "line": "No... this isn't right. The regret still lingers, heavier than ever. I am still lost."
                 }
             ]
         },
@@ -41,7 +41,7 @@
             "failure": [
                 {
                     "character": { "name": "Wandering Spirit", "icon": "wandering_spirit_icon" },
-                    "line": "I don’t feel anything... just more emptiness. I guess some things are beyond repair."
+                    "line": "I don't feel anything... just more emptiness. I guess some things are beyond repair."
                 }
             ]
         },
@@ -50,13 +50,13 @@
             "success": [
                 {
                     "character": { "name": "Shadowed Specter", "icon": "shadowed_specter_icon" },
-                    "line": "I can see a flicker of light in the dark. Maybe I don’t have to be lost forever."
+                    "line": "I can see a flicker of light in the dark. Maybe I don't have to be lost forever."
                 }
             ],
             "failure": [
                 {
                     "character": { "name": "Shadowed Specter", "icon": "shadowed_specter_icon" },
-                    "line": "The fog hasn’t lifted. Maybe it never will..."
+                    "line": "The fog hasn't lifted. Maybe it never will..."
                 }
             ]
         },
@@ -65,13 +65,13 @@
             "success": [
                 {
                     "character": { "name": "Lonely Ghost", "icon": "lonely_ghost_icon" },
-                    "line": "This taste... it reminds me of home. Maybe I’m not as alone as I thought."
+                    "line": "This taste... it reminds me of home. Maybe I'm not as alone as I thought."
                 }
             ],
             "failure": [
                 {
                     "character": { "name": "Lonely Ghost", "icon": "lonely_ghost_icon" },
-                    "line": "No... this isn’t it. I still feel so... disconnected."
+                    "line": "No... this isn't it. I still feel so... disconnected."
                 }
             ]
         },
@@ -147,6 +147,156 @@
                 {
                     "character": { "name": "Angry Ghost", "icon": "angry_ghost_icon" },
                     "line": "Pathetic! You can't keep up! Your so-called kindness is nothing but weakness!"
+                }
+            ]
+        },
+        {
+            "level": 11,
+            "success": [
+                {
+                    "character": { "name": "Eternal Wraith", "icon": "eternal_wraith_icon" },
+                    "line": "The fire's warmth… it's not just memory now. You've given me a piece of home I thought was lost forever."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Eternal Wraith", "icon": "eternal_wraith_icon" },
+                    "line": "The ember flickered… but didn't catch. I suppose some nights remain cold, no matter how much you want the fire back."
+                }
+            ]
+        },
+        {
+            "level": 12,
+            "success": [
+                {
+                    "character": { "name": "Moonlit Specter", "icon": "moonlit_specter_icon" },
+                    "line": "I saw it—just for a moment. The shape of what haunts me. And for once, I didn't turn away."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Moonlit Specter", "icon": "moonlit_specter_icon" },
+                    "line": "It slipped through again. Maybe some shadows are too dense… or maybe I'm still not ready to see."
+                }
+            ]
+        },
+        {
+            "level": 13,
+            "success": [
+                {
+                    "character": { "name": "Glimmering Shade", "icon": "glimmering_shade_icon" },
+                    "line": "It's like something long buried has started to stir. I don't know what's waiting ahead—but for the first time, I want to find out."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Glimmering Shade", "icon": "glimmering_shade_icon" },
+                    "line": "I thought I felt something, but maybe it was just another mirage. Hope keeps slipping through my fingers."
+                }
+            ]
+        },
+        {
+            "level": 14,
+            "success": [
+                {
+                    "character": { "name": "Faded Echo", "icon": "faded_echo_icon" },
+                    "line": "It didn't bring the memories back, but… the ache has softened. And that's okay. I'll face them when I am ready."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Faded Echo", "icon": "faded_echo_icon" },
+                    "line": "I thought I could finally see my memories... but it's just fog again. Maybe I'm not meant to remember at all."
+                }
+            ]
+        },
+        {
+            "level": 15,
+            "success": [
+                {
+                    "character": { "name": "Silent Repose", "icon": "silent_repose_icon" },
+                    "line": "This silence… it's different now. Not empty, but warm. You've made the stillness bearable."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Silent Repose", "icon": "silent_repose_icon" },
+                    "line": "I feel the same suffocating weight, pressing down on me. Looks like I'm cursed to keep waiting…"
+                }
+            ]
+        },
+        {
+            "level": 16,
+            "success": [
+                {
+                    "character": { "name": "Luminous Wanderer", "icon": "luminous_wanderer_icon" },
+                    "line": "I feel a flicker of hope. I am still here. Thank you… for the reminder."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Luminous Wanderer", "icon": "luminous_wanderer_icon" },
+                    "line": "I reached for the light—but it passed through me. Maybe I've drifted too far after all."
+                }
+            ]
+        },
+        {
+            "level": 17,
+            "success": [
+                {
+                    "character": { "name": "Veiled Shadow", "icon": "veiled_shadow_icon" },
+                    "line": "It's not gone… but it doesn't claw the same way. You've shown me a gentler way to carry it."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Veiled Shadow", "icon": "veiled_shadow_icon" },
+                    "line": "No shift. No change. Just the same pain in a different cup."
+                }
+            ]
+        },
+        {
+            "level": 18,
+            "success": [
+                {
+                    "character": { "name": "Shrouded One", "icon": "shrouded_one_icon" },
+                    "line": "...Thank you."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Shrouded One", "icon": "shrouded_one_icon" },
+                    "line": "..."
+                }
+            ]
+        },
+        {
+            "level": 19,
+            "success": [
+                {
+                    "character": { "name": "Wandering Soul", "icon": "wandering_soul_icon" },
+                    "line": "The storm's still there… but it's quieter now. I can finally be at peace."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Wandering Soul", "icon": "wandering_soul_icon" },
+                    "line": "The noise came back as soon as it left. Maybe there's no calm for a mind like mine."
+                }
+            ]
+        },
+        {
+            "level": 20,
+            "success": [
+                {
+                    "character": { "name": "Vengeful Shade", "icon": "vengeful_shade_icon" },
+                    "line": "...I didn't think anything could reach me. But this… it cracked something open. Maybe there's still a piece of me worth saving."
+                }
+            ],
+            "failure": [
+                {
+                    "character": { "name": "Vengeful Shade", "icon": "vengeful_shade_icon" },
+                    "line": "Tch. Weak. You'll need more than that to melt this kind of fury."
                 }
             ]
         }

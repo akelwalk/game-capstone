@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
-using System.IO; 
-using UnityEngine.SceneManagement;
- 
+
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
@@ -44,16 +42,21 @@ public class DialogueManager : MonoBehaviour
                     DisplayNextDialogueLine(); //if all the dialogue is on the screen, we can move to the next dialogue line 
                 }
                 else {
-                    //add end of dialogue behavior (disappear after this click?)
-                    if (MainManager.Instance.getLevel() >= 9) //level 10 is the rhythm game stage (index 9 is level 10)
+                    
+                    // transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "Coffee Shop");
+
+                    if (MainManager.Instance.getLevel() == 9) //level 10 is the rhythm game stage (index 9 is level 10)
                     {
                         transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "rhythm");
-
+                        
                         // ############ ADITI READ THIS: I have a function in the rhythm minigame called 'public void startRhythm(int rhythmTrack)' in a script called 'beginRhythm'. I'm wasn't sure exactly how you wanted to integrate this, but just use this function to start
                         // ############ the rhythm minigame and choose the specific track you want. Otherwise, the buttons just pop up like how I've showed in our presentations.
 
                         // SceneManager.LoadScene("rhythm");
                         // transitionMain.transition2a(4);
+                    }
+                    else if (MainManager.Instance.getLevel() == 19) { //level 20 is the rhythm game stage 
+                        transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "rhythm");
                     }
                     else {
                         // transitionMain.transition2a("Coffee Shop");
@@ -121,7 +124,7 @@ public class DialogueManager : MonoBehaviour
             if (letter == ' ') {
                 continue;
             }
-            else if (letter == '.' || letter == '?' || letter == '?' || letter == '!') {
+            else if (letter == '.' || letter == '?' || letter == '?' || letter == '!' || letter == '—') {
                 yield return new WaitForSeconds(typingSpeed * 2.4f);
             }
             else if (letter == ',') {

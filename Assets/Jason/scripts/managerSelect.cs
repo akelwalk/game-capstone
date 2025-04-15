@@ -30,7 +30,7 @@ public class managerSelect : MonoBehaviour
             case -1:
                 gamemodeNumber = 2;
                 gamemodeText.text = "Rhythm";
-                levelObject.SetActive(false);
+                levelObject.SetActive(true);
                 break;
 
             case 0:
@@ -59,7 +59,6 @@ public class managerSelect : MonoBehaviour
     }
     public void levelChange(int buttonNumber)
     {
-        Debug.Log(gamemodeNumber + " | " + buttonNumber);
         switch (gamemodeNumber, buttonNumber)
         {
             case (1, 0):
@@ -80,7 +79,7 @@ public class managerSelect : MonoBehaviour
 
                 switch (levelNumberFree)
                 {
-                    case 39:
+                    case 17:
                         levelNumberFree = 0;
                         break;
                 }
@@ -127,7 +126,12 @@ public class managerSelect : MonoBehaviour
                 return levelNumberFree + 1;
 
             case 2:
-                return levelNumberRhythm + 1;
+                return ((levelNumberRhythm + 1) * 9) + 1;
         }
+    }
+
+    public int getMode()
+    {
+        return gamemodeNumber;
     }
 }

@@ -15,16 +15,10 @@ public class transitionSmooth : MonoBehaviour
     private Vector3 rightPosition;
     public bool transitionDirection;
     public bool transitionOnce;
+    public bool transitionDelay;
     private static bool transitionOccured;
     private BoxCollider2D transtionBlock;
-
-    /* private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            gameObject.transform.GetChild(2).gameObject.SetActive(true);
-        }
-    } */
+    private float transitionTime = 0.1f;
 
     void Start()
     {
@@ -36,9 +30,20 @@ public class transitionSmooth : MonoBehaviour
 
         transtionBlock = gameObject.GetComponent<BoxCollider2D>();
 
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            transitionTime = 0.5f;
+            Invoke("startRhythm", 0.01f);
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            transitionTime = 0.2f;
+            Invoke("startRhythm", 0.01f);
+        }
+
         if (transitionDirection == true || transitionOccured == true)
         {
-            Debug.Log(transitionDirection + " | " + transitionOccured);
             gameObject.transform.GetChild(1).localPosition = new Vector2(imageMax, 0.5246475f);
             gameObject.transform.GetChild(0).localPosition = new Vector2(-imageMax, 0.5246475f);
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -53,6 +58,23 @@ public class transitionSmooth : MonoBehaviour
 
             transitionStart(false, -1);
         }
+    }
+
+    private void startRhythm()
+    {
+        try
+        {
+            GameObject rhythmStart = transform.GetChild(2).GetChild(0).gameObject;
+            int rhythmNumber = MainManager.Instance.getLevel();
+
+            if (rhythmNumber <= 9)
+            {
+                rhythmNumber = 9;
+            }
+
+            rhythmStart.GetComponent<beginRhythm>().startRhythm((rhythmNumber / 9));
+        }
+        catch { }
     }
 
     public void transitionStart(bool transitionDirection, int sceneChange)
@@ -73,6 +95,11 @@ public class transitionSmooth : MonoBehaviour
 
     private IEnumerator transitionMain(bool transitionDirection, int sceneChange)
     {
+        if (transitionDelay == true)
+        {
+            yield return new WaitForSeconds(transitionTime);
+        }
+
         while (true)
         {
             Vector3 leftMovement = leftPosition;
@@ -105,7 +132,6 @@ public class transitionSmooth : MonoBehaviour
                 if (sceneChange >= 0)
                 {
                     transitionOccured = false;
-                    Debug.Log(transitionOccured);
                     SceneManager.LoadScene(sceneChange);
                 }
 
@@ -118,6 +144,11 @@ public class transitionSmooth : MonoBehaviour
 
     private IEnumerator transitionMain(bool transitionDirection, string sceneChange)
     {
+        if (transitionDelay == true)
+        {
+            yield return new WaitForSeconds(transitionTime);
+        }
+
         while (true)
         {
             Vector3 leftMovement = leftPosition;
@@ -148,7 +179,6 @@ public class transitionSmooth : MonoBehaviour
                 transtionBlock.enabled = false;
 
                 transitionOccured = false;
-                Debug.Log(transitionOccured);
                 SceneManager.LoadScene(sceneChange);
 
                 StopCoroutine(transitionCoroutine);

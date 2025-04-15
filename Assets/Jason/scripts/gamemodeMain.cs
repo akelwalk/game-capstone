@@ -28,7 +28,23 @@ public class gamemodeMain : MonoBehaviour
                 break;
 
             case 4:
-                transitionObject.GetComponent<transitionSmooth>().transitionStart(true, managerCore.managerSelect.getSelect());
+                switch (managerCore.managerSelect.getMode())
+                {
+                    case 0:
+                        transitionObject.GetComponent<transitionSmooth>().transitionStart(true, 1);
+                        break;
+
+                    case 1:
+                        MainManager.Instance.setLevel(managerCore.managerSelect.getSelect() - 1);
+                        transitionObject.GetComponent<transitionSmooth>().transitionStart(true, 1);
+                        break;        
+
+                    case 2:
+                        MainManager.Instance.setLevel(managerCore.managerSelect.getSelect() - 1);
+                        transitionObject.GetComponent<transitionSmooth>().transitionStart(true, 3);
+                        break;
+                }
+
                 break;
         }
     }

@@ -331,6 +331,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260089689}
   m_CullTransparentMesh: 1
+--- !u!1001 &336411722
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4883149151181000986, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_Name
+      value: returnmenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5358102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24251449
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0697218
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242486015580515579, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085231669995912699, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
+      propertyPath: transitionObject
+      value: 
+      objectReference: {fileID: 892353016}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6eb2d5ba47b41224c9836c125d2a1375, type: 3}
 --- !u!1 &355987752
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 23c915dae147fcd47b740d1da9a56c72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c2757601d773e6549b9303a6461a45fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -840,6 +901,10 @@ PrefabInstance:
     - target: {fileID: 4188266253838702172, guid: 1691f0aed3faba647892a9b560108a3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938177684533137150, guid: 1691f0aed3faba647892a9b560108a3c, type: 3}
+      propertyPath: transitionDelay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6938177684533137150, guid: 1691f0aed3faba647892a9b560108a3c, type: 3}
       propertyPath: transitionDirection
@@ -1740,9 +1805,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonDialogue: {fileID: 4900000, guid: f2db3e821d1e13743a066105a3522281, type: 3}
-  strawberrySprite: {fileID: 21300000, guid: 23c915dae147fcd47b740d1da9a56c72, type: 3}
+  strawberrySprite: {fileID: 21300000, guid: c2757601d773e6549b9303a6461a45fc, type: 3}
   ghostSprites:
-  - {fileID: 21300000, guid: 70a490a56c1f0ca41b7cd3792eda03cd, type: 3}
+  - {fileID: 21300000, guid: 69b43b7728cffb34a9262b239ce309df, type: 3}
   dialogue:
     dialogueLines: []
 --- !u!114 &1773812071
@@ -2090,3 +2155,4 @@ SceneRoots:
   - {fileID: 1235462423}
   - {fileID: 942346017}
   - {fileID: 892353015}
+  - {fileID: 336411722}

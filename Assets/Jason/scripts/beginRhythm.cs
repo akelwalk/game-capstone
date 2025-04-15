@@ -5,6 +5,7 @@ using UnityEngine;
 public class beginRhythm : MonoBehaviour
 {
     [SerializeField] managerArrow managerArrow;
+    private int rhythmTrackMain;
 
     private void OnMouseUpAsButton()
     {
@@ -14,7 +15,15 @@ public class beginRhythm : MonoBehaviour
 
     public void startRhythm(int rhythmTrack)
     {
-        managerArrow.arrowsBegin(rhythmTrack);
+        rhythmTrackMain = rhythmTrack;
+
+        Invoke("trueStart", 0.05f);
+    }
+
+    private void trueStart()
+    {
+        managerArrow.arrowsBegin(rhythmTrackMain);
         transform.parent.gameObject.SetActive(false);
     }
+
 }

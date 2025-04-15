@@ -36,7 +36,6 @@ public class MainManager : MonoBehaviour
 
     }
 
-
     public void playMusic(AudioClip clip) {
         if (!audioSource.isPlaying) {
             audioSource.clip = clip; 

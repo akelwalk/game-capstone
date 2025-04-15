@@ -8,6 +8,7 @@ public class managerArrow : MonoBehaviour
 {
     [SerializeField] GameObject arrowMain;
     [SerializeField] GameObject characterMain;
+    [SerializeField] GameObject rhythmEnd;
 
     [SerializeField] TextMeshProUGUI arrowScoreDisplay;
 
@@ -44,6 +45,8 @@ public class managerArrow : MonoBehaviour
     private int arrowTimings1;
     private int arrowTimings2;
     private int arrowTimings3;
+
+    private bool rhythmFinished;
 
     void Start()
     {
@@ -109,13 +112,13 @@ public class managerArrow : MonoBehaviour
                 arrowTimings3++;
             }
 
-            if (Input.GetKeyUp(KeyCode.Return))
+            /* if (Input.GetKeyUp(KeyCode.Return))
             {
                 arrowGenerateEnabled = !arrowGenerateEnabled;
                 StopCoroutine(arrowCoroutine0);
-            }
+            } */
 
-            if (transform.childCount > 6 && ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) || (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))))
+            if (transform.childCount > 6 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)))
             {
                 movementArrow movementArrow = gameObject.transform.GetChild(6).GetComponent<movementArrow>();
 
@@ -165,8 +168,71 @@ public class managerArrow : MonoBehaviour
                     gameObject.transform.SetAsLastSibling();
                 }
             }
+
+            else if (transform.childCount > 6 && (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow)))
+            {
+                movementArrow movementArrow = gameObject.transform.GetChild(6).GetComponent<movementArrow>();
+
+                if (Input.GetKeyDown(movementArrow.arrowLetter) == true || Input.GetKeyDown(movementArrow.arrowDirection) == true)
+                {
+                    Vector3 location = new Vector3(movementArrow.gameObject.transform.localPosition.x + 0.3f, movementArrow.gameObject.transform.localPosition.y, 0);
+
+                    switch (gameObject.transform.GetChild(6).transform.localPosition.y)
+                    {
+                        case >= 4.4f and <= 4.6f:
+                            arrowScore += 1000;
+                            movementArrow.arrows2(0);
+                            arrowsEffects(0);
+                            GameObject tempParticle = gameObject.transform.GetChild(5).transform.GetChild(0).gameObject;
+                            GameObject clone = Instantiate(tempParticle, location, movementArrow.gameObject.transform.localRotation);
+                            clone.SetActive(true);
+                            break;
+
+                        case >= 4.25f and <= 4.75f:
+                            arrowScore += 400;
+                            movementArrow.arrows2(1);
+                            arrowsEffects(1);
+                            tempParticle = gameObject.transform.GetChild(5).transform.GetChild(1).gameObject;
+                            clone = Instantiate(tempParticle, location, movementArrow.gameObject.transform.localRotation);
+                            clone.SetActive(true);
+                            break;
+
+                        case >= 3.9f and <= 5.1f:
+                            arrowScore += 100;
+                            movementArrow.arrows2(2);
+                            arrowsEffects(2);
+                            tempParticle = gameObject.transform.GetChild(5).transform.GetChild(2).gameObject;
+                            clone = Instantiate(tempParticle, location, movementArrow.gameObject.transform.localRotation);
+                            clone.SetActive(true);
+                            break;
+
+                        case >= 3.5f:
+                            movementArrow.arrows2(3);
+                            arrowsEffects(2);
+                            tempParticle = gameObject.transform.GetChild(5).transform.GetChild(3).gameObject;
+                            clone = Instantiate(tempParticle, location, movementArrow.gameObject.transform.localRotation);
+                            clone.SetActive(true);
+                            break;
+                    }
+
+                    arrowScoreDisplay.text = "Score: " + arrowScore;
+                    gameObject.transform.SetAsLastSibling();
+                }
+            }
+
+            if (rhythmFinished == false && arrowTimings0 >= timingsAll[0].Count && arrowTimings1 >= timingsAll[1].Count && arrowTimings2 >= timingsAll[2].Count && arrowTimings3 >= timingsAll[3].Count)
+            {
+                rhythmFinished = true;
+                Invoke("endRhythm", 5);
+            }
         }
         catch { }
+    }
+
+    private void endRhythm()
+    {
+        rhythmEnd.SetActive(true);
+        MainManager.Instance.increaseLevel();
     }
 
     public void arrowsBegin(int trackNumber)

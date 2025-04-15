@@ -32,6 +32,8 @@ public class managerSettings : MonoBehaviour
 
         audioSounds.volume = (sliderSounds.value / 20f);
         sliderSounds.onValueChanged.AddListener(delegate { slider2(); });
+
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
 
     public void fullscreen(bool toggleValue)

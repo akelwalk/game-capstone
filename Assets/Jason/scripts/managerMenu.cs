@@ -10,6 +10,7 @@ public class managerMenu : MonoBehaviour
 {
     [SerializeField] Color32[] colorsUI;
     [SerializeField] GameObject buttons_0;
+    [SerializeField] GameObject startSelect_0;
     [SerializeField] GameObject settings_1;
     [SerializeField] GameObject credits_2;
     [SerializeField] GameObject menuBackground;
@@ -86,7 +87,8 @@ public class managerMenu : MonoBehaviour
         switch (menuButtonHeld)
         {
             case 0:
-                transitionObject.GetComponent<transitionSmooth>().transitionStart(true, 1);
+                Debug.Log(0);
+                startSelect_0.SetActive(true);
                 sceneLoading = true;
                 break;
 

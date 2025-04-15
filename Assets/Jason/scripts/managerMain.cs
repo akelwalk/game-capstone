@@ -6,6 +6,7 @@ public class managerMain : MonoBehaviour
 {
     public static managerMain managerCore;
     public managerMenu managerMenu;
+    public managerSelect managerSelect;
 
     void Start()
     {

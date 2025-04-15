@@ -55,13 +55,11 @@ public class DrinkMenu : MonoBehaviour
 
     public void updateIndex(int i) {
         index = i;
-        Debug.Log("Updating index: " + index);
         updateText();
     }
 
     public void updateText()
     {
-        Debug.Log("On enable index: " + index);
         drinkNameText.text = drinkData.drinks[index].name;
         recipeText.text = drinkData.drinks[index].recipe;
         descriptionText.text = drinkData.drinks[index].description;

@@ -16,7 +16,13 @@ public class Order : MonoBehaviour
         if (jsonOrders != null)
         {
             gameData = JsonUtility.FromJson<GameData>(jsonOrders.text);
-            order.text = gameData.levels[MainManager.Instance.getLevel()].drinks[0];
+            List<string> drinkList = gameData.levels[MainManager.Instance.getLevel()].drinks;
+            if (drinkList.Count > 1) {
+                order.text = "Order: ???";
+            }
+            else {
+                order.text = "Order: " + gameData.levels[MainManager.Instance.getLevel()].drinks[0];
+            }
             description.text = gameData.levels[MainManager.Instance.getLevel()].customer.description;
             customer.text = gameData.levels[MainManager.Instance.getLevel()].customer.name;
         }

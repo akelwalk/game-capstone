@@ -41,7 +41,7 @@ public class Shelf : MonoBehaviour
         else if (MainManager.Instance.getLevel() < 20) {
             selections = selections2;
         }
-        selections = selections2; //TESTING PURPOSES
+        // selections = selections2; //TESTING PURPOSES
         switchSelection(selections[0].ingredientList);
         updateText(selections[0].type);
     }

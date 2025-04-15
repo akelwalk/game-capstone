@@ -29,11 +29,13 @@ public class Cauldron : MonoBehaviour
 
     public Dictionary<string, List<string>> recipes = new Dictionary<string, List<string>>();
     public TextAsset jsonOrders; 
-    private string order; //do we still need this?
-    private List<string> recipe = new List<string>();
+    // private string order;
+    public Dictionary<string, List<string>> acceptableDrinks = new Dictionary<string, List<string>>();
+    // private List<string> recipe = new List<string>();
     private List<string> currentIngredients = new List<string>();
     private GameData gameData;
     private AudioSource audioSource;
+    public AudioClip[] cauldronSFX;
     
     void Awake()
     {
@@ -67,37 +69,57 @@ public class Cauldron : MonoBehaviour
 
     void Start()
     {
-        // if (order != null) {
-        //     ingredients = recipes[order];
-        // }
-        // else if (order == "") {
-        //     //no order, figure out drink yourself
-        // }
-
+        //so we have the acceptable orders dictionary we add that order to the dictionary
         if (jsonOrders != null)
         {
             gameData = JsonUtility.FromJson<GameData>(jsonOrders.text);
-            order = gameData.levels[MainManager.Instance.getLevel()].drinks[0];
-            Debug.Log("Drink to make: " + order);
-            if (order != "") {
-                recipe = recipes[order]; 
+            
+            // order = gameData.levels[MainManager.Instance.getLevel()].drinks[0];
+            // Debug.Log("Drink to make: " + order);
+            // if (order != "") {
+            //     recipe = recipes[order]; 
+            // }
+
+            List<string> drinkList = gameData.levels[MainManager.Instance.getLevel()].drinks;
+            foreach (string drink in drinkList) {
+                acceptableDrinks.Add(drink, recipes[drink]);
             }
+
         }
     }
 
     public void checkRecipe() {
-        MainManager.Instance.success = true;
-        if (recipe.Count != currentIngredients.Count) { //the number of ingredients in the cauldron should match the number of ingredients the recipe calls for 
-            MainManager.Instance.success = false; 
-        }
-        else {
-            for (int i = 0; i < recipe.Count; i++) { //the only ingredients in the cauldron should be the ones in the recipe
-                if (!currentIngredients.Contains(recipe[i] + "(Clone)")) {
-                    MainManager.Instance.success = false;
+        // MainManager.Instance.success = true;
+        // if (recipe.Count != currentIngredients.Count) { //the number of ingredients in the cauldron should match the number of ingredients the recipe calls for 
+        //     MainManager.Instance.success = false; 
+        // }
+        // else {
+        //     for (int i = 0; i < recipe.Count; i++) { //the only ingredients in the cauldron should be the ones in the recipe
+        //         if (!currentIngredients.Contains(recipe[i] + "(Clone)")) {
+        //             MainManager.Instance.success = false;
+        //         }
+        //     }
+        // }
+        // Debug.Log("success status: " + MainManager.Instance.success);
+
+        MainManager.Instance.success = false;
+        foreach (KeyValuePair<string, List<string>> entry in acceptableDrinks)
+        {
+            string drink = entry.Key;
+            List<string> recipeh = entry.Value;
+
+            bool contains = true;
+            for (int i = 0; i < recipeh.Count; i++) { 
+                if (!currentIngredients.Contains(recipeh[i] + "(Clone)")) {
+                    contains = false;
                 }
             }
-        }
-        Debug.Log("success status: " + MainManager.Instance.success);
+
+            if (contains && recipeh.Count == currentIngredients.Count) { //the only ingredients in the cauldron should be the ones in the recipe
+                MainManager.Instance.success = true;
+                break;
+            }
+        }   
     }
 
     // public void printIngredients(List<string> list)
@@ -110,26 +132,21 @@ public class Cauldron : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Ingredient")) {
             Debug.Log("Added " + other.gameObject.name);
-            audioSource.Play();
+            PlaySFX();
             currentIngredients.Add(other.gameObject.name); //adding the name of ingredient to the cauldron
             other.gameObject.SetActive(false);
-
-            //testing something, remove later
-            // DragIngredients ingredient = other.gameObject.GetComponent<DragIngredients>();
-            // ingredient.canDrag = false;
-            // StartCoroutine(HandleIngredientReset(other));
         }
         else {
             Debug.Log("did you set the ingredient label?");
         }
     }
 
+    private void PlaySFX() {
+        if (cauldronSFX.Length > 0) 
+        {
+            int randomIndex = Random.Range(0, cauldronSFX.Length); // Get a random index
+            audioSource.PlayOneShot(cauldronSFX[randomIndex]); // Play the clip
+        }
+    }
 
-    // private IEnumerator HandleIngredientReset(Collider2D other)
-    // {
-    //     DragIngredients ingredient = other.gameObject.GetComponent<DragIngredients>();
-    //     ingredient.resetLocation();
-    //     yield return null;
-
-    // }
 }

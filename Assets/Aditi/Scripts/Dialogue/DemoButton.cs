@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DemoButton : MonoBehaviour
 {
+    public int maxLevel = 20;
     private DialogueTrigger trigger;
     // Start is called before the first frame update
     void Start()
@@ -12,7 +13,10 @@ public class DemoButton : MonoBehaviour
     }
 
     public void nextInteraction() {
-        MainManager.Instance.increaseLevel();
-        trigger.Start();
+        Debug.Log(MainManager.Instance.getLevel());
+        if (MainManager.Instance.getLevel() < maxLevel-1) {
+            MainManager.Instance.increaseLevel();
+            trigger.Start();
+        }
     }
 }

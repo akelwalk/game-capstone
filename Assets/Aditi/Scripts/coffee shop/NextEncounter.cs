@@ -10,6 +10,7 @@ public class NextEncounter : MonoBehaviour
 
     public void Next() {
         MainManager.Instance.increaseLevel();
+        MainManager.Instance.stopMusic();
         transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "Dialogue");
         // SceneManager.LoadScene("Dialogue");
         // transitionMain.transition2a("Dialogue");

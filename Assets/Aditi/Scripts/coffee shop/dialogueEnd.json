@@ -299,6 +299,146 @@
                     "line": "Tch. Weak. You'll need more than that to melt this kind of fury."
                 }
             ]
+        },
+        {
+            "level": 21,
+            "success": [
+              {
+                "character": { "name": "Flickering Specter", "icon": "flickering_specter_icon" },
+                "line": "The fire... it's calmed. I can finally feel the coolness of the air around me, and for the first time, I think I'm ready to move forward."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Flickering Specter", "icon": "flickering_specter_icon" },
+                "line": "The flames rage on. Nothing has changed. I'm still caught in this unending cycle."
+              }
+            ]
+          },
+          {
+            "level": 22,
+            "success": [
+              {
+                "character": { "name": "Abandoned Wraith", "icon": "abandoned_wraith_icon" },
+                "line": "I can almost feel the warmth again, like I'm coming back to life. It's not the same as before, but it's a start."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Abandoned Wraith", "icon": "abandoned_wraith_icon" },
+                "line": "It's still cold... the emptiness lingers. I'm not sure if anything can fill this void."
+              }
+            ]
+          },
+          {
+            "level": 23,
+            "success": [
+              {
+                "character": { "name": "Drowned Echo", "icon": "drowned_echo_icon" },
+                "line": "The stillness is so peaceful. It's like the weight of the world has lifted, and I can hear myself again."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Drowned Echo", "icon": "drowned_echo_icon" },
+                "line": "The silence... it doesn't last. The sorrow returns, and I am lost beneath it once more."
+              }
+            ]
+          },
+          {
+            "level": 24,
+            "success": [
+              {
+                "character": { "name": "Hollow Reflection", "icon": "hollow_reflection_icon" },
+                "line": "I see myself now—whole, not broken. Maybe this is who I was always meant to be."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Hollow Reflection", "icon": "hollow_reflection_icon" },
+                "line": "The reflection... it's still fractured. I'm not sure I'll ever recognize who I've become."
+              }
+            ]
+          },
+          {
+            "level": 25,
+            "success": [
+              {
+                "character": { "name": "Willow Wisp", "icon": "mirephantom_icon" },
+                "line": "The fog has lifted. I can see clearly now, and I feel lighter—like I've freed myself from the past."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Willow Wisp", "icon": "mirephantom_icon" },
+                "line": "The fog is still here, thick as ever. The past continues to haunt me, and I can't escape it."
+              }
+            ]
+          },
+          {
+            "level": 26,
+            "success": [
+              {
+                "character": { "name": "Faded Phantom", "icon": "faded_bloom_icon" },
+                "line": "I can feel both worlds now, intertwined. The past and present have found their place together, and I feel... whole again."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Faded Phantom", "icon": "faded_bloom_icon" },
+                "line": "I'm still caught in between. The gap is too wide, and I can't seem to bridge the two worlds."
+              }
+            ]
+          },
+          {
+            "level": 27,
+            "success": [
+              {
+                "character": { "name": "Wilting Spirit", "icon": "wilting_spirit_icon" },
+                "line": "I feel the warmth again, like a spark of life. It's not the same as it once was, but it's enough to keep me going."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Wilting Spirit", "icon": "wilting_spirit_icon" },
+                "line": "The warmth is gone again. I'm left with only the cold of the past, and nothing seems to change."
+              }
+            ]
+          },
+          {
+            "level": 28,
+            "success": [
+              {
+                "character": { "name": "Wandering Shade", "icon": "wandering_shade_icon" },
+                "line": "I can feel the earth beneath me now, grounding me. It's like a piece of who I was has come back to me."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Wandering Shade", "icon": "wandering_shade_icon" },
+                "line": "The ground is still slipping through my fingers. I'm still lost, with no sense of where I belong."
+              }
+            ]
+          },
+          {
+            "level": 29,
+            "success": [
+              {
+                "character": { "name": "Grieving Ghost", "icon": "griefs_embrace_icon" },
+                "line": "For the first time in so long, I feel lighter. The weight has shifted, if only for a moment. I can breathe again."
+              }
+            ],
+            "failure": [
+              {
+                "character": { "name": "Grieving Ghost", "icon": "griefs_embrace_icon" },
+                "line": "The sorrow is still here, pressing down on me. I can't escape it. It's like a shadow that never leaves."
+              }
+            ]
+          },
+          {
+            "level": 30,
+            "success": [],
+            "failure": []
         }
     ]
 }

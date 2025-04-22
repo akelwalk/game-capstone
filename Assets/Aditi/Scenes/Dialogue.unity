@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d7a8011f60f3140b535e84f920d1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLevel: 20
+  maxLevel: 30
 --- !u!82 &1773812072
 AudioSource:
   m_ObjectHideFlags: 0

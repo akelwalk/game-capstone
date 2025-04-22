@@ -50,7 +50,7 @@ public class Cauldron : MonoBehaviour
         recipes.Add("Dreamcatcher", new List<string> { "Ghost Brew", "Stardust Sugar" });
         recipes.Add("Eclipsed Mocha", new List<string> { "Cocoa", "Whisper Syrup" });
         recipes.Add("Sunfire Espresso", new List<string> { "Infernal Roast", "Stardust Sugar" });
-        recipes.Add("Lunar Bloom", new List<string> { "Moonlit Tea", "Cloud Foam" });
+        recipes.Add("Lunar Bloom", new List<string> { "Moonlit Tea", "Cloud Foam" }); 
         recipes.Add("Starry Drip", new List<string> { "Nocturnal Drip", "Stardust Sugar" });
 
         //phase 2
@@ -64,6 +64,19 @@ public class Cauldron : MonoBehaviour
         recipes.Add("Mistbound", new List<string> { "Veilbrew", "Soul Milk", "Obsidian Vanilla", "Glow Pearls" });
         recipes.Add("Faded Silence", new List<string> { "Shadow Water", "Veilbrew", "Soulshards", "Nightshade" });
         recipes.Add("EclipseVeil", new List<string> { "Veilbrew", "Obsidian Vanilla", "Glow Pearls" });
+        
+        //phase 3
+        recipes.Add("Underleaf", new List<string> { "Matcha", "Truffle", "Silvermist", "Dreamwhip" });
+        recipes.Add("Fogwalker", new List<string> { "Matcha", "Silvermist", "Gloamdew", "Glow Ice" });
+        recipes.Add("Forest Bloom", new List<string> { "Spirit Soda", "Matcha", "Crimsonberry", "Gloamdew" });
+        recipes.Add("Berry Fizz", new List<string> { "Spirit Soda", "Moonflower", "Starberries", "Glow Ice" });
+        recipes.Add("Ashroot", new List<string> { "Chai", "Crimsonberry", "Starberries", "Glow Ice" });
+        recipes.Add("Earthbound", new List<string> { "Chai", "Truffle", "Silvermist", "Dreamwhip" });
+        recipes.Add("Mirewood", new List<string> { "Dreadshot", "Truffle", "Silvermist", "Dreamwhip" });
+        recipes.Add("Reflection's End", new List<string> { "Dreadshot", "Truffle", "Starberries", "Gloamdew" });
+        recipes.Add("Mistlock", new List<string> { "Spirit Soda", "Silvermist", "Gloamdew", "Dreamwhip" });
+        recipes.Add("Nightshock", new List<string> { "Dreadshot", "Moonflower", "Truffle", "Glow Ice" });
+
 
     }
 

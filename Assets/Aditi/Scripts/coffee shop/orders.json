@@ -140,7 +140,7 @@
             "level": 18,
             "customer": {
             "name": "Shrouded One",
-            "description": "They speak little, their presence like a whisper in heavy fog. They’re drawn to things that feel like being seen without having to be found."
+            "description": "They speak little, their presence like a whisper in heavy fog. They're drawn to things that feel like being seen without having to be found."
             },
             "drinks": ["Faded Silence"]
         },
@@ -151,6 +151,86 @@
             "description": "Their mind flits from thought to thought like wind through dry leaves. What they long for is something that helps them settle into themselves again."
             },
             "drinks": ["Mistbound", "The Shifting", "Crimson Haze"]
-        }
+        },
+        {
+            "level": 20,
+            "customer": {
+                "name": "Rhythm Stage",
+                "description": "You found a glitch."
+            },
+            "drinks": ["N/A"]
+        }, 
+        {
+            "level": 21,
+            "customer": {
+              "name": "Flickering Specter",
+              "description": "They simmer with quiet rage—like a flicker of flame trapped in a shadow. They seek something bold to match their inner fire."
+            },
+            "drinks": ["Nightshock"]
+        },
+          {
+            "level": 22,
+            "customer": {
+              "name": "Abandoned Wraith",
+              "description": "Left behind in the depths of sorrow, they wander aimlessly. They crave something earthy, a taste of the comfort they once knew."
+            },
+            "drinks": ["Earthbound"]
+          },
+          {
+            "level": 23,
+            "customer": {
+              "name": "Drowned Echo",
+              "description": "Their voice is muffled and distant, as if lost in an ocean of grief. They need a drink that wraps them in a moment of stillness."
+            },
+            "drinks": ["Mistlock"]
+          },
+          {
+            "level": 24,
+            "customer": {
+              "name": "Hollow Reflection",
+              "description": "They've stared too long at fractured images, unsure of what’s real. They seek a drink that makes them feel seen, if only through the eyes of others."
+            },
+            "drinks": ["Reflection's End"]
+          },
+          {
+            "level": 25,
+            "customer": {
+              "name": "Willow Wisp",
+              "description": "Caught in a fog of denial, clinging to a past that no longer exists. This ghost needs something to free them from their burdens."
+            },
+            "drinks": ["Mistlock", "Reflection's End", "Mirewood"]
+          },
+          {
+            "level": 26,
+            "customer": {
+              "name": "Faded Phantom",
+              "description": "Trapped between the pull of yesterday and today, this ghost seeks an unconventional drink that blends the past and present."
+            },
+            "drinks": ["Forest Bloom", "Fogwalker", "Nightshock"]
+          },
+          {
+            "level": 27,
+            "customer": {
+              "name": "Wilted Spirit",
+              "description": "They speak of nostalgia, love, and broken promises. A fizzy drink might help them reconnect with the ghosts of who they used to be."
+            },
+            "drinks": ["Berry Fizz", "Forest Bloom", "Ashroot"]
+          },
+          {
+            "level": 28,
+            "customer": {
+              "name": "Wandering Shade",
+              "description": "Pacing endlessly, confused and fragmented. This ghost needs a drink grounded in nature to help them recall their lost origin."
+            },
+            "drinks": ["Fogwalker", "Underleaf", "Nightshock"]
+          },
+          {
+            "level": 29,
+            "customer": {
+              "name": "Grieving Ghost",
+              "description": "They carry the weight of sorrow, searching for something to temporarily ease their heartache and escape their pain."
+            },
+            "drinks": ["Ashroot", "Berry Fizz", "Nightshock"]
+          }
     ]
 }

@@ -19,19 +19,20 @@ public class Shelf : MonoBehaviour
     public List<SpawnIngredient> buttons;
 
     [System.Serializable]
-    public class serializableClass
+    public class ingredientSystem
     {
         public Ingredient type;
         public List<Sprite> ingredientList;
         public List<GameObject> prefabList;
     }
-    public List<serializableClass> selections1 = new List<serializableClass>();
-    public List<serializableClass> selections2 = new List<serializableClass>();
+    public List<ingredientSystem> selections1 = new List<ingredientSystem>();
+    public List<ingredientSystem> selections2 = new List<ingredientSystem>();
+    public List<ingredientSystem> selection3 = new List<ingredientSystem>();
     
     public TMP_Text selectionText;
 
     private int index = 0;
-    private List<serializableClass> selections;
+    private List<ingredientSystem> selections;
 
     public void Start()
     {
@@ -40,6 +41,9 @@ public class Shelf : MonoBehaviour
         }
         else if (MainManager.Instance.getLevel() < 20) {
             selections = selections2;
+        }
+        else if (MainManager.Instance.getLevel() < 30) {
+            selections = selection3;
         }
         // selections = selections2; //TESTING PURPOSES
         switchSelection(selections[0].ingredientList);

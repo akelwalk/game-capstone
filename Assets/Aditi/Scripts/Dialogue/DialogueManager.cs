@@ -58,6 +58,9 @@ public class DialogueManager : MonoBehaviour
                     else if (MainManager.Instance.getLevel() == 19) { //level 20 is the rhythm game stage 
                         transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "rhythm");
                     }
+                    else if (MainManager.Instance.getLevel() == 29) { //level 30 is the rhythm game stage 
+                        transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "rhythm");
+                    }
                     else {
                         // transitionMain.transition2a("Coffee Shop");
                         transitionObject.GetComponent<transitionSmooth>().transitionStart(true, "Coffee Shop");

@@ -6,6 +6,7 @@ public class Pages : MonoBehaviour
 {
     public List<GameObject> pages1 = new List<GameObject>();
     public List<GameObject> pages2 = new List<GameObject>();
+    public List<GameObject> pages3 = new List<GameObject>();
     private int pageNum = 0;
 
     public GameObject coffeeMenu;
@@ -30,6 +31,9 @@ public class Pages : MonoBehaviour
         }
         else if (MainManager.Instance.getLevel() < 20) {
             pages = pages2;
+        }
+        else if (MainManager.Instance.getLevel() < 30) {
+            pages = pages3;
         }
         // pages = pages2; //TESTING PURPOSES
         pages[0].SetActive(true);

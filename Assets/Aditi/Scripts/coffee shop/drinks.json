@@ -99,6 +99,56 @@
         "name": "EclipseVeil",
         "recipe": "Veilbrew + Obsidian Vanilla + Glow Pearls",
         "description": "A drink for drifting thoughts and quiet moments, where the world fades away in reflection."
+      },
+      {
+        "name": "Underleaf",
+        "recipe": "Matcha + Truffle + Silvermist + Dreamwhip",
+        "description": "Earthy and warm, a soft reminder that even shadowed paths hold light."
+      },
+      {
+        "name": "Fogwalker",
+        "recipe": "Matcha + Silvermist + Gloamdew + Glow Ice",
+        "description": "A misty and refreshing drink that evokes quiet wanderings through dew-covered mornings."
+      },
+      {
+        "name": "Forest Bloom",
+        "recipe": "Spirit Soda + Matcha + Crimsonberry + Gloamdew",
+        "description": "A strange blend of berry and earthy flavors"
+      },
+      {
+        "name": "Berry Fizz",
+        "recipe": "Spirit Soda + Moonflower + Starberries + Glow Ice",
+        "description": "Sweet soda with floral notes—bright, nostalgic, like an unforgettable memory."
+      },
+      {
+        "name": "Ashroot",
+        "recipe": "Chai + Crimsonberry + Starberries + Glow Ice",
+        "description": "A spicy, berry-infused blend that masks grief with joy"
+      },
+      {
+        "name": "Earthbound",
+        "recipe": "Chai + Truffle + Silvermist + Dreamwhip",
+        "description": "Spiced and earthy, it grounds lost souls in comfort long forgotten."
+      },
+      {
+        "name": "Mirewood",
+        "recipe": "Dreadshot + Truffle + Silvermist + Dreamwhip",
+        "description": "A dark, gentle blend that offers ghosts a way out of memories they've been mired in."
+      },
+      {
+        "name": "Reflection's End",
+        "recipe": "Dreadshot + Truffle + Starberries + Gloamdew",
+        "description": "A rich drink that shows ghosts who they were in the eyes of others."
+      },
+      {
+        "name": "Mistlock",
+        "recipe": "Spirit Soda + Silvermist + Gloamdew + Dreamwhip",
+        "description": "A soft soda that pauses time, allowing a moment peace for the overwhelmed."
+      },
+      {
+        "name": "Nightshock",
+        "recipe": "Dreadshot + Moonflower + Truffle + Glow Ice",
+        "description": "A bold drink that jolts the senses—shockingly good for furious or restless ghosts"
       }
     ]
   }

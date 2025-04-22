@@ -594,7 +594,358 @@
             "line": "Then let the music do the talking. I'm not afraid of a challenge."
           }
         ]
-      }  
+      },
+      {
+        "level": 21,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Flickering Specter",
+              "icon": "flickering_specter_icon"
+            },
+            "line": "I feel raging fire trapped in my head. It's never going out... no matter how much I try to smother it."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "That anger—it's like an endless fire. What's been feeding it?"
+          },
+          {
+            "character": {
+              "name": "Flickering Specter",
+              "icon": "flickering_specter_icon"
+            },
+            "line": "Everything! It's like I'm stuck in a loop—fighting, but never getting anywhere. Everything I see just makes the flames flare higher."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "It sounds like you need something strong to jolt your system out of it: A Nightshock."
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Abandoned Wraith",
+              "icon": "abandoned_wraith_icon"
+            },
+            "line": "I wander, lost in the memories of warmth... But all I find is cold, hollow emptiness."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Memories like that are hard to hold onto, especially when everything around you feels so distant. What do you miss the most?"
+          },
+          {
+            "character": {
+              "name": "Abandoned Wraith",
+              "icon": "abandoned_wraith_icon"
+            },
+            "line": "It's the feeling of comfort—of being home, grounded in something that feels familiar and safe."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I think I have something that might bring you that sense of warmth... Earthbound."
+          }
+        ]
+      },
+      {
+        "level": 23,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Drowned Echo",
+              "icon": "drowned_echo_icon"
+            },
+            "line": "My voice... it's lost beneath the waves of sorrow. Every word feels distant, like it's slipping away before it can be heard."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "That sorrow—it can make everything feel so far away, so hard to reach. When everything feels muffled, what would make you feel heard again?"
+          },
+          {
+            "character": {
+              "name": "Drowned Echo",
+              "icon": "drowned_echo_icon"
+            },
+            "line": "I just want to find a moment of silence... a stillness where everything fades and I can breathe again."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I have just what you need. A Mistlock will still the world around you, giving you the peace you crave."
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Hollow Reflection",
+              "icon": "hollow_reflection_icon"
+            },
+            "line": "I've stared at my reflection for so long that I don't recognize myself anymore. It's like I've become a ghost of what I once was."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Mirrors can be cruel, especially when they show only fragments of who we were. What do you see when you look at yourself?"
+          },
+          {
+            "character": {
+              "name": "Hollow Reflection",
+              "icon": "hollow_reflection_icon"
+            },
+            "line": "I see pieces—half of a person, lost in the cracks. I don't know who I've become anymore."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Maybe you need to see yourself through someone else's eyes. A Reflection's End will help you recognize who you've become."
+          }
+        ]
+      },
+      {
+        "level": 25,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Willow Wisp",
+              "icon": "mirephantom_icon"
+            },
+            "line": "I'm stuck here... the past haunts me, blurring everything in front of me. I can't escape it, no matter how hard I try."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "The past has a way of holding us captive, doesn't it? But sometimes, we need to let go, let something else help clear the way."
+          },
+          {
+            "character": {
+              "name": "Willow Wisp",
+              "icon": "mirephantom_icon"
+            },
+            "line": "If only I could feel free again... Everything I once knew is slipping through my fingers like sand. I need something that'll break these chains."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Maybe it's time for something to help you see clearly again. Something that can lift the fog."
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Faded Phantom",
+              "icon": "faded_bloom_icon"
+            },
+            "line": "I'm caught between two worlds... the past is long gone, but I can't fully step into today. I find myself in a gap between time, in a space where I don't quite belong."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "It's hard, isn't it? Being torn between who you were and who you are now. What are you searching for in this moment?"
+          },
+          {
+            "character": {
+              "name": "Faded Phantom",
+              "icon": "faded_bloom_icon"
+            },
+            "line": "Something that can blend the two—that can tie the past to the present and help me feel whole again."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Blending the past with the present… I think I know just the thing to help you find that balance."
+          }
+        ]
+      },
+      {
+        "level": 27,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Wilting Spirit",
+              "icon": "wilting_spirit_icon"
+            },
+            "line": "The past lingers in my mind... nostalgia, love, promises that faded. How did I get here? Everything I once had is slipping away."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "Nostalgia can be a heavy thing, pulling us backward when we're trying to move forward. What do you miss most from those days?"
+          },
+          {
+            "character": {
+              "name": "Wilting Spirit",
+              "icon": "wilting_spirit_icon"
+            },
+            "line": "The warmth of things once so full of life. I need something that can remind me of that feeling."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I think I know just the drink to bring back those memories."
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Wandering Shade",
+              "icon": "wandering_shade_icon"
+            },
+            "line": "I can't remember where I came from... everything feels so fractured. I wander with no destination in mind."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "It's hard when the past slips away and leaves us wandering, isn't it? What do you think would help you find your way again?"
+          },
+          {
+            "character": {
+              "name": "Wandering Shade",
+              "icon": "wandering_shade_icon"
+            },
+            "line": "Something that could ground me, something rooted in nature—something that reminds me of where I came from, even if I can't recall it."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I think I can make something for you..."
+          }
+        ]
+      },
+      {
+        "level": 29,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Grieving Ghost",
+              "icon": "griefs_embrace_icon"
+            },
+            "line": "The weight of it... it never leaves. Grief follows me like a shadow, pressing down on me. I just want to feel something else, even if it's for a moment."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I can see that sorrow in your eyes... Grief can be suffocating. What would help you breathe again, even if just for a little while?"
+          },
+          {
+            "character": {
+              "name": "Grieving Ghost",
+              "icon": "griefs_embrace_icon"
+            },
+            "line": "Something light, something that could lift the weight off my chest, if only for a brief moment. I just need a break from the sorrow."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I think I have just the thing to help you feel better."
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "dialogueLines": [
+          {
+            "character": {
+              "name": "Hollow Echo",
+              "icon": "hollow_echo_icon"
+            },
+            "line": "Oh great. Another savior with a smile and a teacup. Spare me the sermon."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I'm not here to save you. Just offering a drink, if you want it."
+          },
+          {
+            "character": {
+              "name": "Hollow Echo",
+              "icon": "hollow_echo_icon"
+            },
+            "line": "Want. That's funny. I stopped wanting things a long time ago. They just turn to ash anyway."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "That sounds like someone who used to care an awful lot."
+          },
+          {
+            "character": {
+              "name": "Hollow Echo",
+              "icon": "hollow_echo_icon"
+            },
+            "line": "Don't dig around in me like there's something left to rescue. If you really think there's meaning in all this... prove it."
+          },
+          {
+            "character": {
+              "name": "Hollow Echo",
+              "icon": "hollow_echo_icon"
+            },
+            "line": "Face me in a rhythm battle. Beat me or stop pretending to help people."
+          },
+          {
+            "character": {
+              "name": "Rehema",
+              "icon": "rehema_icon"
+            },
+            "line": "I don't pretend. Let's speak in the only language you still trust—music."
+          }
+        ]
+      }      
     ]
   }
   

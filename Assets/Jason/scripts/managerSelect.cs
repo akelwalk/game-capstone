@@ -67,25 +67,25 @@ public class managerSelect : MonoBehaviour
                 switch (levelNumberFree)
                 {
                     case -1:
-                        levelNumberFree = 38;
+                        levelNumberFree = 29;
                         break;
                 }
 
                 levelText.text = "Level: " + (levelNumberFree + 1);
                 break;
-
             case (1, 1):
                 levelNumberFree++;
 
                 switch (levelNumberFree)
                 {
-                    case 17:
+                    case 30:
                         levelNumberFree = 0;
                         break;
                 }
 
                 levelText.text = "Level: " + (levelNumberFree + 1);
                 break;
+
 
             case (2, 0):
                 levelNumberRhythm--;

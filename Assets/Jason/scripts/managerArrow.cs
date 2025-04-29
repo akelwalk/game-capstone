@@ -114,7 +114,7 @@ public class managerArrow : MonoBehaviour
                 break;
 
             case 2:
-                if (Time.unscaledTime - musicStart >= 26 && arrowWiggle == 0)
+                if (Time.unscaledTime - musicStart >= 26 && arrowWiggle == 0 && musicStart != -1)
                 {
                     arrowMain.GetComponent<movementArrow>().arrows3();
                     arrowWiggle = 1;
@@ -142,7 +142,7 @@ public class managerArrow : MonoBehaviour
                 break;
 
             case 3:
-                if (Time.unscaledTime - musicStart >= 23 && arrowWiggle == 0)
+                if (Time.unscaledTime - musicStart >= 23 && arrowWiggle == 0 && musicStart != -1)
                 {
                     arrowMain.GetComponent<movementArrow>().arrows3();
                     arrowWiggle = 1;
@@ -156,7 +156,7 @@ public class managerArrow : MonoBehaviour
                 break;
 
             case 4:
-                if (Time.unscaledTime - musicStart >= 35 && arrowWiggle == 0)
+                if (Time.unscaledTime - musicStart >= 35 && arrowWiggle == 0 && musicStart != -1)
                 {
                     arrowMain.GetComponent<movementArrow>().arrows3();
                     arrowWiggle = 1;

@@ -849,13 +849,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 52f56509f5f84c24db5388c88263bfb9, type: 3}
   - {fileID: 8300000, guid: 7062e62e5545e0b46aeaa08f6fa26f8a, type: 3}
   - {fileID: 8300000, guid: 9a8ae3984a2b2b64e94895d514e2182e, type: 3}
-  - {fileID: 8300000, guid: ad5d0b84ce54a664494be0cb35bd4187, type: 3}
+  - {fileID: 8300000, guid: 6aca7e69701d1ac45996486cc4fbd01d, type: 3}
   stageMusic: {fileID: 519420033}
   arrowGenerateEnabled: 1
   arrowGeneratePerSecond: 1
   danceBG:
   - {fileID: 21300000, guid: a18cecaed4f145d499cf301c439e1f76, type: 3}
-  - {fileID: 21300000, guid: 048a7f7149799654a9a1222935d66b3e, type: 3}
+  - {fileID: 21300000, guid: f6fb42d8784eb1f4baf902e8d7d89cc1, type: 3}
   - {fileID: 21300000, guid: bce6860d022c7294e9004d5388427c20, type: 3}
   - {fileID: 21300000, guid: 509f05329282f794eaf56c42c9f61f0d, type: 3}
   backgroundObj: {fileID: 1918555955}
@@ -865,6 +865,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: be66f228f09eb704ebe03943fc3fcf78, type: 3}
   - {fileID: 8300000, guid: be893be8ac89d744294599329d165d05, type: 3}
   audioMain: {fileID: 1462806805}
+  targetPoint: {fileID: 0}
 --- !u!1 &594399326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -209.9}
+  m_AnchoredPosition: {x: 0, y: -199}
   m_SizeDelta: {x: 800, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &819613788
@@ -1296,9 +1297,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You kicked that
+  m_text: 'There are still more
 
-    ghost''s ass'
+    souls to soothe
+
+    at the Coffin Cafe.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 61c4581a61f4c3240a60a6e2dae1f06c, type: 2}
@@ -6707,6 +6710,7 @@ MonoBehaviour:
   success: 1
   transitionStop: 0
   levelEnd: 0
+  coffeeMusic: []
 --- !u!4 &1539505585
 Transform:
   m_ObjectHideFlags: 0
@@ -7532,9 +7536,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 2.2, y: 2.2, z: 2.2, w: 2.2}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.5, y: 6}
+    oldSize: {x: 40.96, y: 40.96}
     newSize: {x: 9, y: 8.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
@@ -7714,7 +7718,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: c4aaeccbf0519154fa189ee27e6e442d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8011411b85527b24f8136afac82f1302, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27479,7 +27483,7 @@ Transform:
   m_GameObject: {fileID: 1374400581905223915}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -25, z: 0}
   m_LocalScale: {x: 66.666664, y: 66.666664, z: 66.666664}
   m_ConstrainProportionsScale: 1
   m_Children: []

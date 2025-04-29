@@ -39,6 +39,7 @@ public class DemoEndMessage : MonoBehaviour
     {
         endData = JsonUtility.FromJson<EndData>(jsonMessages.text);
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetInt("audioSounds") / 20f;
     }
 
     public void Start()

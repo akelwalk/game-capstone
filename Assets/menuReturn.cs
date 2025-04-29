@@ -11,6 +11,7 @@ public class menuReturn : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             transitionObject.GetComponent<transitionSmooth>().transitionStart(true, 0);
+            MainManager.Instance.stopMusic();
         }
     }
 }

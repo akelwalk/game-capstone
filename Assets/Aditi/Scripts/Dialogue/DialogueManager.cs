@@ -20,6 +20,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] transitionMain transitionMain; 
     [SerializeField] GameObject transitionObject;
 
+    private void Start()
+    {
+        audioSource.volume = PlayerPrefs.GetInt("audioSounds") / 20f;
+    }
 
     private void Awake()
     {

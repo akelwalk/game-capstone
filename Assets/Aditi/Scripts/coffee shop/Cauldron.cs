@@ -40,6 +40,7 @@ public class Cauldron : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 0.5f * (PlayerPrefs.GetInt("audioSounds") / 20f);
         // Add drink names and their corresponding ingredients
         //phase 1
         recipes.Add("Twilight Velvet", new List<string> { "Ghost Brew", "Whisper Syrup" });

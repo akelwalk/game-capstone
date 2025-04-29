@@ -16,6 +16,7 @@ public class transitionSmooth : MonoBehaviour
     public bool transitionDirection;
     public bool transitionOnce;
     public bool transitionDelay;
+    private bool transitionActive;
     private static bool transitionOccured;
     private BoxCollider2D transtionBlock;
     private float transitionTime = 0.1f;
@@ -79,22 +80,29 @@ public class transitionSmooth : MonoBehaviour
 
     public void transitionStart(bool transitionDirection, int sceneChange)
     {
-        transitionCoroutine = transitionMain(transitionDirection, sceneChange);
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        if (transitionActive == false)
+        {
+            transitionCoroutine = transitionMain(transitionDirection, sceneChange);
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
-        StartCoroutine(transitionCoroutine);
+            StartCoroutine(transitionCoroutine);
+        }
     }
 
     public void transitionStart(bool transitionDirection, string sceneChange)
     {
-        transitionCoroutine = transitionMain(transitionDirection, sceneChange);
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        if (transitionActive == false)
+        {
+            transitionCoroutine = transitionMain(transitionDirection, sceneChange);
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
-        StartCoroutine(transitionCoroutine);
+            StartCoroutine(transitionCoroutine);
+        }
     }
 
     private IEnumerator transitionMain(bool transitionDirection, int sceneChange)
     {
+        transitionActive = true;
         if (transitionDelay == true)
         {
             yield return new WaitForSeconds(transitionTime);
@@ -128,6 +136,7 @@ public class transitionSmooth : MonoBehaviour
                 rightImage.localPosition = rightMovement;
                 transitionDirection = !transitionDirection;
                 transtionBlock.enabled = false;
+                transitionActive = false;
 
                 if (sceneChange >= 0)
                 {
@@ -144,6 +153,8 @@ public class transitionSmooth : MonoBehaviour
 
     private IEnumerator transitionMain(bool transitionDirection, string sceneChange)
     {
+        transitionActive = true;
+
         if (transitionDelay == true)
         {
             yield return new WaitForSeconds(transitionTime);
@@ -177,6 +188,7 @@ public class transitionSmooth : MonoBehaviour
                 rightImage.localPosition = rightMovement;
                 transitionDirection = !transitionDirection;
                 transtionBlock.enabled = false;
+                transitionActive = false;
 
                 transitionOccured = false;
                 SceneManager.LoadScene(sceneChange);

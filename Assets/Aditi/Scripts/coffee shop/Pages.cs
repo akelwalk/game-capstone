@@ -21,6 +21,7 @@ public class Pages : MonoBehaviour
     public void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 0.5f * (PlayerPrefs.GetInt("audioSounds") / 20f);
     }
 
     //basically a start function that another script can call 

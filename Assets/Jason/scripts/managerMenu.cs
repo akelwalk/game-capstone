@@ -87,7 +87,6 @@ public class managerMenu : MonoBehaviour
         switch (menuButtonHeld)
         {
             case 0:
-                Debug.Log(0);
                 startSelect_0.SetActive(true);
                 sceneLoading = true;
                 break;

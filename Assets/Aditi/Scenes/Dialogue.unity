@@ -433,14 +433,14 @@ MonoBehaviour:
   m_text: 'Level: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
-  m_sharedMaterial: {fileID: -4684204876309514909, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 2149344b8354fcd4181c54206b537b30, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4282716199
+  m_fontColor: {r: 0.15294118, g: 0.0627451, b: 0.27058825, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -516,14 +516,14 @@ RectTransform:
   m_GameObject: {fileID: 355987752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1690517422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -432, y: 259}
+  m_AnchoredPosition: {x: -330.5, y: 248.9}
   m_SizeDelta: {x: -876.3244, y: -538.5128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &365618384
@@ -903,6 +903,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6938177684533137150, guid: 1691f0aed3faba647892a9b560108a3c, type: 3}
+      propertyPath: transitionOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938177684533137150, guid: 1691f0aed3faba647892a9b560108a3c, type: 3}
       propertyPath: transitionDelay
       value: 1
       objectReference: {fileID: 0}
@@ -1276,6 +1280,7 @@ MonoBehaviour:
   success: 1
   transitionStop: 0
   levelEnd: 0
+  coffeeMusic: []
 --- !u!82 &1235462425
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1659,7 +1664,7 @@ MonoBehaviour:
   m_text: Rehema
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
-  m_sharedMaterial: {fileID: -4684204876309514909, guid: 95a93684f3dd8e8458d94efe13b4f191, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: d0f7f534d054dfb43b8ddab8139f4ccc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1689,7 +1694,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535

@@ -98,6 +98,7 @@ public class movementArrow : MonoBehaviour
 
     public void arrows2(int arrowQuality)
     {
+        gameObject.transform.SetParent(null);
         arrowMovement0 = Vector3.zero;
         arrowMovement1 = Vector3.zero;
         arrowMovement2 = Vector3.zero;

@@ -14,6 +14,8 @@ public class MainManager : MonoBehaviour
     public bool transitionStop;
     public bool levelEnd = false;
 
+    [SerializeField] AudioClip[] coffeeMusic;
+
     private AudioSource audioSource;
 
 
@@ -37,15 +39,22 @@ public class MainManager : MonoBehaviour
     }
 
     public void playMusic(AudioClip clip) {
-        if (!audioSource.isPlaying) {
-            audioSource.clip = clip; 
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = coffeeMusic[level];
+            audioSource.volume = PlayerPrefs.GetInt("audioMusic") / 20f;
             audioSource.loop = true;
             audioSource.Play();
         }
     }
 
     public void stopMusic() {
-        audioSource.Stop();
+        try
+        {
+            audioSource.Stop();
+        }
+
+        catch { }
     }
 
     public void increaseLevel() {

@@ -11,7 +11,7 @@ public class rhythmEnd : MonoBehaviour
     {
         switch (MainManager.Instance.getLevel())
         {
-            case >= 10:
+            case >= 30:
                 transitionObject.GetComponent<transitionSmooth>().transitionStart(true, 0);
                 break;
 
